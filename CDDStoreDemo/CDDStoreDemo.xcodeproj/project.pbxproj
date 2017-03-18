@@ -52,6 +52,7 @@
 		187E68B01E7D8F0000722607 /* XWFilterAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E688F1E7D8F0000722607 /* XWFilterAnimator.m */; };
 		187E68B11E7D8F0000722607 /* XWFilterTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68911E7D8F0000722607 /* XWFilterTransitionView.m */; };
 		187E68B21E7D8F0000722607 /* XWMagicMoveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68941E7D8F0000722607 /* XWMagicMoveAnimator.m */; };
+		187E68B51E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */; };
 		B4BD6CD985407C4066CE3D78 /* libPods-CDDStoreDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D28CF44E5CEBF6947E889711 /* libPods-CDDStoreDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,8 @@
 		187E68911E7D8F0000722607 /* XWFilterTransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWFilterTransitionView.m; sourceTree = "<group>"; };
 		187E68931E7D8F0000722607 /* XWMagicMoveAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMagicMoveAnimator.h; sourceTree = "<group>"; };
 		187E68941E7D8F0000722607 /* XWMagicMoveAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMagicMoveAnimator.m; sourceTree = "<group>"; };
+		187E68B31E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DCBarButtonItem.h"; sourceTree = "<group>"; };
+		187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DCBarButtonItem.m"; sourceTree = "<group>"; };
 		B6042526F9488CF29434ADDB /* Pods-CDDStoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDStoreDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D28CF44E5CEBF6947E889711 /* libPods-CDDStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDDStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3736E949C41228120EF9FC0 /* Pods-CDDStoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDStoreDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 			children = (
 				187E67D61E7D871600722607 /* UIView+DCExtension.h */,
 				187E67D71E7D871600722607 /* UIView+DCExtension.m */,
+				187E68B31E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.h */,
+				187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -716,6 +721,7 @@
 				187E68AB1E7D8F0000722607 /* XWFilterAnimator+XWMask.m in Sources */,
 				187E68411E7D8D7E00722607 /* DCStoreViewController.m in Sources */,
 				187E67C91E7D79E100722607 /* AppDelegate.m in Sources */,
+				187E68B51E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				187E68A61E7D8F0000722607 /* XWDrawerAnimator.m in Sources */,
 				187E689E1E7D8F0000722607 /* XWCoolAnimator+XWExplode.m in Sources */,
 				187E689F1E7D8F0000722607 /* XWCoolAnimator+XWFold.m in Sources */,

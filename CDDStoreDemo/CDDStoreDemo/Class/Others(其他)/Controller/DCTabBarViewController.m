@@ -7,6 +7,8 @@
 //
 
 #import "DCTabBarViewController.h"
+#import "DCNavigationController.h"
+#import "DCStoreViewController.h"
 
 @interface DCTabBarViewController ()
 
@@ -14,24 +16,49 @@
 
 @implementation DCTabBarViewController
 
+#pragma mark - 设置tabBar字体格式
++(void)load
+{
+    UITabBarItem *titleItem = [UITabBarItem appearance];
+    //正常
+    NSMutableDictionary *normalDict = [NSMutableDictionary dictionary];
+    normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    normalDict[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [titleItem setTitleTextAttributes:normalDict forState:UIControlStateNormal];
+    //选中
+    NSMutableDictionary *selectedDict = [NSMutableDictionary dictionary];
+    selectedDict[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [titleItem setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //添加子控制器
+    [self setUpAllChildView];
+    //添加所有按钮内容
+    [self setUpTabBarBtn];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - 添加所有按钮内容
+-(void)setUpTabBarBtn
+{
+    DCNavigationController *nav = self.childViewControllers[0];
+    nav.tabBarItem.image = [UIImage imageNamed:@"shopping"];
+    nav.tabBarItem.selectedImage = [UIImage imageNamed:@"shopping down"];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - 添加子控制器
+-(void)setUpAllChildView
+{
+    //商城
+    DCStoreViewController *storeVc = [[DCStoreViewController alloc] init];
+    DCNavigationController *nav = [[DCNavigationController alloc]initWithRootViewController:storeVc];
+    [self addChildViewController:nav];
+    
 }
-*/
 
 @end
