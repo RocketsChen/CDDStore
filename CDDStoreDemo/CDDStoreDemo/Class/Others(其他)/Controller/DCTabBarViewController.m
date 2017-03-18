@@ -31,34 +31,31 @@
     [titleItem setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
 }
 
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //添加子控制器
+
     [self setUpAllChildView];
-    //添加所有按钮内容
-    [self setUpTabBarBtn];
     
 }
 
-
-#pragma mark - 添加所有按钮内容
--(void)setUpTabBarBtn
-{
-    DCNavigationController *nav = self.childViewControllers[0];
-    nav.tabBarItem.image = [UIImage imageNamed:@"shopping"];
-    nav.tabBarItem.selectedImage = [UIImage imageNamed:@"shopping down"];
-    
-}
 
 #pragma mark - 添加子控制器
 -(void)setUpAllChildView
 {
     //商城
-    DCStoreViewController *storeVc = [[DCStoreViewController alloc] init];
-    DCNavigationController *nav = [[DCNavigationController alloc]initWithRootViewController:storeVc];
-    [self addChildViewController:nav];
+    DCStoreViewController *indentVc = [[DCStoreViewController alloc]init];
+    [self setUpOneViewController:indentVc WithImage:@"shopping" WithSelImage:@"shopping down" WithTitle:@"商城"];
+}
+
+
+- (void)setUpOneViewController :(UIViewController *)Vc WithImage:(NSString *)image WithSelImage:(NSString *)selImage WithTitle:(NSString *)title{
     
+    DCNavigationController *navC = [[DCNavigationController alloc]initWithRootViewController:Vc];
+    Vc.tabBarItem.image = [UIImage imageNamed:image];
+    Vc.tabBarItem.selectedImage = [UIImage imageNamed:selImage];
+    Vc.tabBarItem.title = title;
+    [self addChildViewController:navC];
 }
 
 @end
