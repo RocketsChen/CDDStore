@@ -1,0 +1,12 @@
+platform :ios, "8.0"
+
+pod "AFNetworking"
+pod "SDWebImage"
+pod "MJExtension"
+pod "MJRefresh"
+pod "Masonry"
+pod "SDCycleScrollView"
+pod "TXScrollLabelView"
+pod "SVProgressHUD"
+
+target :"CDDStoreDemo"
