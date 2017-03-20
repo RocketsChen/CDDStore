@@ -238,7 +238,6 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCStoreItemCell class]) bundle:nil] forCellReuseIdentifier:DCStoreItemCellID];
 }
 
-
 -(id)setSomeOneChangeColor:(UILabel *)label SetSelectArray:(NSArray *)arrray SetChangeColor:(UIColor *)color
 {
     NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc]initWithString:label.text];
