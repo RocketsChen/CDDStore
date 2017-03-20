@@ -12,6 +12,7 @@
 #import "DCStoreItemCell.h"
 
 #import "DCConsts.h"
+#import "DCCustomButton.h"
 #import "UIView+DCExtension.h"
 
 #import <Masonry.h>
@@ -54,7 +55,7 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
-        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 59, 0);
+        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -75,8 +76,9 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 
 }
 
+#pragma mark - 头部轮播图
 - (void)setUpHeaderView : (NSArray *)bannerImages WithAdvertisement : (NSString *)advertise{
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, ScreenHNoNavi * 0.4 + 77)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, ScreenHNoNavi * 0.4 + 15)];
     
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenW, ScreenHNoNavi * 0.4 - 20) imageURLStringsGroup:bannerImages];
     cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
@@ -94,11 +96,22 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     scrollLabelView.backgroundColor = [UIColor whiteColor];
     [cycleScrollView addSubview:scrollLabelView];
     
+    UIView *intervalView = [[UIView alloc] init];
+    intervalView.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.3];
+    [view addSubview:intervalView];
+    
     [scrollLabelView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(cycleScrollView.mas_left);
         make.right.mas_equalTo(cycleScrollView.mas_right);
         [make.top.mas_equalTo(cycleScrollView.mas_top)setOffset:cycleScrollView.dc_height];
         make.height.mas_equalTo(@(30));
+    }];
+    
+    [intervalView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(cycleScrollView.mas_left);
+        make.right.mas_equalTo(cycleScrollView.mas_right);
+        make.bottom.mas_equalTo(view.mas_bottom);
+        make.height.mas_equalTo(@(7));
     }];
     
     UIImageView *image = [[UIImageView alloc]init];
@@ -139,10 +152,61 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     
 }
 
+#pragma mark - 中间筛选视图
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, 50)];
+    
+    [self setUpSeachPhoneView:view];
+    
+    return view;
+}
+
+
+#pragma mark - 商品数
+- (void)setUpSeachPhoneView:(UIView *)view
+{
+    UIView *seachPhoneView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 50)];
+    seachPhoneView.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *showNum_Label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, ScreenW * 0.4, 50)];
+    [seachPhoneView addSubview:showNum_Label];
+    NSString *shopCount = [NSString stringWithFormat:@"%zd",_storeItem.count];
+    showNum_Label.text = [NSString stringWithFormat:@"共筛选出 %@ 件商品",shopCount];
+    showNum_Label.font = [UIFont systemFontOfSize:12];
+    
+    [self setSomeOneChangeColor:showNum_Label SetSelectArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] SetChangeColor:[UIColor orangeColor]];
+    
+    
+    DCCustomButton *customButton = [DCCustomButton buttonWithType:UIButtonTypeCustom];
+    customButton.frame = CGRectMake(ScreenW - 70, 0 , 60 , 50);
+    [customButton setTitle:@"筛选" forState:UIControlStateNormal];
+    [customButton setImage:[UIImage imageNamed:@"custom"] forState:UIControlStateNormal];
+    customButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    [customButton addTarget:self action:@selector(customButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [seachPhoneView addSubview:customButton];
+    
+    [view addSubview:seachPhoneView];
+}
+
+#pragma mark - 筛选点击
+- (void)customButtonClick
+{
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 50;
+}
+
 
 - (void)loadStoreDatas
 {
+    NSArray *storeArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"MallShops.plist" ofType:nil]];
+    _storeItem = [DCStoreItem mj_objectArrayWithKeyValuesArray:storeArray];
     
+    [self.tableView reloadData];
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -159,6 +223,11 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return _storeItem[indexPath.row].cellHeight;
+}
+
 - (void)setUpTab
 {
     self.view.backgroundColor = [UIColor whiteColor];
@@ -168,5 +237,21 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCStoreItemCell class]) bundle:nil] forCellReuseIdentifier:DCStoreItemCellID];
 }
+
+
+-(id)setSomeOneChangeColor:(UILabel *)label SetSelectArray:(NSArray *)arrray SetChangeColor:(UIColor *)color
+{
+    NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc]initWithString:label.text];
+    for (int i = 0; i < label.text.length; i ++) {
+        NSString *a = [label.text substringWithRange:NSMakeRange(i, 1)];
+        NSArray *number = arrray;
+        if ([number containsObject:a]) {
+            [attributeString setAttributes:@{NSForegroundColorAttributeName:color} range:NSMakeRange(i, 1)];
+        }
+    }
+    label.attributedText = attributeString;
+    return label;
+}
+
 
 @end
