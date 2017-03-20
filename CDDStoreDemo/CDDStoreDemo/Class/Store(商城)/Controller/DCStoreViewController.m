@@ -7,6 +7,8 @@
 //
 
 #import "DCStoreViewController.h"
+#import "DCCustomViewController.h"
+#import "DCWebViewController.h"
 
 #import "DCStoreItem.h"
 #import "DCStoreItemCell.h"
@@ -14,6 +16,8 @@
 #import "DCConsts.h"
 #import "DCCustomButton.h"
 #import "UIView+DCExtension.h"
+#import "XWDrawerAnimator.h"
+#import "UIViewController+XWTransition.h"
 
 #import <Masonry.h>
 #import <MJRefresh.h>
@@ -144,12 +148,28 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 
 #pragma mark - 点击图片Bannar跳转
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    __weak typeof(self)weakSelf = self;
+    DCWebViewController *bannerWebVc = [[DCWebViewController alloc] init];
+    if (index == 0) {
+        
+        bannerWebVc.url = @"https://www.baidu.com/";
+        
+    }else if(index == 1){
+        
+        bannerWebVc.url = @"https://github.com/RocketsChen/CDDStore";
+    }
     
+    [weakSelf.navigationController pushViewController:bannerWebVc animated:YES];
 }
 
 #pragma mark - 点击了广告跳转
 - (void)shopAdvertiseClick {
     
+    DCWebViewController *titleWebVc = [[DCWebViewController alloc] init];
+    
+    titleWebVc.url = @"https://www.baidu.com/";
+    
+    [self.navigationController pushViewController:titleWebVc animated:YES];
 }
 
 #pragma mark - 中间筛选视图
@@ -192,8 +212,33 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 #pragma mark - 筛选点击
 - (void)customButtonClick
 {
+    XWDrawerAnimatorDirection direction = XWDrawerAnimatorDirectionRight;
+    CGFloat distance = ScreenW * 0.8; //分享窗口宽度
+    XWDrawerAnimator *animator = [XWDrawerAnimator xw_animatorWithDirection:direction moveDistance:distance];
+    animator.toDuration = 0.5;
+    animator.backDuration = 0.5;
+    animator.parallaxEnable = YES;
+    //点击当前界面返回
+    DCCustomViewController *shopsCustomVc = [[DCCustomViewController alloc] init];
+    shopsCustomVc.sureButtonClickBlock = ^(NSString *attributeViewBrandString,NSString * attributeViewSortString){
+
+        NSLog(@"刷选回调 选择的品牌：%@   展示方式：%@",attributeViewBrandString,attributeViewSortString);
+    };
     
+    [self xw_presentViewController:shopsCustomVc withAnimator:animator];
+    __weak typeof(self)weakSelf = self;
+    [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
+        [weakSelf selfAlterViewback];
+    }];
+
 }
+
+#pragma 退出界面
+- (void)selfAlterViewback{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
