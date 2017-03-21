@@ -16,7 +16,7 @@
     if (_cellHeight) return _cellHeight;
     CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 103];
     CGSize secondttSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 103];
-    _cellHeight = 66 + titleSize.height + secondttSize.height;
+    _cellHeight = 62 + titleSize.height + secondttSize.height;
     
     return _cellHeight;
 }
