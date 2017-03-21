@@ -63,9 +63,21 @@
 		18E8F68A1E80DB8700D6F275 /* DCStoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F67D1E80DB8700D6F275 /* DCStoreItem.m */; };
 		18E8F68B1E80DB8700D6F275 /* DCStoreItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6801E80DB8700D6F275 /* DCStoreItemCell.m */; };
 		18E8F68C1E80DB8700D6F275 /* DCStoreItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8F6811E80DB8700D6F275 /* DCStoreItemCell.xib */; };
-		18E8F6921E80DC3400D6F275 /* DCStoreCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6911E80DC3400D6F275 /* DCStoreCommentViewController.m */; };
-		18E8F6951E80DC3F00D6F275 /* DCStoreMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6941E80DC3F00D6F275 /* DCStoreMainViewController.m */; };
-		18E8F6981E80DC8400D6F275 /* DCStoreIntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6971E80DC8400D6F275 /* DCStoreIntroduceViewController.m */; };
+		18E8F6AC1E81891D00D6F275 /* DCStoreCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6A11E81891D00D6F275 /* DCStoreCommentViewController.m */; };
+		18E8F6AD1E81891D00D6F275 /* DCStoreIntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6A41E81891D00D6F275 /* DCStoreIntroduceViewController.m */; };
+		18E8F6AE1E81891D00D6F275 /* DCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6A71E81891D00D6F275 /* DCBaseViewController.m */; };
+		18E8F6AF1E81891D00D6F275 /* DCStoreItemSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6A91E81891D00D6F275 /* DCStoreItemSelectViewController.m */; };
+		18E8F6B01E81891D00D6F275 /* DCStoreMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6AB1E81891D00D6F275 /* DCStoreMainViewController.m */; };
+		18E8F6B71E8189AA00D6F275 /* DCBaseServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6B51E8189AA00D6F275 /* DCBaseServiceCell.m */; };
+		18E8F6B81E8189AA00D6F275 /* DCBaseServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8F6B61E8189AA00D6F275 /* DCBaseServiceCell.xib */; };
+		18E8F6BB1E818A3E00D6F275 /* DCBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6BA1E818A3E00D6F275 /* DCBaseItem.m */; };
+		18E8F6BD1E818A7100D6F275 /* StoreBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E8F6BC1E818A7100D6F275 /* StoreBase.plist */; };
+		18E8F6C11E818E0600D6F275 /* DCIntroduceSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6BF1E818E0600D6F275 /* DCIntroduceSelectCell.m */; };
+		18E8F6C21E818E0600D6F275 /* DCIntroduceSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8F6C01E818E0600D6F275 /* DCIntroduceSelectCell.xib */; };
+		18E8F6C51E81911C00D6F275 /* DCStoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6C41E81911C00D6F275 /* DCStoreButton.m */; };
+		18E8F6CE1E81924E00D6F275 /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */; };
+		18E8F6CF1E81924E00D6F275 /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */; };
+		18E8F6D01E81924E00D6F275 /* UIView+YKCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */; };
 		18F8C4CA1E7F883700AB2070 /* DCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4C91E7F883700AB2070 /* DCConsts.m */; };
 		18F8C4E01E7F95AA00AB2070 /* MallShops.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C4DF1E7F95AA00AB2070 /* MallShops.plist */; };
 		18F8C4E31E7F966000AB2070 /* DCCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4E21E7F966000AB2070 /* DCCustomButton.m */; };
@@ -195,12 +207,34 @@
 		18E8F67F1E80DB8700D6F275 /* DCStoreItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreItemCell.h; sourceTree = "<group>"; };
 		18E8F6801E80DB8700D6F275 /* DCStoreItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreItemCell.m; sourceTree = "<group>"; };
 		18E8F6811E80DB8700D6F275 /* DCStoreItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCStoreItemCell.xib; sourceTree = "<group>"; };
-		18E8F6901E80DC3400D6F275 /* DCStoreCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreCommentViewController.h; sourceTree = "<group>"; };
-		18E8F6911E80DC3400D6F275 /* DCStoreCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreCommentViewController.m; sourceTree = "<group>"; };
-		18E8F6931E80DC3F00D6F275 /* DCStoreMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreMainViewController.h; sourceTree = "<group>"; };
-		18E8F6941E80DC3F00D6F275 /* DCStoreMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreMainViewController.m; sourceTree = "<group>"; };
-		18E8F6961E80DC8400D6F275 /* DCStoreIntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreIntroduceViewController.h; sourceTree = "<group>"; };
-		18E8F6971E80DC8400D6F275 /* DCStoreIntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreIntroduceViewController.m; sourceTree = "<group>"; };
+		18E8F6A01E81891D00D6F275 /* DCStoreCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreCommentViewController.h; sourceTree = "<group>"; };
+		18E8F6A11E81891D00D6F275 /* DCStoreCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreCommentViewController.m; sourceTree = "<group>"; };
+		18E8F6A31E81891D00D6F275 /* DCStoreIntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreIntroduceViewController.h; sourceTree = "<group>"; };
+		18E8F6A41E81891D00D6F275 /* DCStoreIntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreIntroduceViewController.m; sourceTree = "<group>"; };
+		18E8F6A61E81891D00D6F275 /* DCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBaseViewController.h; sourceTree = "<group>"; };
+		18E8F6A71E81891D00D6F275 /* DCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBaseViewController.m; sourceTree = "<group>"; };
+		18E8F6A81E81891D00D6F275 /* DCStoreItemSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreItemSelectViewController.h; sourceTree = "<group>"; };
+		18E8F6A91E81891D00D6F275 /* DCStoreItemSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreItemSelectViewController.m; sourceTree = "<group>"; };
+		18E8F6AA1E81891D00D6F275 /* DCStoreMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreMainViewController.h; sourceTree = "<group>"; };
+		18E8F6AB1E81891D00D6F275 /* DCStoreMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreMainViewController.m; sourceTree = "<group>"; };
+		18E8F6B41E8189AA00D6F275 /* DCBaseServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBaseServiceCell.h; sourceTree = "<group>"; };
+		18E8F6B51E8189AA00D6F275 /* DCBaseServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBaseServiceCell.m; sourceTree = "<group>"; };
+		18E8F6B61E8189AA00D6F275 /* DCBaseServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCBaseServiceCell.xib; sourceTree = "<group>"; };
+		18E8F6B91E818A3E00D6F275 /* DCBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBaseItem.h; sourceTree = "<group>"; };
+		18E8F6BA1E818A3E00D6F275 /* DCBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBaseItem.m; sourceTree = "<group>"; };
+		18E8F6BC1E818A7100D6F275 /* StoreBase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoreBase.plist; sourceTree = "<group>"; };
+		18E8F6BE1E818E0600D6F275 /* DCIntroduceSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntroduceSelectCell.h; sourceTree = "<group>"; };
+		18E8F6BF1E818E0600D6F275 /* DCIntroduceSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntroduceSelectCell.m; sourceTree = "<group>"; };
+		18E8F6C01E818E0600D6F275 /* DCIntroduceSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCIntroduceSelectCell.xib; sourceTree = "<group>"; };
+		18E8F6C31E81911C00D6F275 /* DCStoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreButton.h; sourceTree = "<group>"; };
+		18E8F6C41E81911C00D6F275 /* DCStoreButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreButton.m; sourceTree = "<group>"; };
+		18E8F6C71E81924E00D6F275 /* CAAnimation+WAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+WAnimation.h"; sourceTree = "<group>"; };
+		18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+WAnimation.m"; sourceTree = "<group>"; };
+		18E8F6C91E81924E00D6F275 /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
+		18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
+		18E8F6CB1E81924E00D6F275 /* UIView+YKCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YKCExtension.h"; sourceTree = "<group>"; };
+		18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YKCExtension.m"; sourceTree = "<group>"; };
+		18E8F6CD1E81924E00D6F275 /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
 		18F8C4C81E7F883700AB2070 /* DCConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConsts.h; sourceTree = "<group>"; };
 		18F8C4C91E7F883700AB2070 /* DCConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCConsts.m; sourceTree = "<group>"; };
 		18F8C4DF1E7F95AA00AB2070 /* MallShops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MallShops.plist; sourceTree = "<group>"; };
@@ -355,6 +389,7 @@
 		187E67C31E7D79E100722607 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18E8F6C61E81924E00D6F275 /* StoreCar */,
 				187E68531E7D8F0000722607 /* XWTransition */,
 			);
 			path = Tools;
@@ -367,6 +402,8 @@
 				187E67D41E7D855600722607 /* DCShopItemView.m */,
 				18F8C4E11E7F966000AB2070 /* DCCustomButton.h */,
 				18F8C4E21E7F966000AB2070 /* DCCustomButton.m */,
+				18E8F6C31E81911C00D6F275 /* DCStoreButton.h */,
+				18E8F6C41E81911C00D6F275 /* DCStoreButton.m */,
 				18E8F6631E80D7D300D6F275 /* DCNavigationTabBar.h */,
 				18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */,
 			);
@@ -385,6 +422,7 @@
 		187E67CA1E7D83ED00722607 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				18E8F6BC1E818A7100D6F275 /* StoreBase.plist */,
 				18F8C4DF1E7F95AA00AB2070 /* MallShops.plist */,
 				187E67CC1E7D83ED00722607 /* ShopItem_01.plist */,
 				187E67CD1E7D83ED00722607 /* ShopItem_02.plist */,
@@ -534,12 +572,9 @@
 		18E8F6671E80DB8700D6F275 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18E8F6931E80DC3F00D6F275 /* DCStoreMainViewController.h */,
-				18E8F6941E80DC3F00D6F275 /* DCStoreMainViewController.m */,
-				18E8F6961E80DC8400D6F275 /* DCStoreIntroduceViewController.h */,
-				18E8F6971E80DC8400D6F275 /* DCStoreIntroduceViewController.m */,
-				18E8F6901E80DC3400D6F275 /* DCStoreCommentViewController.h */,
-				18E8F6911E80DC3400D6F275 /* DCStoreCommentViewController.m */,
+				18E8F6A51E81891D00D6F275 /* Shops(商品) */,
+				18E8F69F1E81891D00D6F275 /* Comment(评论) */,
+				18E8F6A21E81891D00D6F275 /* Detail(详情) */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -553,6 +588,8 @@
 				18E8F66C1E80DB8700D6F275 /* DCStore_list.m */,
 				18E8F66D1E80DB8700D6F275 /* DCStoreAttribute.h */,
 				18E8F66E1E80DB8700D6F275 /* DCStoreAttribute.m */,
+				18E8F6B91E818A3E00D6F275 /* DCBaseItem.h */,
+				18E8F6BA1E818A3E00D6F275 /* DCBaseItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -560,6 +597,12 @@
 		18E8F66F1E80DB8700D6F275 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18E8F6B41E8189AA00D6F275 /* DCBaseServiceCell.h */,
+				18E8F6B51E8189AA00D6F275 /* DCBaseServiceCell.m */,
+				18E8F6B61E8189AA00D6F275 /* DCBaseServiceCell.xib */,
+				18E8F6BE1E818E0600D6F275 /* DCIntroduceSelectCell.h */,
+				18E8F6BF1E818E0600D6F275 /* DCIntroduceSelectCell.m */,
+				18E8F6C01E818E0600D6F275 /* DCIntroduceSelectCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,6 +650,51 @@
 				18E8F6811E80DB8700D6F275 /* DCStoreItemCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18E8F69F1E81891D00D6F275 /* Comment(评论) */ = {
+			isa = PBXGroup;
+			children = (
+				18E8F6A01E81891D00D6F275 /* DCStoreCommentViewController.h */,
+				18E8F6A11E81891D00D6F275 /* DCStoreCommentViewController.m */,
+			);
+			path = "Comment(评论)";
+			sourceTree = "<group>";
+		};
+		18E8F6A21E81891D00D6F275 /* Detail(详情) */ = {
+			isa = PBXGroup;
+			children = (
+				18E8F6A31E81891D00D6F275 /* DCStoreIntroduceViewController.h */,
+				18E8F6A41E81891D00D6F275 /* DCStoreIntroduceViewController.m */,
+			);
+			path = "Detail(详情)";
+			sourceTree = "<group>";
+		};
+		18E8F6A51E81891D00D6F275 /* Shops(商品) */ = {
+			isa = PBXGroup;
+			children = (
+				18E8F6AA1E81891D00D6F275 /* DCStoreMainViewController.h */,
+				18E8F6AB1E81891D00D6F275 /* DCStoreMainViewController.m */,
+				18E8F6A61E81891D00D6F275 /* DCBaseViewController.h */,
+				18E8F6A71E81891D00D6F275 /* DCBaseViewController.m */,
+				18E8F6A81E81891D00D6F275 /* DCStoreItemSelectViewController.h */,
+				18E8F6A91E81891D00D6F275 /* DCStoreItemSelectViewController.m */,
+			);
+			path = "Shops(商品)";
+			sourceTree = "<group>";
+		};
+		18E8F6C61E81924E00D6F275 /* StoreCar */ = {
+			isa = PBXGroup;
+			children = (
+				18E8F6C71E81924E00D6F275 /* CAAnimation+WAnimation.h */,
+				18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */,
+				18E8F6C91E81924E00D6F275 /* UIView+WZLBadge.h */,
+				18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */,
+				18E8F6CB1E81924E00D6F275 /* UIView+YKCExtension.h */,
+				18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */,
+				18E8F6CD1E81924E00D6F275 /* WZLBadgeProtocol.h */,
+			);
+			path = StoreCar;
 			sourceTree = "<group>";
 		};
 		74A1EBEB1AB5059931285F7F /* Pods */ = {
@@ -740,14 +828,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				187E67D01E7D83ED00722607 /* ShopItem_01.plist in Resources */,
+				18E8F6BD1E818A7100D6F275 /* StoreBase.plist in Resources */,
 				18E8F68C1E80DB8700D6F275 /* DCStoreItemCell.xib in Resources */,
 				187E689C1E7D8F0000722607 /* restrictedshine.tiff in Resources */,
 				18F8C4E01E7F95AA00AB2070 /* MallShops.plist in Resources */,
 				187E689A1E7D8F0000722607 /* line.png in Resources */,
+				18E8F6C21E818E0600D6F275 /* DCIntroduceSelectCell.xib in Resources */,
 				187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */,
 				187E689B1E7D8F0000722607 /* mask.jpg in Resources */,
 				18E8F6891E80DB8700D6F275 /* DCWebViewController.xib in Resources */,
 				187E67D21E7D83ED00722607 /* ShopItem_03.plist in Resources */,
+				18E8F6B81E8189AA00D6F275 /* DCBaseServiceCell.xib in Resources */,
 				187E67961E7D793100722607 /* Assets.xcassets in Resources */,
 				187E67D11E7D83ED00722607 /* ShopItem_02.plist in Resources */,
 			);
@@ -823,21 +914,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				187E68971E7D8F0000722607 /* UIViewController+XWTransition.m in Sources */,
+				18E8F6CE1E81924E00D6F275 /* CAAnimation+WAnimation.m in Sources */,
+				18E8F6B71E8189AA00D6F275 /* DCBaseServiceCell.m in Sources */,
 				18E8F6831E80DB8700D6F275 /* DCStore_list.m in Sources */,
 				187E678B1E7D793100722607 /* main.m in Sources */,
 				187E683E1E7D8D6400722607 /* DCTabBarViewController.m in Sources */,
 				18E8F6881E80DB8700D6F275 /* DCWebViewController.m in Sources */,
 				18E8F6851E80DB8700D6F275 /* DCCustomViewController.m in Sources */,
+				18E8F6AE1E81891D00D6F275 /* DCBaseViewController.m in Sources */,
+				18E8F6AD1E81891D00D6F275 /* DCStoreIntroduceViewController.m in Sources */,
 				18E8F6821E80DB8700D6F275 /* DCStore_attr.m in Sources */,
+				18E8F6C11E818E0600D6F275 /* DCIntroduceSelectCell.m in Sources */,
 				187E689D1E7D8F0000722607 /* XWCircleSpreadAnimator.m in Sources */,
 				18F8C4CA1E7F883700AB2070 /* DCConsts.m in Sources */,
-				18E8F6981E80DC8400D6F275 /* DCStoreIntroduceViewController.m in Sources */,
 				187E683B1E7D8D3900722607 /* DCNavigationController.m in Sources */,
 				187E68A51E7D8F0000722607 /* XWCoolAnimator.m in Sources */,
 				187E68961E7D8F0000722607 /* UIView+Snapshot.m in Sources */,
 				18E8F6651E80D7D300D6F275 /* DCNavigationTabBar.m in Sources */,
 				187E68A31E7D8F0000722607 /* XWCoolAnimator+XWPortal.m in Sources */,
 				187E68981E7D8F0000722607 /* XWInteractiveTransition.m in Sources */,
+				18E8F6B01E81891D00D6F275 /* DCStoreMainViewController.m in Sources */,
 				18E8F6841E80DB8700D6F275 /* DCStoreAttribute.m in Sources */,
 				187E68A41E7D8F0000722607 /* XWCoolAnimator+XWScanning.m in Sources */,
 				187E68991E7D8F0000722607 /* XWTransitionAnimator.m in Sources */,
@@ -845,6 +941,7 @@
 				187E68A71E7D8F0000722607 /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				18E8F68A1E80DB8700D6F275 /* DCStoreItem.m in Sources */,
 				18E8F68B1E80DB8700D6F275 /* DCStoreItemCell.m in Sources */,
+				18E8F6CF1E81924E00D6F275 /* UIView+WZLBadge.m in Sources */,
 				187E68AA1E7D8F0000722607 /* XWFilterAnimator+XWFlash.m in Sources */,
 				187E68AB1E7D8F0000722607 /* XWFilterAnimator+XWMask.m in Sources */,
 				187E67C91E7D79E100722607 /* AppDelegate.m in Sources */,
@@ -852,12 +949,11 @@
 				187E68A61E7D8F0000722607 /* XWDrawerAnimator.m in Sources */,
 				187E689E1E7D8F0000722607 /* XWCoolAnimator+XWExplode.m in Sources */,
 				187E689F1E7D8F0000722607 /* XWCoolAnimator+XWFold.m in Sources */,
-				18E8F6951E80DC3F00D6F275 /* DCStoreMainViewController.m in Sources */,
 				187E68B21E7D8F0000722607 /* XWMagicMoveAnimator.m in Sources */,
-				18E8F6921E80DC3400D6F275 /* DCStoreCommentViewController.m in Sources */,
 				187E67D81E7D871600722607 /* UIView+DCExtension.m in Sources */,
 				18E8F6871E80DB8700D6F275 /* DCStoreViewController.m in Sources */,
 				187E68A11E7D8F0000722607 /* XWCoolAnimator+XWMiddlePageFlip.m in Sources */,
+				18E8F6AC1E81891D00D6F275 /* DCStoreCommentViewController.m in Sources */,
 				187E68AE1E7D8F0000722607 /* XWFilterAnimator+XWRipple.m in Sources */,
 				187E68A21E7D8F0000722607 /* XWCoolAnimator+XWPageFlip.m in Sources */,
 				18F8C4E31E7F966000AB2070 /* DCCustomButton.m in Sources */,
@@ -867,9 +963,13 @@
 				187E68951E7D8F0000722607 /* UINavigationController+XWTransition.m in Sources */,
 				187E68AC1E7D8F0000722607 /* XWFilterAnimator+XWMod.m in Sources */,
 				187E68A01E7D8F0000722607 /* XWCoolAnimator+XWLines.m in Sources */,
+				18E8F6D01E81924E00D6F275 /* UIView+YKCExtension.m in Sources */,
 				187E68AD1E7D8F0000722607 /* XWFilterAnimator+XWPageCurl.m in Sources */,
+				18E8F6BB1E818A3E00D6F275 /* DCBaseItem.m in Sources */,
 				187E68B01E7D8F0000722607 /* XWFilterAnimator.m in Sources */,
 				187E68AF1E7D8F0000722607 /* XWFilterAnimator+XWSwipe.m in Sources */,
+				18E8F6AF1E81891D00D6F275 /* DCStoreItemSelectViewController.m in Sources */,
+				18E8F6C51E81911C00D6F275 /* DCStoreButton.m in Sources */,
 				187E68A81E7D8F0000722607 /* XWFilterAnimator+XWBoxBlur.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
