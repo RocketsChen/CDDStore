@@ -86,7 +86,7 @@
     NSString *title = btn.titleLabel.text;
     NSLog(@"%@",title);
     if ([view isEqual:self.attributeViewBrand]){
-       NSArray *brandArray = @[@"苹果",@"三星",@"华为",@"小米",@"魅族",@"努比亚"];
+       NSArray *brandArray = @[@"苹果",@"三星",@"华为",@"小米",@"魅族",@"努比亚",@"OPPO"];
         for (NSInteger i = 0; i<brandArray.count; i++) {
             if ([brandArray[i] isEqualToString:title]) {
                 NSLog(@"%zd  %@",i , brandArray[i]);
