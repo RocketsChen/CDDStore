@@ -62,6 +62,8 @@
     if (!_subViewControllers) {
         //创建子控制器
         DCStoreMainViewController *storeMainVc = [[DCStoreMainViewController alloc] init];
+        storeMainVc.goodsid = _goodsid;
+        storeMainVc.goodspics = _goodspics;
         
         DCStoreIntroduceViewController *storeIntroduceVc = [[DCStoreIntroduceViewController alloc] init];
         

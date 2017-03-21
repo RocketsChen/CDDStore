@@ -278,6 +278,10 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DCStoreDetailViewController *dcStoreDetailVc = [[DCStoreDetailViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    dcStoreDetailVc.goodsid = _storeItem[indexPath.row].goodsid;
+    dcStoreDetailVc.goodspics = _storeItem[indexPath.row].goodspics;
+    dcStoreDetailVc.stockStr = _storeItem[indexPath.row].stock;
+    dcStoreDetailVc.shopPrice = _storeItem[indexPath.row].price;
     [self.navigationController pushViewController:dcStoreDetailVc animated:YES];
 }
 

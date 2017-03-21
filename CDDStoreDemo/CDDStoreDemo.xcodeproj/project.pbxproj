@@ -78,6 +78,8 @@
 		18E8F6CE1E81924E00D6F275 /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */; };
 		18E8F6CF1E81924E00D6F275 /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */; };
 		18E8F6D01E81924E00D6F275 /* UIView+YKCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */; };
+		18E8F6D41E819D1200D6F275 /* DCAdExCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6D21E819D1200D6F275 /* DCAdExCell.m */; };
+		18E8F6D51E819D1200D6F275 /* DCAdExCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8F6D31E819D1200D6F275 /* DCAdExCell.xib */; };
 		18F8C4CA1E7F883700AB2070 /* DCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4C91E7F883700AB2070 /* DCConsts.m */; };
 		18F8C4E01E7F95AA00AB2070 /* MallShops.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C4DF1E7F95AA00AB2070 /* MallShops.plist */; };
 		18F8C4E31E7F966000AB2070 /* DCCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4E21E7F966000AB2070 /* DCCustomButton.m */; };
@@ -235,6 +237,9 @@
 		18E8F6CB1E81924E00D6F275 /* UIView+YKCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YKCExtension.h"; sourceTree = "<group>"; };
 		18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YKCExtension.m"; sourceTree = "<group>"; };
 		18E8F6CD1E81924E00D6F275 /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
+		18E8F6D11E819D1200D6F275 /* DCAdExCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAdExCell.h; sourceTree = "<group>"; };
+		18E8F6D21E819D1200D6F275 /* DCAdExCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAdExCell.m; sourceTree = "<group>"; };
+		18E8F6D31E819D1200D6F275 /* DCAdExCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCAdExCell.xib; sourceTree = "<group>"; };
 		18F8C4C81E7F883700AB2070 /* DCConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConsts.h; sourceTree = "<group>"; };
 		18F8C4C91E7F883700AB2070 /* DCConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCConsts.m; sourceTree = "<group>"; };
 		18F8C4DF1E7F95AA00AB2070 /* MallShops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MallShops.plist; sourceTree = "<group>"; };
@@ -597,6 +602,9 @@
 		18E8F66F1E80DB8700D6F275 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18E8F6D11E819D1200D6F275 /* DCAdExCell.h */,
+				18E8F6D21E819D1200D6F275 /* DCAdExCell.m */,
+				18E8F6D31E819D1200D6F275 /* DCAdExCell.xib */,
 				18E8F6B41E8189AA00D6F275 /* DCBaseServiceCell.h */,
 				18E8F6B51E8189AA00D6F275 /* DCBaseServiceCell.m */,
 				18E8F6B61E8189AA00D6F275 /* DCBaseServiceCell.xib */,
@@ -832,6 +840,7 @@
 				18E8F68C1E80DB8700D6F275 /* DCStoreItemCell.xib in Resources */,
 				187E689C1E7D8F0000722607 /* restrictedshine.tiff in Resources */,
 				18F8C4E01E7F95AA00AB2070 /* MallShops.plist in Resources */,
+				18E8F6D51E819D1200D6F275 /* DCAdExCell.xib in Resources */,
 				187E689A1E7D8F0000722607 /* line.png in Resources */,
 				18E8F6C21E818E0600D6F275 /* DCIntroduceSelectCell.xib in Resources */,
 				187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */,
@@ -940,6 +949,7 @@
 				187E67D51E7D855600722607 /* DCShopItemView.m in Sources */,
 				187E68A71E7D8F0000722607 /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				18E8F68A1E80DB8700D6F275 /* DCStoreItem.m in Sources */,
+				18E8F6D41E819D1200D6F275 /* DCAdExCell.m in Sources */,
 				18E8F68B1E80DB8700D6F275 /* DCStoreItemCell.m in Sources */,
 				18E8F6CF1E81924E00D6F275 /* UIView+WZLBadge.m in Sources */,
 				187E68AA1E7D8F0000722607 /* XWFilterAnimator+XWFlash.m in Sources */,
