@@ -7,6 +7,11 @@
 //
 
 #import "DCStoreDetailViewController.h"
+
+#import "DCStoreMainViewController.h"
+#import "DCStoreIntroduceViewController.h"
+#import "DCStoreCommentViewController.h"
+
 #import "DCNavigationTabBar.h"
 
 @interface DCStoreDetailViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource>
@@ -39,16 +44,13 @@
 {
     if (!_subViewControllers) {
         //创建子控制器
-        UIViewController *oneVc = [[UIViewController alloc] init];
-        oneVc.view.backgroundColor = [UIColor orangeColor];
+        DCStoreMainViewController *storeMainVc = [[DCStoreMainViewController alloc] init];
         
-        UIViewController *twoVc = [[UIViewController alloc] init];
-        twoVc.view.backgroundColor = [UIColor lightGrayColor];
+        DCStoreIntroduceViewController *storeIntroduceVc = [[DCStoreIntroduceViewController alloc] init];
         
-        UIViewController *threeVc = [[UIViewController alloc] init];
-        threeVc.view.backgroundColor = [UIColor purpleColor];
+        DCStoreCommentViewController *storeCommentVc = [[DCStoreCommentViewController alloc] init];
         
-        self.subViewControllers = @[oneVc,twoVc,threeVc];
+        self.subViewControllers = @[storeMainVc,storeIntroduceVc,storeCommentVc];
     }
     return _subViewControllers;
 }
