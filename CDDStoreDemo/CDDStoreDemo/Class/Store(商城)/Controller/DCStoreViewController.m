@@ -9,6 +9,7 @@
 #import "DCStoreViewController.h"
 #import "DCCustomViewController.h"
 #import "DCWebViewController.h"
+#import "DCStoreDetailViewController.h"
 
 #import "DCStoreItem.h"
 #import "DCStoreItemCell.h"
@@ -272,6 +273,14 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 {
     return _storeItem[indexPath.row].cellHeight;
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DCStoreDetailViewController *dcStoreDetailVc = [[DCStoreDetailViewController alloc] init];
+    [self.navigationController pushViewController:dcStoreDetailVc animated:YES];
+}
+
 
 - (void)setUpTab
 {

@@ -55,6 +55,8 @@
 		18AEBA991E7FD8090069936B /* DCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBA971E7FD8090069936B /* DCWebViewController.m */; };
 		18AEBA9A1E7FD8090069936B /* DCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AEBA981E7FD8090069936B /* DCWebViewController.xib */; };
 		18AEBA9D1E7FD9310069936B /* DCCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBA9C1E7FD9310069936B /* DCCustomViewController.m */; };
+		18E8F6621E80D75C00D6F275 /* DCStoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6611E80D75C00D6F275 /* DCStoreDetailViewController.m */; };
+		18E8F6651E80D7D300D6F275 /* DCNavigationTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */; };
 		18F8C4C71E7F87AE00AB2070 /* DCStoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4C61E7F87AE00AB2070 /* DCStoreItem.m */; };
 		18F8C4CA1E7F883700AB2070 /* DCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4C91E7F883700AB2070 /* DCConsts.m */; };
 		18F8C4CD1E7F89C900AB2070 /* DCStoreAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4CC1E7F89C900AB2070 /* DCStoreAttribute.m */; };
@@ -175,6 +177,10 @@
 		18AEBA981E7FD8090069936B /* DCWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCWebViewController.xib; sourceTree = "<group>"; };
 		18AEBA9B1E7FD9310069936B /* DCCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCustomViewController.h; sourceTree = "<group>"; };
 		18AEBA9C1E7FD9310069936B /* DCCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCustomViewController.m; sourceTree = "<group>"; };
+		18E8F6601E80D75C00D6F275 /* DCStoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreDetailViewController.h; sourceTree = "<group>"; };
+		18E8F6611E80D75C00D6F275 /* DCStoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreDetailViewController.m; sourceTree = "<group>"; };
+		18E8F6631E80D7D300D6F275 /* DCNavigationTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNavigationTabBar.h; sourceTree = "<group>"; };
+		18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNavigationTabBar.m; sourceTree = "<group>"; };
 		18F8C4C51E7F87AE00AB2070 /* DCStoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreItem.h; sourceTree = "<group>"; };
 		18F8C4C61E7F87AE00AB2070 /* DCStoreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreItem.m; sourceTree = "<group>"; };
 		18F8C4C81E7F883700AB2070 /* DCConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConsts.h; sourceTree = "<group>"; };
@@ -352,6 +358,8 @@
 				187E67D41E7D855600722607 /* DCShopItemView.m */,
 				18F8C4E11E7F966000AB2070 /* DCCustomButton.h */,
 				18F8C4E21E7F966000AB2070 /* DCCustomButton.m */,
+				18E8F6631E80D7D300D6F275 /* DCNavigationTabBar.h */,
+				18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +384,8 @@
 				18AEBA981E7FD8090069936B /* DCWebViewController.xib */,
 				18AEBA9B1E7FD9310069936B /* DCCustomViewController.h */,
 				18AEBA9C1E7FD9310069936B /* DCCustomViewController.m */,
+				18E8F6601E80D75C00D6F275 /* DCStoreDetailViewController.h */,
+				18E8F6611E80D75C00D6F275 /* DCStoreDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -765,6 +775,7 @@
 				187E683B1E7D8D3900722607 /* DCNavigationController.m in Sources */,
 				187E68A51E7D8F0000722607 /* XWCoolAnimator.m in Sources */,
 				187E68961E7D8F0000722607 /* UIView+Snapshot.m in Sources */,
+				18E8F6651E80D7D300D6F275 /* DCNavigationTabBar.m in Sources */,
 				187E68A31E7D8F0000722607 /* XWCoolAnimator+XWPortal.m in Sources */,
 				187E68981E7D8F0000722607 /* XWInteractiveTransition.m in Sources */,
 				18AEBA991E7FD8090069936B /* DCWebViewController.m in Sources */,
@@ -801,6 +812,7 @@
 				187E68B01E7D8F0000722607 /* XWFilterAnimator.m in Sources */,
 				187E68AF1E7D8F0000722607 /* XWFilterAnimator+XWSwipe.m in Sources */,
 				187E68A81E7D8F0000722607 /* XWFilterAnimator+XWBoxBlur.m in Sources */,
+				18E8F6621E80D75C00D6F275 /* DCStoreDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
