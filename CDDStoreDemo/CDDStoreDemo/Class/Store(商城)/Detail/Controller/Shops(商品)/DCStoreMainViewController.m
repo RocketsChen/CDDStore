@@ -192,8 +192,8 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
 {
     if (indexPath.row == 0) {
         DCAdExCell *cell = [tableView dequeueReusableCellWithIdentifier:DCAdExCellID forIndexPath:indexPath];
-        cell.expressageLabel.text = [NSString stringWithFormat:@"快递费 %@",_expressage];
-        cell.saleCountLabel.text = [NSString stringWithFormat:@"销售 %@件",_saleCount] ;
+        cell.expressageLabel.text = [NSString stringWithFormat:@"快递费: %@",_expressage];
+        cell.saleCountLabel.text = [NSString stringWithFormat:@"销售 %@ 笔",_saleCount] ;
         cell.siteLabel.text = _site;
         return cell;
         
