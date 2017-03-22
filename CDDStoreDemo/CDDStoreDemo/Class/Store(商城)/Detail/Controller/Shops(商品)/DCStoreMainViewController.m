@@ -254,8 +254,8 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     DCStoreItemSelectViewController *itemVc = [[DCStoreItemSelectViewController alloc] init];
     itemVc.stock = _stockStr;
     itemVc.goodsid = _goodsid;
-    itemVc.money = @"12312";
-    itemVc.iconImage = @"shopImage01";
+    itemVc.money = _shopPrice;
+    itemVc.iconImage = _goodspics;
     [self xw_presentViewController:itemVc withAnimator:animator];
     __weak typeof(self)weakSelf = self;
     [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
