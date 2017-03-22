@@ -125,13 +125,12 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     [shopTitleView addSubview:verticalPartingLine];
     
     DCStoreButton *shareButton = [DCStoreButton buttonWithType:UIButtonTypeCustom];
+    [shareButton setImage:[UIImage imageNamed:@"shareview"] forState:UIControlStateNormal];
+    [shareButton setTitle:@"分享" forState:UIControlStateNormal];
     shareButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [shareButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [shopTitleView addSubview:shareButton];
-    
-    UIButton *bigShareButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [shopTitleView addSubview:bigShareButton];
-    
+
     UILabel *showMoneyLabel = [[UILabel alloc] init];
     showMoneyLabel.font = [UIFont systemFontOfSize:20];
     showMoneyLabel.textColor = [UIColor redColor];
@@ -149,7 +148,7 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     
     [showShopLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         [make.left.mas_equalTo(shopTitleView)setOffset:10];
-        [make.right.mas_equalTo(shareButton)setOffset:-10];
+        [make.right.mas_equalTo(shareButton)setOffset:-20];
         [make.top.mas_equalTo(shopTitleView)setOffset:0];
         make.height.mas_equalTo(@(50));
     }];
@@ -161,17 +160,10 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     }];
     
     [shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        [make.right.mas_equalTo(shopTitleView)setOffset:-(5 + 22)];
-        make.top.mas_equalTo(showShopLabel);
+        [make.right.mas_equalTo(view)setOffset:-10];
+        [make.top.mas_equalTo(showShopLabel)setOffset:5];
         make.height.mas_equalTo(@(22));
         make.width.mas_equalTo(@(22));
-    }];
-
-    [bigShareButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        [make.right.mas_equalTo(shopTitleView)setOffset:-10];
-        [make.top.mas_equalTo(showShopLabel)setOffset:10];
-        make.height.mas_equalTo(@(50));
-        make.width.mas_equalTo(@(50));
     }];
     
     self.tableView.tableHeaderView = view;
