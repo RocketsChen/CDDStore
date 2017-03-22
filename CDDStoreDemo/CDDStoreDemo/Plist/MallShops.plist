@@ -3,6 +3,12 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>12</string>
 		<key>add_time</key>
 		<integer>1484751612000</integer>
 		<key>categoryid</key>
@@ -23,6 +29,12 @@
 		<integer>12</integer>
 	</dict>
 	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州 </string>
+		<key>expressage</key>
+		<string>30</string>
+		<key>sale_count</key>
+		<string>123</string>
 		<key>add_time</key>
 		<integer>1486535939000</integer>
 		<key>categoryid</key>
@@ -43,6 +55,12 @@
 		<integer>20</integer>
 	</dict>
 	<dict>
+		<key>goods_address</key>
+		<string>江苏 盐城</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>sale_count</key>
+		<string>366</string>
 		<key>add_time</key>
 		<integer>1486636624000</integer>
 		<key>categoryid</key>

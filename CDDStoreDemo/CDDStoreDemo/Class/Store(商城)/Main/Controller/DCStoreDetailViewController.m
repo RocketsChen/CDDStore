@@ -64,6 +64,11 @@
         DCStoreMainViewController *storeMainVc = [[DCStoreMainViewController alloc] init];
         storeMainVc.goodsid = _goodsid;
         storeMainVc.goodspics = _goodspics;
+        storeMainVc.goods_title = _goods_title;
+        storeMainVc.shopPrice = _shopPrice;
+        storeMainVc.expressage = _expressage;
+        storeMainVc.saleCount = _saleCount;
+        storeMainVc.site = _site;
         
         DCStoreIntroduceViewController *storeIntroduceVc = [[DCStoreIntroduceViewController alloc] init];
         

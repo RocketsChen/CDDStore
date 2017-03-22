@@ -28,6 +28,12 @@
 /** 商品头像 */
 @property (nonatomic, copy) NSString *goodspics;
 
+/* 商品快递费 */
+@property (copy, nonatomic) NSString *expressage;
+/* 商品已售出量 */
+@property (copy, nonatomic) NSString *sale_count;
+/* 商品地点 */
+@property (copy, nonatomic) NSString *goods_address;
 
 /** cell行高 */
 @property (nonatomic , assign) CGFloat cellHeight;

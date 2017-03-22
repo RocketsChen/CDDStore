@@ -14,23 +14,19 @@
 @property (strong , nonatomic)NSString *goodsid;
 /* 商品图片*/
 @property (strong , nonatomic)NSString *goodspics;
-/* 商品标题 */
-@property (weak ,nonatomic) UILabel *showShopLabel;
-/* 商品价格 */
-@property (weak ,nonatomic) UILabel *showMoneyLabel;
-/* 商品快递费 */
-@property (weak, nonatomic) UILabel *expressageLabel;
-/* 商品已售出量 */
-@property (weak, nonatomic) UILabel *saleCountLabel;
-/* 商品地点 */
-@property (weak, nonatomic) UILabel *siteLabel;
-/* 商品第二介绍 */
-@property (weak, nonatomic) UILabel *secondtitleLabel;
 /* 商品库存*/
 @property (weak, nonatomic) NSString *stockStr;
-
-/* 商品详情介绍*/
-@property (weak, nonatomic) NSString *introduce;
-
+/* 商品价格 */
+@property (weak ,nonatomic) NSString *shopPrice;
+/* 商品介绍 */
+@property (weak ,nonatomic) NSString *introduce;
+/* 商品标题 */
+@property (weak ,nonatomic) NSString *goods_title;
+/* 商品快递费 */
+@property (weak, nonatomic) NSString *expressage;
+/* 商品已售出量 */
+@property (weak, nonatomic) NSString *saleCount;
+/* 商品地点 */
+@property (weak, nonatomic) NSString *site;
 
 @end

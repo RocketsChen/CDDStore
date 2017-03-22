@@ -282,6 +282,12 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     dcStoreDetailVc.goodspics = _storeItem[indexPath.row].goodspics;
     dcStoreDetailVc.stockStr = _storeItem[indexPath.row].stock;
     dcStoreDetailVc.shopPrice = _storeItem[indexPath.row].price;
+    dcStoreDetailVc.goods_title = _storeItem[indexPath.row].goods_title;
+    dcStoreDetailVc.expressage = _storeItem[indexPath.row].expressage;
+    dcStoreDetailVc.saleCount = _storeItem[indexPath.row].sale_count;
+    
+    dcStoreDetailVc.site = _storeItem[indexPath.row].goods_address;
+    
     [self.navigationController pushViewController:dcStoreDetailVc animated:YES];
 }
 

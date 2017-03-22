@@ -29,7 +29,18 @@
 @interface DCStoreMainViewController ()<UITableViewDelegate , UITableViewDataSource,SDCycleScrollViewDelegate>
 
 @property (nonatomic , strong) UITableView *tableView;
-
+/* 商品标题 */
+@property (weak ,nonatomic) UILabel *showShopLabel;
+/* 商品价格 */
+@property (weak ,nonatomic) UILabel *showMoneyLabel;
+/* 商品快递费 */
+@property (weak, nonatomic) UILabel *expressageLabel;
+/* 商品已售出量 */
+@property (weak, nonatomic) UILabel *saleCountLabel;
+/* 商品地点 */
+@property (weak, nonatomic) UILabel *siteLabel;
+/* 商品第二介绍 */
+@property (weak, nonatomic) UILabel *secondtitleLabel;
 
 @end
 
@@ -102,6 +113,7 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     
     UILabel *showShopLabel = [[UILabel alloc] init];
     [shopTitleView addSubview:showShopLabel];
+    showShopLabel.text = _goods_title;
     showShopLabel.font = [UIFont systemFontOfSize:16];
     showShopLabel.numberOfLines = 0;
     [view addSubview:shopTitleView];
@@ -123,26 +135,28 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     UILabel *showMoneyLabel = [[UILabel alloc] init];
     showMoneyLabel.font = [UIFont systemFontOfSize:20];
     showMoneyLabel.textColor = [UIColor redColor];
+    showMoneyLabel.text = [NSString stringWithFormat:@"¥ %@",_shopPrice];
     [shopTitleView addSubview:showMoneyLabel];
     _showMoneyLabel = showMoneyLabel;
     
+    shopTitleView.backgroundColor = [UIColor whiteColor];
     [shopTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(view);
         make.width.mas_equalTo(view);
-        make.bottom.mas_equalTo(view);
-        make.height.mas_equalTo(@(50));
+        [make.top.mas_equalTo(cycleScrollView.mas_bottom)setOffset:10];
+        make.height.mas_equalTo(@(70));
     }];
     
     [showShopLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         [make.left.mas_equalTo(shopTitleView)setOffset:10];
         [make.right.mas_equalTo(shareButton)setOffset:-10];
-        [make.top.mas_equalTo(shopTitleView)setOffset:10];
+        [make.top.mas_equalTo(shopTitleView)setOffset:0];
         make.height.mas_equalTo(@(50));
     }];
     
     [showMoneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(showShopLabel);
-        [make.top.mas_equalTo(showShopLabel)setOffset: - 10];
+        [make.top.mas_equalTo(showShopLabel.mas_bottom)setOffset:0];
         make.width.mas_equalTo(showShopLabel);
     }];
     
@@ -178,9 +192,9 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
 {
     if (indexPath.row == 0) {
         DCAdExCell *cell = [tableView dequeueReusableCellWithIdentifier:DCAdExCellID forIndexPath:indexPath];
-        _expressageLabel  = cell.expressageLabel;
-        _saleCountLabel = cell.saleCountLabel;
-        _siteLabel = cell.siteLabel;
+        cell.expressageLabel.text = [NSString stringWithFormat:@"快递费 %@",_expressage];
+        cell.saleCountLabel.text = [NSString stringWithFormat:@"销售 %@件",_saleCount] ;
+        cell.siteLabel.text = _site;
         return cell;
         
     }else {
