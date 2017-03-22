@@ -207,9 +207,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.titleView = self.navigationTabBar;
+    self.automaticallyAdjustsScrollViewInsets = NO; //这个必须要填写  不然会下移64哦！
     self.delegate = self;
     self.dataSource = self;
-    [self setViewControllers:@[self.subViewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil]; //默认第一个控制器
+    [self setViewControllers:@[self.subViewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     [self setUpBottonView];
     
