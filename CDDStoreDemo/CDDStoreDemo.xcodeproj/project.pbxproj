@@ -51,6 +51,7 @@
 		187E68B11E7D8F0000722607 /* XWFilterTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68911E7D8F0000722607 /* XWFilterTransitionView.m */; };
 		187E68B21E7D8F0000722607 /* XWMagicMoveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68941E7D8F0000722607 /* XWMagicMoveAnimator.m */; };
 		187E68B51E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */; };
+		18DAF90F1E843C38002A46E0 /* DCSpeedy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF90E1E843C38002A46E0 /* DCSpeedy.m */; };
 		18E8F6651E80D7D300D6F275 /* DCNavigationTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */; };
 		18E8F6821E80DB8700D6F275 /* DCStore_attr.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F66A1E80DB8700D6F275 /* DCStore_attr.m */; };
 		18E8F6831E80DB8700D6F275 /* DCStore_list.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F66C1E80DB8700D6F275 /* DCStore_list.m */; };
@@ -187,6 +188,8 @@
 		187E68941E7D8F0000722607 /* XWMagicMoveAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMagicMoveAnimator.m; sourceTree = "<group>"; };
 		187E68B31E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DCBarButtonItem.h"; sourceTree = "<group>"; };
 		187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DCBarButtonItem.m"; sourceTree = "<group>"; };
+		18DAF90D1E843C38002A46E0 /* DCSpeedy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSpeedy.h; sourceTree = "<group>"; };
+		18DAF90E1E843C38002A46E0 /* DCSpeedy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSpeedy.m; sourceTree = "<group>"; };
 		18E8F6631E80D7D300D6F275 /* DCNavigationTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNavigationTabBar.h; sourceTree = "<group>"; };
 		18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNavigationTabBar.m; sourceTree = "<group>"; };
 		18E8F6691E80DB8700D6F275 /* DCStore_attr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStore_attr.h; sourceTree = "<group>"; };
@@ -381,12 +384,14 @@
 		187E67C21E7D79E100722607 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				18F8C4C81E7F883700AB2070 /* DCConsts.h */,
+				18F8C4C91E7F883700AB2070 /* DCConsts.m */,
+				18DAF90D1E843C38002A46E0 /* DCSpeedy.h */,
+				18DAF90E1E843C38002A46E0 /* DCSpeedy.m */,
 				187E67D61E7D871600722607 /* UIView+DCExtension.h */,
 				187E67D71E7D871600722607 /* UIView+DCExtension.m */,
 				187E68B31E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.h */,
 				187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */,
-				18F8C4C81E7F883700AB2070 /* DCConsts.h */,
-				18F8C4C91E7F883700AB2070 /* DCConsts.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -936,6 +941,7 @@
 				18E8F6C11E818E0600D6F275 /* DCIntroduceSelectCell.m in Sources */,
 				187E689D1E7D8F0000722607 /* XWCircleSpreadAnimator.m in Sources */,
 				18F8C4CA1E7F883700AB2070 /* DCConsts.m in Sources */,
+				18DAF90F1E843C38002A46E0 /* DCSpeedy.m in Sources */,
 				187E683B1E7D8D3900722607 /* DCNavigationController.m in Sources */,
 				187E68A51E7D8F0000722607 /* XWCoolAnimator.m in Sources */,
 				187E68961E7D8F0000722607 /* UIView+Snapshot.m in Sources */,

@@ -15,6 +15,7 @@
 #import "DCStoreItemCell.h"
 
 #import "DCConsts.h"
+#import "DCSpeedy.h"
 #import "DCCustomButton.h"
 #import "UIView+DCExtension.h"
 #import "XWDrawerAnimator.h"
@@ -196,8 +197,7 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     showNum_Label.text = [NSString stringWithFormat:@"共筛选出 %@ 件商品",shopCount];
     showNum_Label.font = [UIFont systemFontOfSize:12];
     
-    [self setSomeOneChangeColor:showNum_Label SetSelectArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] SetChangeColor:[UIColor orangeColor]];
-    
+    [DCSpeedy setSomeOneChangeColor:showNum_Label SetSelectArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] SetChangeColor:[UIColor orangeColor]];
     
     DCCustomButton *customButton = [DCCustomButton buttonWithType:UIButtonTypeCustom];
     customButton.frame = CGRectMake(ScreenW - 70, 0 , 60 , 50);
@@ -300,20 +300,6 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCStoreItemCell class]) bundle:nil] forCellReuseIdentifier:DCStoreItemCellID];
-}
-
--(id)setSomeOneChangeColor:(UILabel *)label SetSelectArray:(NSArray *)arrray SetChangeColor:(UIColor *)color
-{
-    NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc]initWithString:label.text];
-    for (int i = 0; i < label.text.length; i ++) {
-        NSString *a = [label.text substringWithRange:NSMakeRange(i, 1)];
-        NSArray *number = arrray;
-        if ([number containsObject:a]) {
-            [attributeString setAttributes:@{NSForegroundColorAttributeName:color} range:NSMakeRange(i, 1)];
-        }
-    }
-    label.attributedText = attributeString;
-    return label;
 }
 
 

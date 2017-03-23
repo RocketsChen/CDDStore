@@ -14,6 +14,7 @@
 #import "DCIntroduceSelectCell.h"
 
 #import "DCConsts.h"
+#import "DCSpeedy.h"
 #import "DCStoreButton.h"
 #import "UIView+YKCExtension.h"
 #import "XWDrawerAnimator.h"
@@ -194,10 +195,7 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
         DCIntroduceSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:DCIntroduceSelectCellID forIndexPath:indexPath];
         NSArray *titles = @[@"门店自提，品质保证，售后保障，急速发货",@"请选择 网络类型 机身颜色 套餐类型",@"满200元享包邮；不包邮地区：港澳台及海外"];
         cell.contentLabel.text = titles[indexPath.row - 1];
-        cell.markButton.layer.borderColor = [[UIColor redColor] CGColor];
-        cell.markButton.layer.borderWidth = 1.5f;
-        cell.markButton.layer.cornerRadius = 8.0;
-        cell.markButton.layer.masksToBounds = YES;
+        [DCSpeedy chageControlCircularWith:cell.markButton AndSetCornerRadius:8.0 SetBorderWidth:1.5f SetBorderColor:[UIColor redColor] canMasksToBounds:YES];
         cell.canClickButton.hidden = YES;
         [cell.markButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [cell.markButton sizeToFit];
