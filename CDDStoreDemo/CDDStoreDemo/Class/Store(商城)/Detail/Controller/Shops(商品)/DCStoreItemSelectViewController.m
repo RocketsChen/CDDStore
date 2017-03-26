@@ -137,8 +137,9 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
     
     self.view.backgroundColor = [UIColor clearColor];
     
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCStoreHeadPriceCell class]) bundle:nil] forCellReuseIdentifier:DCStoreHeadPriceCellID];
     self.tableView.scrollEnabled = NO;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCStoreHeadPriceCell class]) bundle:nil] forCellReuseIdentifier:DCStoreHeadPriceCellID];
 }
 
 
