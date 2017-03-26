@@ -8,6 +8,8 @@
 
 #import "DCCustomButton.h"
 
+#import "DCConsts.h"
+
 #import "UIView+DCExtension.h"
 
 @implementation DCCustomButton
@@ -28,7 +30,7 @@
     
     //    [self sizeToFit];
     //sizeToFit算完后加三倍的间距
-    self.dc_width += 10;
+    self.dc_width += DCMargin;
 }
 
 - (void)layoutSubviews
@@ -36,9 +38,9 @@
     [super layoutSubviews];
     
     self.titleLabel.dc_centerY = self.dc_centerY;
-    self.titleLabel.dc_x = 10;
+    self.titleLabel.dc_x = DCMargin;
     self.imageView.dc_centerY = self.dc_centerY;
-    self.imageView.dc_x = CGRectGetMaxX(self.titleLabel.frame) + 1/3*10;
+    self.imageView.dc_x = CGRectGetMaxX(self.titleLabel.frame) + 1/3 * DCMargin;
 }
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "DCShopItemView.h"
+
+#import "DCConsts.h"
+
 #import "UIView+DCExtension.h"
 
 #define BGColor  Color(245, 58, 64)
@@ -76,7 +79,7 @@
         btn.tag = i;
         [view addSubview:btn];
         if (i == texts.count - 1) {
-            view.dc_height = CGRectGetMaxY(btn.frame) + 10;
+            view.dc_height = CGRectGetMaxY(btn.frame) + DCMargin;
             view.dc_x = 0;
             view.dc_width = viewWidth;
         }

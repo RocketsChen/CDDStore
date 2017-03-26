@@ -30,8 +30,6 @@
 
 static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 
-#define ScreenHNoNavi ([UIScreen mainScreen].bounds.size.height - 64 - 49)
-
 @interface DCStoreViewController ()<UITableViewDelegate , UITableViewDataSource,SDCycleScrollViewDelegate,UISearchBarDelegate>
 @property (nonatomic , strong) UITableView *tableView;
 /* 数据 */

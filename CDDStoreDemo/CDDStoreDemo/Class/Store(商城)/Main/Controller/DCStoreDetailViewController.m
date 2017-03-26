@@ -129,7 +129,7 @@
         
         if (button.tag == 2) {//购物车数量提示
             UIButton *markButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            markButton.frame = CGRectMake(CGRectGetMaxX(button.imageView.frame), button.imageView.dc_y, 10, 10);
+            markButton.frame = CGRectMake(CGRectGetMaxX(button.imageView.frame), button.imageView.dc_y, DCMargin, DCMargin);
             [button addSubview:markButton];
             _markButton = markButton;
             [markButton showBadgeWithStyle:WBadgeStyleNumber value:2 animationType:WBadgeAnimTypeScale];  //购物车提示数
