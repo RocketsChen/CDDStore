@@ -14,6 +14,7 @@
 #import "DCStoreHeadPriceCell.h"
 
 #import "DCConsts.h"
+#import "WJYAlertView.h"
 #import "PPNumberButton.h"
 #import "DCStoreAttribute.h"
 #import "DCShopItemView.h"
@@ -54,13 +55,6 @@
 @property (nonatomic ,weak) DCShopItemView *attributeViewAtt03;
 @property (nonatomic ,weak) DCShopItemView *attributeViewAtt04;
 @property (nonatomic ,weak) DCShopItemView *attributeViewAtt05;
-
-/* 属性名 */
-@property (weak ,nonatomic) NSString *Att01Name;
-@property (weak ,nonatomic) NSString *Att02Name;
-@property (weak ,nonatomic) NSString *Att03Name;
-@property (weak ,nonatomic) NSString *Att04Name;
-@property (weak ,nonatomic) NSString *Att05Name;
 
 /* 属性数组 */
 @property (nonatomic ,strong) NSMutableArray *array01;
@@ -435,9 +429,6 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
     NSInteger price05 = (plusprice05_.length != 0) ? [plusprice05_ intValue] : 0;
     
     plusprice_ = price01 + price02 + price03 + price04 + price05;
-    
-    NSLog(@"额外价格  %zd",plusprice_);
-    
     cell.priceLabel.text = [NSString stringWithFormat:@"¥ %0.2f",[_money floatValue] + plusprice_];
     cell.repertoryLabel.text = [NSString stringWithFormat:@"库存%@件",_stock];
     
@@ -449,8 +440,6 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
     };
     return cell;
 }
-
-
 
 
 #pragma mark - 商品View
@@ -610,63 +599,93 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
 #pragma mark - 立即购买和加入购物车按钮点击事件
 - (void)buyItButtonClick:(UIButton *)button
 {
+    __weak typeof(self)weakSelf = self;
     if (button.tag == 1) {//立即购买
-        if ((_shopAttr.count == 2 && _label1.text.length == 0) || [_label0.text isEqualToString:@"商品属性"]) {
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }else if((_shopAttr.count == 3 && _label2.text.length == 0)  ||  (_label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])) {
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }else if((_shopAttr.count == 4 && _label3.text.length == 0 )|| (_label2.text.length == 0 &&  _label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])){
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }else if ((_shopAttr.count == 5 && _label4.text.length == 0 )|| (_label3.text.length == 0 && _label2.text.length == 0 &&  _label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])){
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }
-
+        [self cancelWithChoseItemBlock:^{
+            [weakSelf buyItNow];
+        }];
     }else{//加入购物车
         
-        if ((_shopAttr.count == 2 && _label1.text.length == 0) || [_label0.text isEqualToString:@"商品属性"]) {
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }else if((_shopAttr.count == 3 && _label2.text.length == 0)  ||  (_label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])) {
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }else if((_shopAttr.count == 4 && _label3.text.length == 0 )|| (_label2.text.length == 0 &&  _label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])){
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }else if ((_shopAttr.count == 5 && _label4.text.length == 0 )|| (_label3.text.length == 0 && _label2.text.length == 0 &&  _label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])){
-            [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-            });
-            return;
-        }
+        [self cancelWithChoseItemBlock:^{
+            [weakSelf addShopCar];
+        }];
     }
+    
 }
 
+#pragma mark - 立即购买
+- (void)buyItNow
+{
+    NSLog(@"点击了立即购买");
+}
+
+#pragma mark - 添加购物车
+- (void)addShopCar
+{
+
+    [self addShopCarAnimal];
+    NSLog(@"点击了添加购物车");
+}
+
+
+#pragma mark - 判断选择
+- (void)cancelWithChoseItemBlock:(void(^)())choseSussessBlock
+{
+    if ((_shopAttr.count == 2 && _label1.text.length == 0) || [_label0.text isEqualToString:@"商品属性"]) {
+        [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }else if((_shopAttr.count == 3 && _label2.text.length == 0)  ||  (_label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])) {
+        [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }else if((_shopAttr.count == 4 && _label3.text.length == 0 )|| (_label2.text.length == 0 &&  _label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])){
+        [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }else if ((_shopAttr.count == 5 && _label4.text.length == 0 )|| (_label3.text.length == 0 && _label2.text.length == 0 &&  _label1.text.length == 0 && [_label0.text isEqualToString:@"商品属性"])){
+        [SVProgressHUD showInfoWithStatus:@"请选择商品属性"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }else{
+        !choseSussessBlock ? : choseSussessBlock();
+    }
+
+}
+
+#pragma mark - 添加购物车动画
+- (void)addShopCarAnimal
+{
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 15];
+    rotationAnimation.duration = 1.0;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = 0;
+    
+    // 让旋转动画慢于缩放动画执行
+    __weak typeof(self)weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf.iconImageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    });
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        weakSelf.iconImageView.frame = CGRectMake(weakSelf.view.frame.size.width - 55, - (weakSelf.view.frame.size.height - CGRectGetHeight(weakSelf.view.frame) - 40), 0, 0);
+    } completion:^(BOOL finished) {
+        
+        // 动画完成后弹框消失
+        [weakSelf selfViewBack];
+
+    }];
+}
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

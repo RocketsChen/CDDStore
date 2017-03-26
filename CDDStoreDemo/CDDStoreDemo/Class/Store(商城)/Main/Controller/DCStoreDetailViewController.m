@@ -167,12 +167,12 @@
 #pragma mark - 立即购买按钮点击
 - (void)buyButtonClick
 {
-//    [self ItemSelectionTransition];
+    [self ItemSelectionTransition];
 }
 #pragma mark - 加入购物车按钮点击
 - (void)addShoppingCarButtonClick
 {
-//    [self ItemSelectionTransition];
+    [self ItemSelectionTransition];
 }
 
 #pragma mark - 弹出选择商品服务弹框
@@ -188,7 +188,10 @@
     //点击当前界面返回
     __weak typeof(self)weakSelf = self;
     DCStoreItemSelectViewController *itemVc = [[DCStoreItemSelectViewController alloc] init];
-    
+    itemVc.stock = _stockStr;
+    itemVc.goodsid = _goodsid;
+    itemVc.money = _shopPrice;
+    itemVc.iconImage = _goodspics;
     [self xw_presentViewController:itemVc withAnimator:animator];
     [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
         [weakSelf selfAlterViewback];

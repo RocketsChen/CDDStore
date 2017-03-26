@@ -14,6 +14,8 @@
 		181F05E71E87DC3E008E88F4 /* ShopItemA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 181F05E41E87DC3E008E88F4 /* ShopItemA.plist */; };
 		181F05E81E87DC3E008E88F4 /* ShopItemB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 181F05E51E87DC3E008E88F4 /* ShopItemB.plist */; };
 		181F05E91E87DC3E008E88F4 /* ShopItemC.plist in Resources */ = {isa = PBXBuildFile; fileRef = 181F05E61E87DC3E008E88F4 /* ShopItemC.plist */; };
+		181F05F21E882B08008E88F4 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F05ED1E882B08008E88F4 /* UIPlaceHolderTextView.m */; };
+		181F05F41E882B08008E88F4 /* WJYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F05F11E882B08008E88F4 /* WJYAlertView.m */; };
 		187E678B1E7D793100722607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E678A1E7D793100722607 /* main.m */; };
 		187E67961E7D793100722607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187E67951E7D793100722607 /* Assets.xcassets */; };
 		187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E67971E7D793100722607 /* LaunchScreen.storyboard */; };
@@ -119,6 +121,10 @@
 		181F05E41E87DC3E008E88F4 /* ShopItemA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShopItemA.plist; sourceTree = "<group>"; };
 		181F05E51E87DC3E008E88F4 /* ShopItemB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShopItemB.plist; sourceTree = "<group>"; };
 		181F05E61E87DC3E008E88F4 /* ShopItemC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShopItemC.plist; sourceTree = "<group>"; };
+		181F05EC1E882B08008E88F4 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		181F05ED1E882B08008E88F4 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		181F05F01E882B08008E88F4 /* WJYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJYAlertView.h; sourceTree = "<group>"; };
+		181F05F11E882B08008E88F4 /* WJYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJYAlertView.m; sourceTree = "<group>"; };
 		187E67861E7D793000722607 /* CDDStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E678A1E7D793100722607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187E67951E7D793100722607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -299,6 +305,25 @@
 			path = PPNumberButton;
 			sourceTree = "<group>";
 		};
+		181F05EA1E882B08008E88F4 /* AlertViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				181F05EB1E882B08008E88F4 /* UIPlaceHolderTextView */,
+				181F05F01E882B08008E88F4 /* WJYAlertView.h */,
+				181F05F11E882B08008E88F4 /* WJYAlertView.m */,
+			);
+			path = AlertViewManager;
+			sourceTree = "<group>";
+		};
+		181F05EB1E882B08008E88F4 /* UIPlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				181F05EC1E882B08008E88F4 /* UIPlaceHolderTextView.h */,
+				181F05ED1E882B08008E88F4 /* UIPlaceHolderTextView.m */,
+			);
+			path = UIPlaceHolderTextView;
+			sourceTree = "<group>";
+		};
 		187E677D1E7D793000722607 = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +446,7 @@
 		187E67C31E7D79E100722607 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				181F05EA1E882B08008E88F4 /* AlertViewManager */,
 				181F05DD1E87CC83008E88F4 /* PPNumberButton */,
 				18E8F6C61E81924E00D6F275 /* StoreCar */,
 				187E68531E7D8F0000722607 /* XWTransition */,
@@ -973,6 +999,7 @@
 				18DAF90F1E843C38002A46E0 /* DCSpeedy.m in Sources */,
 				187E683B1E7D8D3900722607 /* DCNavigationController.m in Sources */,
 				187E68A51E7D8F0000722607 /* XWCoolAnimator.m in Sources */,
+				181F05F21E882B08008E88F4 /* UIPlaceHolderTextView.m in Sources */,
 				187E68961E7D8F0000722607 /* UIView+Snapshot.m in Sources */,
 				18E8F6651E80D7D300D6F275 /* DCNavigationTabBar.m in Sources */,
 				187E68A31E7D8F0000722607 /* XWCoolAnimator+XWPortal.m in Sources */,
@@ -1002,6 +1029,7 @@
 				18E8F6AC1E81891D00D6F275 /* DCStoreCommentViewController.m in Sources */,
 				187E68AE1E7D8F0000722607 /* XWFilterAnimator+XWRipple.m in Sources */,
 				187E68A21E7D8F0000722607 /* XWCoolAnimator+XWPageFlip.m in Sources */,
+				181F05F41E882B08008E88F4 /* WJYAlertView.m in Sources */,
 				18F8C4E31E7F966000AB2070 /* DCCustomButton.m in Sources */,
 				18E8F6861E80DB8700D6F275 /* DCStoreDetailViewController.m in Sources */,
 				187E68B11E7D8F0000722607 /* XWFilterTransitionView.m in Sources */,
