@@ -63,6 +63,7 @@
         //创建子控制器
         DCStoreMainViewController *storeMainVc = [[DCStoreMainViewController alloc] init];
         storeMainVc.goodsid = _goodsid;
+        storeMainVc.stockStr = _stockStr;
         storeMainVc.goodspics = _goodspics;
         storeMainVc.goods_title = _goods_title;
         storeMainVc.shopPrice = _shopPrice;

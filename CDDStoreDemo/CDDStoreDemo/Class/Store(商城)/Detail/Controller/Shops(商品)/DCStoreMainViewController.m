@@ -213,7 +213,7 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     if (indexPath.row == 1) {
         [self BaseServicesTransition];
     }else if (indexPath.row == 2){
-//        [self ItemSelectionTransition];
+        [self ItemSelectionTransition];
     }else if (indexPath.row == 3) {
         NSLog(@"满200");
     }return;

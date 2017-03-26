@@ -12,8 +12,6 @@
 
 /** 类型 */
 @property (nonatomic, copy) NSString *infoname;
-/** 类型ID */
-@property (nonatomic, copy) NSString *goodsid;
 /** 额外价格 */
 @property (nonatomic, copy) NSString *plusprice;
 

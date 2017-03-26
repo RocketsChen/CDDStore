@@ -10,4 +10,8 @@
 
 @implementation DCConsts
 
+/** 常量 */
+CGFloat const DCMargin = 10;
+
+
 @end

@@ -8,7 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+#import <UIKit/UIKit.h>
+
 @interface DCConsts : NSObject
+
+
+/** 常量 */
+UIKIT_EXTERN CGFloat const DCMargin;
+
+
+
+
+
 
 /** 屏幕高度 */
 #define ScreenH [UIScreen mainScreen].bounds.size.height
