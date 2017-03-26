@@ -318,9 +318,6 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
         
         DCShopItemView *attributeViewAtt02 = [DCShopItemView attributeViewWithTitle:_shopAttr[1].attr.attrname titleFont:font titleColor:[UIColor blackColor] WithBtnBgColor:DCRGBColor(229, 229, 229) titleNormalColor:DCRGBColor(100, 100, 100) titleSelectColor:[UIColor whiteColor] WithButtonCornerRadius:3 attributeTexts:_array02 viewWidth:ScreenW];
         self.attributeViewAtt02 = attributeViewAtt02;
-        // 设置代理
-        _attributeViewAtt01.ShopItem_delegate = self;
-        _attributeViewAtt02.ShopItem_delegate = self;
         // 添加到scrollview上
         [scrollView addSubview:_attributeViewAtt01];
         [scrollView addSubview:_attributeViewAtt02];
