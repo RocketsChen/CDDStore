@@ -663,11 +663,10 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
                 [SVProgressHUD dismiss];
             });
             return;
-        }else{
-
         }
     }
 }
+
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
