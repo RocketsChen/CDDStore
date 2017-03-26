@@ -365,44 +365,8 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
     
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DCStoreHeadPriceCell *cell = [tableView dequeueReusableCellWithIdentifier:DCStoreHeadPriceCellID forIndexPath:indexPath];
-
-    cell.icoImageView.image = [UIImage imageNamed:_iconImage];
-    
-    _iconImageView = cell.icoImageView;
-    
-    NSInteger price01 = (plusprice01_.length != 0) ? [plusprice01_ intValue] : 0;
-    NSInteger price02 = (plusprice02_.length != 0) ? [plusprice02_ intValue] : 0;
-    NSInteger price03 = (plusprice03_.length != 0) ? [plusprice03_ intValue] : 0;
-    NSInteger price04 = (plusprice04_.length != 0) ? [plusprice04_ intValue] : 0;
-    NSInteger price05 = (plusprice05_.length != 0) ? [plusprice05_ intValue] : 0;
-    
-    plusprice_ = price01 + price02 + price03 + price04 + price05;
-    
-    NSLog(@"额外价格  %zd",plusprice_);
-    
-    cell.priceLabel.text = [NSString stringWithFormat:@"¥ %0.2f",[_money floatValue] + plusprice_];
-    cell.repertoryLabel.text = [NSString stringWithFormat:@"库存%@件",_stock];
-    
-    cell.attributeLabel.text = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@",(![self.label0.text isEqualToString:@"商品属性"])? @"已选择:" :@"请选择:",(self.label0.text.length != 0) ? self.label0.text : @"",(self.label1.text.length != 0) ? self.label1.text : @"",(self.label2.text.length != 0) ? self.label2.text : @"" ,(self.label3.text.length != 0) ? self.label3.text : @"" ,(self.label4.text.length != 0) ? self.label4.text : @"" ];
-    
-    __weak typeof(self)weakSelf = self;
-    cell.dismissButtonClickBlock = ^(){
-        [weakSelf selfViewBack];
-    };
-    return cell;
-}
-
-
 #pragma mark - AttributeViewDelegate
-- (void)Attribute_View:(DCShopItemView *)view didClickBtn:(UIButton *)btn{
+- (void)ShopItem_View:(DCShopItemView *)view didClickBtn:(UIButton *)btn{
     NSString *title = btn.titleLabel.text;
     [self.tableView reloadData];
     if (!btn.selected) {
@@ -450,6 +414,44 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
         }
     }
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DCStoreHeadPriceCell *cell = [tableView dequeueReusableCellWithIdentifier:DCStoreHeadPriceCellID forIndexPath:indexPath];
+
+    cell.icoImageView.image = [UIImage imageNamed:_iconImage];
+    
+    _iconImageView = cell.icoImageView;
+    
+    NSInteger price01 = (plusprice01_.length != 0) ? [plusprice01_ intValue] : 0;
+    NSInteger price02 = (plusprice02_.length != 0) ? [plusprice02_ intValue] : 0;
+    NSInteger price03 = (plusprice03_.length != 0) ? [plusprice03_ intValue] : 0;
+    NSInteger price04 = (plusprice04_.length != 0) ? [plusprice04_ intValue] : 0;
+    NSInteger price05 = (plusprice05_.length != 0) ? [plusprice05_ intValue] : 0;
+    
+    plusprice_ = price01 + price02 + price03 + price04 + price05;
+    
+    NSLog(@"额外价格  %zd",plusprice_);
+    
+    cell.priceLabel.text = [NSString stringWithFormat:@"¥ %0.2f",[_money floatValue] + plusprice_];
+    cell.repertoryLabel.text = [NSString stringWithFormat:@"库存%@件",_stock];
+    
+    cell.attributeLabel.text = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@",(![self.label0.text isEqualToString:@"商品属性"])? @"已选择:" :@"请选择:",(self.label0.text.length != 0) ? self.label0.text : @"",(self.label1.text.length != 0) ? self.label1.text : @"",(self.label2.text.length != 0) ? self.label2.text : @"" ,(self.label3.text.length != 0) ? self.label3.text : @"" ,(self.label4.text.length != 0) ? self.label4.text : @"" ];
+    
+    __weak typeof(self)weakSelf = self;
+    cell.dismissButtonClickBlock = ^(){
+        [weakSelf selfViewBack];
+    };
+    return cell;
+}
+
+
+
 
 #pragma mark - 商品View
 - (void)setUpShopsItemView
