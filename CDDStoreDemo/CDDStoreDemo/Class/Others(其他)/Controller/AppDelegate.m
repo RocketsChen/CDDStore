@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self init3DTouchActionShow:YES]; //开启3DTouch
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     DCTabBarViewController *nav = [[DCTabBarViewController alloc] init];
@@ -30,6 +32,7 @@
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
@@ -52,8 +55,45 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler
+{
+    if ([shortcutItem.type isEqualToString:@"store"])
+    {
+        
+    }else if ([shortcutItem.type isEqualToString:@"myOrder"])
+    {
+        
+    }
+}
+
+/**
+ type 该item 唯一标识符
+ localizedTitle ：标题
+ localizedSubtitle：副标题
+ icon：icon图标 可以使用系统类型 也可以使用自定义的图片
+ userInfo：用户信息字典 自定义参数，完成具体功能需求
+ */
+-(void)init3DTouchActionShow:(BOOL)isShow
+{
+    UIApplication *application = [UIApplication sharedApplication];
+    
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"shopping"];
+    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc]initWithType:@"store" localizedTitle:@"商城" localizedSubtitle:nil icon:icon1 userInfo:nil];
+    
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"shopping"];
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"myOrder" localizedTitle:@"购物车" localizedSubtitle:nil icon:icon2 userInfo:nil];
+    
+    if (isShow)
+    {
+        application.shortcutItems = @[item1,item2];
+    }else
+    {
+        application.shortcutItems = @[];
+    }
+}
 
 @end
