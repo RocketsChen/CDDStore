@@ -89,12 +89,11 @@
     
     if (isShow) //显示
     {
-        application.shortcutItems = @[item1,item2];
+        application.shortcutItems = @[item1,item2];   
     }else
     {
         application.shortcutItems = @[];
     }
 }
-
 
 @end
