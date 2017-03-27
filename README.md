@@ -13,7 +13,7 @@ A：初步实现功能: <br />
            6.商品加入购物车动画  <br />
            
 ***
-![Alt text](https://github.com/RocketsChen/raw/CDDStore/CDDStoreImage01.jpg)
+![image](https://github.com/RocketsChen/raw/CDDStore/CDDStoreImage01.jpg)
 ***
 
 B：计划稍后实现功能:<br />
