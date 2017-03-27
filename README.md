@@ -29,3 +29,7 @@ B：计划稍后实现功能:<br />
 提示:商城Demo配有注释和编码思路，易于理解和学习，有不理解的或者发现项目有待完善的地方欢迎打扰！ <br />
 
 [点击进入我的微博](http://weibo.com/u/5605532343) <br />
+
+***
+![Alt text](https://github.com/RocketsChen/CDDStore/raw/master/CDDStoreGif.gif)
+***
