@@ -66,7 +66,7 @@
        //视图跳转
     }else if ([shortcutItem.type isEqualToString:@"myOrder"])
     {
-    //视图跳转
+       //视图跳转
     }
 }
 
@@ -87,7 +87,7 @@
     UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"home_home_tab"];
     UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"myOrder" localizedTitle:@"购物车" localizedSubtitle:nil icon:icon2 userInfo:nil];
     
-    if (isShow)
+    if (isShow) //显示
     {
         application.shortcutItems = @[item1,item2];
     }else
