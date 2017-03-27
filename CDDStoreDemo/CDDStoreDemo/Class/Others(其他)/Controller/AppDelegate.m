@@ -63,10 +63,10 @@
 {
     if ([shortcutItem.type isEqualToString:@"store"])
     {
-        
+       //视图跳转
     }else if ([shortcutItem.type isEqualToString:@"myOrder"])
     {
-        
+    //视图跳转
     }
 }
 
