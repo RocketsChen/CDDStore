@@ -14,6 +14,7 @@ A：初步实现功能: <br />
            
 ***
 ![Alt text](https://github.com/RocketsChen/raw/CDDStore/CDDStoreImage01.jpg)
+***
 
 B：计划稍后实现功能:<br />
               1.商品选择付款 <br />
