@@ -81,10 +81,10 @@
 {
     UIApplication *application = [UIApplication sharedApplication];
     
-    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"shopping"];
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"home_home_tab"];
     UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc]initWithType:@"store" localizedTitle:@"商城" localizedSubtitle:nil icon:icon1 userInfo:nil];
     
-    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"shopping"];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"home_home_tab"];
     UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"myOrder" localizedTitle:@"购物车" localizedSubtitle:nil icon:icon2 userInfo:nil];
     
     if (isShow)

@@ -45,7 +45,7 @@
 {
     //商城
     DCStoreViewController *indentVc = [[DCStoreViewController alloc]init];
-    [self setUpOneViewController:indentVc WithImage:@"shopping" WithSelImage:@"shopping down" WithTitle:@"商城"];
+    [self setUpOneViewController:indentVc WithImage:@"home_home_tab" WithSelImage:@"home_home_tab_s" WithTitle:@"商城"];
 }
 
 
