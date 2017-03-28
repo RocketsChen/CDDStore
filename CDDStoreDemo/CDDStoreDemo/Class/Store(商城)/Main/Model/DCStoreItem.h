@@ -11,14 +11,10 @@
 
 @interface DCStoreItem : NSObject
 
-/** 商品_id */
-@property (nonatomic, copy) NSString *goodsid;
 /** 商品标题 */
 @property (nonatomic, copy) NSString *goods_title;
 /** 商品价格 */
 @property (nonatomic, copy) NSString *price;
-/** 商品种类 */
-@property (nonatomic, copy) NSString *categoryid;
 /** 商品存货 */
 @property (nonatomic, copy) NSString *stock;
 /** 已售出 */

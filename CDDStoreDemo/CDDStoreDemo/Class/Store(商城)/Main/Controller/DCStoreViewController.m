@@ -72,12 +72,11 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUpHeaderView:@[@"mainHead",@"mainHead"] WithAdvertisement:@"如果觉得项目还行，请赏个Star！谢谢"];
-    
     [self setUpTab];
     
     [self loadStoreDatas];
-
+    
+    [self setUpHeaderView:@[@"mainHead",@"mainHead"] WithAdvertisement:@"如果觉得项目还行，请赏个Star！谢谢"];
 }
 
 #pragma mark - 头部轮播图
@@ -276,14 +275,14 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DCStoreDetailViewController *dcStoreDetailVc = [[DCStoreDetailViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    dcStoreDetailVc.goodsid = _storeItem[indexPath.row].goodsid;
+    
+    //传商品属性
     dcStoreDetailVc.goodspics = _storeItem[indexPath.row].goodspics;
     dcStoreDetailVc.stockStr = _storeItem[indexPath.row].stock;
     dcStoreDetailVc.shopPrice = _storeItem[indexPath.row].price;
     dcStoreDetailVc.goods_title = _storeItem[indexPath.row].goods_title;
     dcStoreDetailVc.expressage = _storeItem[indexPath.row].expressage;
     dcStoreDetailVc.saleCount = _storeItem[indexPath.row].sale_count;
-    
     dcStoreDetailVc.site = _storeItem[indexPath.row].goods_address;
     
     [self.navigationController pushViewController:dcStoreDetailVc animated:YES];

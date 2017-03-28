@@ -11,12 +11,8 @@
 		<string>12</string>
 		<key>add_time</key>
 		<integer>1484751612000</integer>
-		<key>categoryid</key>
-		<string>1d168a26-434d-45fc-88fa-7405d5b9d5ab</string>
 		<key>goods_title</key>
 		<string>Apple 苹果 iPhone7Plus 全网4G 5.5寸双摄像头 </string>
-		<key>goodsid</key>
-		<string>709f304f-be20-4388-a2f3-9d4b0dd51614</string>
 		<key>goodspics</key>
 		<string>shopImage03</string>
 		<key>price</key>
@@ -37,12 +33,8 @@
 		<string>123</string>
 		<key>add_time</key>
 		<integer>1486535939000</integer>
-		<key>categoryid</key>
-		<string>2adf5b11-3f71-4541-a7b7-90e7e7b1ff5d</string>
 		<key>goods_title</key>
 		<string>Apple 苹果 iPhone6s 全网4G 4.7寸 3D touch 1200万像素 热销机型</string>
-		<key>goodsid</key>
-		<string>43779fa3-ccc2-4125-b20a-447d7e983085</string>
 		<key>goodspics</key>
 		<string>shopImage02</string>
 		<key>price</key>
@@ -63,12 +55,8 @@
 		<string>366</string>
 		<key>add_time</key>
 		<integer>1486636624000</integer>
-		<key>categoryid</key>
-		<string>1d168a26-434d-45fc-88fa-7405d5b9d5ab</string>
 		<key>goods_title</key>
 		<string>Apple 苹果 iPhone7 全网4G 4.7寸 最新款</string>
-		<key>goodsid</key>
-		<string>6f410141-8d1d-4e74-afab-bea34b93cb45</string>
 		<key>goodspics</key>
 		<string>shopImage01</string>
 		<key>price</key>
