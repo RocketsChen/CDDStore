@@ -1190,6 +1190,7 @@
 					"$(PROJECT_DIR)/CDDStoreDemo/Class/Others(其他)/Tools/WXFrameworks",
 				);
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CDD.CDDStoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1207,6 +1208,7 @@
 					"$(PROJECT_DIR)/CDDStoreDemo/Class/Others(其他)/Tools/WXFrameworks",
 				);
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CDD.CDDStoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
