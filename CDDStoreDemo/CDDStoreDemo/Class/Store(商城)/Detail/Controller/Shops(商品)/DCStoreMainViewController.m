@@ -193,7 +193,7 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     }else {
         
         DCIntroduceSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:DCIntroduceSelectCellID forIndexPath:indexPath];
-        NSArray *titles = @[@"门店自提，品质保证，售后保障，急速发货",@"请选择 网络类型 机身颜色 套餐类型",@"满200元享包邮；不包邮地区：港澳台及海外"];
+        NSArray *titles = @[@"门店自提，品质保证，售后保障，急速发货",@"请选择商品 网络类型 机身颜色 套餐类型",@"满8888元享包邮；快来选购吧，亲！"];
         cell.contentLabel.text = titles[indexPath.row - 1];
         [DCSpeedy chageControlCircularWith:cell.markButton AndSetCornerRadius:8.0 SetBorderWidth:1.5f SetBorderColor:[UIColor redColor] canMasksToBounds:YES];
         cell.canClickButton.hidden = YES;

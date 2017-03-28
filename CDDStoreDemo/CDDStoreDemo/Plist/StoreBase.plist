@@ -6,23 +6,23 @@
 		<key>imgs</key>
 		<string>carry</string>
 		<key>title</key>
-		<string>门店自提</string>
+		<string>标题1</string>
 		<key>content</key>
-		<string>消费者可以在品牌线下门店自提商品</string>
+		<string>门店自提，门店自提，门店自提，门店自提，门店自提，</string>
 	</dict>
 	<dict>
 		<key>imgs</key>
 		<string>good</string>
 		<key>title</key>
-		<string>品质保障</string>
+		<string>标题2</string>
 		<key>content</key>
-		<string>该商品中国全都享受正品保障</string>
+		<string>品质保障，品质保障，品质保障，品质保障，品质保障</string>
 	</dict>
 	<dict>
 		<key>imgs</key>
 		<string>sale</string>
 		<key>title</key>
-		<string>售后保障</string>
+		<string>标题2</string>
 		<key>content</key>
 		<string>售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障,售后保障</string>
 	</dict>
@@ -30,9 +30,9 @@
 		<key>imgs</key>
 		<string>post</string>
 		<key>title</key>
-		<string>急速发货</string>
+		<string>标题4</string>
 		<key>content</key>
-		<string>急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货</string>
+		<string>急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货,急速发货</string>
 	</dict>
 </array>
 </plist>

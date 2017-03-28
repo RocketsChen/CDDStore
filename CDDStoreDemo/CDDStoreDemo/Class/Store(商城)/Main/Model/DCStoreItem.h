@@ -11,8 +11,6 @@
 
 @interface DCStoreItem : NSObject
 
-/** 商品标题 */
-@property (nonatomic, copy) NSString *goods_title;
 /** 商品价格 */
 @property (nonatomic, copy) NSString *price;
 /** 商品存货 */
@@ -23,6 +21,9 @@
 @property (nonatomic, copy) NSString *secondtitle;
 /** 商品头像 */
 @property (nonatomic, copy) NSString *goodspics;
+/** 商品标题 */
+@property (nonatomic, copy) NSString *goods_title;
+
 
 /* 商品快递费 */
 @property (copy, nonatomic) NSString *expressage;

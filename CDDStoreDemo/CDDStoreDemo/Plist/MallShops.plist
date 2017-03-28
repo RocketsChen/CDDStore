@@ -9,8 +9,6 @@
 		<string>222</string>
 		<key>expressage</key>
 		<string>12</string>
-		<key>add_time</key>
-		<integer>1484751612000</integer>
 		<key>goods_title</key>
 		<string>Apple 苹果 iPhone7Plus 全网4G 5.5寸双摄像头 </string>
 		<key>goodspics</key>
@@ -31,8 +29,6 @@
 		<string>30</string>
 		<key>sale_count</key>
 		<string>123</string>
-		<key>add_time</key>
-		<integer>1486535939000</integer>
 		<key>goods_title</key>
 		<string>Apple 苹果 iPhone6s 全网4G 4.7寸 3D touch 1200万像素 热销机型</string>
 		<key>goodspics</key>
@@ -53,8 +49,6 @@
 		<string>10</string>
 		<key>sale_count</key>
 		<string>366</string>
-		<key>add_time</key>
-		<integer>1486636624000</integer>
 		<key>goods_title</key>
 		<string>Apple 苹果 iPhone7 全网4G 4.7寸 最新款</string>
 		<key>goodspics</key>

@@ -61,6 +61,8 @@
 {
     if (!_subViewControllers) {
         //创建子控制器
+        
+        //商城主页
         DCStoreMainViewController *storeMainVc = [[DCStoreMainViewController alloc] init];
         storeMainVc.goodsid = _goodsid;
         storeMainVc.stockStr = _stockStr;
@@ -71,8 +73,10 @@
         storeMainVc.saleCount = _saleCount;
         storeMainVc.site = _site;
         
+        //商城详情
         DCStoreIntroduceViewController *storeIntroduceVc = [[DCStoreIntroduceViewController alloc] init];
         
+        //商城评论
         DCStoreCommentViewController *storeCommentVc = [[DCStoreCommentViewController alloc] init];
         
         self.subViewControllers = @[storeMainVc,storeIntroduceVc,storeCommentVc];
