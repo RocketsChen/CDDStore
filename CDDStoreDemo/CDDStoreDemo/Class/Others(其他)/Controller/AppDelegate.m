@@ -6,6 +6,8 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
 #import "AppDelegate.h"
 #import "DCTabBarViewController.h"
 
@@ -18,7 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self init3DTouchActionShow:YES]; //开启3DTouch
+    if (IOS_VERSION > 9.0) {
+        [self init3DTouchActionShow:YES]; //关闭
+    }else{
+        [self init3DTouchActionShow:NO]; //关闭
+    }
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
