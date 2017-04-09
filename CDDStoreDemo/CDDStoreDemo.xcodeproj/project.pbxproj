@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1803B3081E99EE59009F4925 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1803B3031E99EE59009F4925 /* .gitignore */; };
+		1803B3091E99EE59009F4925 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1803B3051E99EE59009F4925 /* .gitignore */; };
+		1803B30A1E99EE59009F4925 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1803B3071E99EE59009F4925 /* .gitignore */; };
+		1803B30F1E99EF90009F4925 /* DCSureOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803B30D1E99EF90009F4925 /* DCSureOrderViewController.m */; };
+		1803B3101E99EF90009F4925 /* DCSureOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1803B30E1E99EF90009F4925 /* DCSureOrderViewController.xib */; };
+		1803B3131E99F05B009F4925 /* DCUserPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803B3121E99F05B009F4925 /* DCUserPayViewController.m */; };
+		1803B3171E99F0A8009F4925 /* DCPayWayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803B3151E99F0A8009F4925 /* DCPayWayCell.m */; };
 		181F05DB1E87CB44008E88F4 /* DCStoreHeadPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F05D91E87CB44008E88F4 /* DCStoreHeadPriceCell.m */; };
 		181F05DC1E87CB44008E88F4 /* DCStoreHeadPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181F05DA1E87CB44008E88F4 /* DCStoreHeadPriceCell.xib */; };
 		181F05E01E87CC83008E88F4 /* PPNumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F05DF1E87CC83008E88F4 /* PPNumberButton.m */; };
@@ -84,7 +91,6 @@
 		18E8F6C51E81911C00D6F275 /* DCStoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6C41E81911C00D6F275 /* DCStoreButton.m */; };
 		18E8F6CE1E81924E00D6F275 /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */; };
 		18E8F6CF1E81924E00D6F275 /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */; };
-		18E8F6D01E81924E00D6F275 /* UIView+YKCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */; };
 		18E8F6D41E819D1200D6F275 /* DCAdExCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6D21E819D1200D6F275 /* DCAdExCell.m */; };
 		18E8F6D51E819D1200D6F275 /* DCAdExCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8F6D31E819D1200D6F275 /* DCAdExCell.xib */; };
 		18F8C4CA1E7F883700AB2070 /* DCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C4C91E7F883700AB2070 /* DCConsts.m */; };
@@ -111,6 +117,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1803B3031E99EE59009F4925 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1803B3051E99EE59009F4925 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1803B3071E99EE59009F4925 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1803B30C1E99EF90009F4925 /* DCSureOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSureOrderViewController.h; sourceTree = "<group>"; };
+		1803B30D1E99EF90009F4925 /* DCSureOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSureOrderViewController.m; sourceTree = "<group>"; };
+		1803B30E1E99EF90009F4925 /* DCSureOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCSureOrderViewController.xib; sourceTree = "<group>"; };
+		1803B3111E99F05B009F4925 /* DCUserPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUserPayViewController.h; sourceTree = "<group>"; };
+		1803B3121E99F05B009F4925 /* DCUserPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUserPayViewController.m; sourceTree = "<group>"; };
+		1803B3141E99F0A8009F4925 /* DCPayWayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPayWayCell.h; sourceTree = "<group>"; };
+		1803B3151E99F0A8009F4925 /* DCPayWayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPayWayCell.m; sourceTree = "<group>"; };
 		181F05D81E87CB44008E88F4 /* DCStoreHeadPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreHeadPriceCell.h; sourceTree = "<group>"; };
 		181F05D91E87CB44008E88F4 /* DCStoreHeadPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreHeadPriceCell.m; sourceTree = "<group>"; };
 		181F05DA1E87CB44008E88F4 /* DCStoreHeadPriceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCStoreHeadPriceCell.xib; sourceTree = "<group>"; };
@@ -254,8 +270,6 @@
 		18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+WAnimation.m"; sourceTree = "<group>"; };
 		18E8F6C91E81924E00D6F275 /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
 		18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
-		18E8F6CB1E81924E00D6F275 /* UIView+YKCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YKCExtension.h"; sourceTree = "<group>"; };
-		18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YKCExtension.m"; sourceTree = "<group>"; };
 		18E8F6CD1E81924E00D6F275 /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
 		18E8F6D11E819D1200D6F275 /* DCAdExCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAdExCell.h; sourceTree = "<group>"; };
 		18E8F6D21E819D1200D6F275 /* DCAdExCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAdExCell.m; sourceTree = "<group>"; };
@@ -296,6 +310,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1803B3011E99EE59009F4925 /* ShopCar(购物车) */ = {
+			isa = PBXGroup;
+			children = (
+				1803B3021E99EE59009F4925 /* Controller */,
+				1803B3041E99EE59009F4925 /* Model */,
+				1803B3061E99EE59009F4925 /* View */,
+			);
+			path = "ShopCar(购物车)";
+			sourceTree = "<group>";
+		};
+		1803B3021E99EE59009F4925 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1803B3031E99EE59009F4925 /* .gitignore */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1803B3041E99EE59009F4925 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1803B3051E99EE59009F4925 /* .gitignore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1803B3061E99EE59009F4925 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1803B3071E99EE59009F4925 /* .gitignore */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1803B30B1E99EE89009F4925 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				1803B30C1E99EF90009F4925 /* DCSureOrderViewController.h */,
+				1803B30D1E99EF90009F4925 /* DCSureOrderViewController.m */,
+				1803B30E1E99EF90009F4925 /* DCSureOrderViewController.xib */,
+				1803B3111E99F05B009F4925 /* DCUserPayViewController.h */,
+				1803B3121E99F05B009F4925 /* DCUserPayViewController.m */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
 		181F05DD1E87CC83008E88F4 /* PPNumberButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				187E67C51E7D79E100722607 /* Store(商城) */,
+				1803B3011E99EE59009F4925 /* ShopCar(购物车) */,
 				187E67BD1E7D79E100722607 /* Others(其他) */,
 			);
 			path = Class;
@@ -474,6 +535,7 @@
 			children = (
 				18E8F6701E80DB8700D6F275 /* Main */,
 				18E8F6661E80DB8700D6F275 /* Detail */,
+				1803B30B1E99EE89009F4925 /* Pay */,
 			);
 			path = "Store(商城)";
 			sourceTree = "<group>";
@@ -713,6 +775,8 @@
 				18E8F67F1E80DB8700D6F275 /* DCStoreItemCell.h */,
 				18E8F6801E80DB8700D6F275 /* DCStoreItemCell.m */,
 				18E8F6811E80DB8700D6F275 /* DCStoreItemCell.xib */,
+				1803B3141E99F0A8009F4925 /* DCPayWayCell.h */,
+				1803B3151E99F0A8009F4925 /* DCPayWayCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -755,8 +819,6 @@
 				18E8F6C81E81924E00D6F275 /* CAAnimation+WAnimation.m */,
 				18E8F6C91E81924E00D6F275 /* UIView+WZLBadge.h */,
 				18E8F6CA1E81924E00D6F275 /* UIView+WZLBadge.m */,
-				18E8F6CB1E81924E00D6F275 /* UIView+YKCExtension.h */,
-				18E8F6CC1E81924E00D6F275 /* UIView+YKCExtension.m */,
 				18E8F6CD1E81924E00D6F275 /* WZLBadgeProtocol.h */,
 			);
 			path = StoreCar;
@@ -896,17 +958,21 @@
 				181F05DC1E87CB44008E88F4 /* DCStoreHeadPriceCell.xib in Resources */,
 				18E8F68C1E80DB8700D6F275 /* DCStoreItemCell.xib in Resources */,
 				187E689C1E7D8F0000722607 /* restrictedshine.tiff in Resources */,
+				1803B3081E99EE59009F4925 /* .gitignore in Resources */,
 				181F05E71E87DC3E008E88F4 /* ShopItemA.plist in Resources */,
 				18F8C4E01E7F95AA00AB2070 /* MallShops.plist in Resources */,
+				1803B3101E99EF90009F4925 /* DCSureOrderViewController.xib in Resources */,
 				181F05E91E87DC3E008E88F4 /* ShopItemC.plist in Resources */,
 				18E8F6D51E819D1200D6F275 /* DCAdExCell.xib in Resources */,
 				187E689A1E7D8F0000722607 /* line.png in Resources */,
 				18E8F6C21E818E0600D6F275 /* DCIntroduceSelectCell.xib in Resources */,
+				1803B30A1E99EE59009F4925 /* .gitignore in Resources */,
 				187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */,
 				187E689B1E7D8F0000722607 /* mask.jpg in Resources */,
 				18E8F6891E80DB8700D6F275 /* DCWebViewController.xib in Resources */,
 				18E8F6B81E8189AA00D6F275 /* DCBaseServiceCell.xib in Resources */,
 				187E67961E7D793100722607 /* Assets.xcassets in Resources */,
+				1803B3091E99EE59009F4925 /* .gitignore in Resources */,
 				181F05E81E87DC3E008E88F4 /* ShopItemB.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1007,6 +1073,7 @@
 				18E8F6B01E81891D00D6F275 /* DCStoreMainViewController.m in Sources */,
 				18E8F6841E80DB8700D6F275 /* DCStoreAttribute.m in Sources */,
 				187E68A41E7D8F0000722607 /* XWCoolAnimator+XWScanning.m in Sources */,
+				1803B3131E99F05B009F4925 /* DCUserPayViewController.m in Sources */,
 				187E68991E7D8F0000722607 /* XWTransitionAnimator.m in Sources */,
 				187E67D51E7D855600722607 /* DCShopItemView.m in Sources */,
 				187E68A71E7D8F0000722607 /* XWFilterAnimator+XWBarSwipe.m in Sources */,
@@ -1023,6 +1090,7 @@
 				187E689E1E7D8F0000722607 /* XWCoolAnimator+XWExplode.m in Sources */,
 				187E689F1E7D8F0000722607 /* XWCoolAnimator+XWFold.m in Sources */,
 				187E68B21E7D8F0000722607 /* XWMagicMoveAnimator.m in Sources */,
+				1803B30F1E99EF90009F4925 /* DCSureOrderViewController.m in Sources */,
 				187E67D81E7D871600722607 /* UIView+DCExtension.m in Sources */,
 				18E8F6871E80DB8700D6F275 /* DCStoreViewController.m in Sources */,
 				187E68A11E7D8F0000722607 /* XWCoolAnimator+XWMiddlePageFlip.m in Sources */,
@@ -1037,10 +1105,10 @@
 				187E68951E7D8F0000722607 /* UINavigationController+XWTransition.m in Sources */,
 				187E68AC1E7D8F0000722607 /* XWFilterAnimator+XWMod.m in Sources */,
 				187E68A01E7D8F0000722607 /* XWCoolAnimator+XWLines.m in Sources */,
-				18E8F6D01E81924E00D6F275 /* UIView+YKCExtension.m in Sources */,
 				187E68AD1E7D8F0000722607 /* XWFilterAnimator+XWPageCurl.m in Sources */,
 				18E8F6BB1E818A3E00D6F275 /* DCBaseItem.m in Sources */,
 				187E68B01E7D8F0000722607 /* XWFilterAnimator.m in Sources */,
+				1803B3171E99F0A8009F4925 /* DCPayWayCell.m in Sources */,
 				187E68AF1E7D8F0000722607 /* XWFilterAnimator+XWSwipe.m in Sources */,
 				18E8F6AF1E81891D00D6F275 /* DCStoreItemSelectViewController.m in Sources */,
 				18E8F6C51E81911C00D6F275 /* DCStoreButton.m in Sources */,

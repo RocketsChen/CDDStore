@@ -16,7 +16,7 @@
 #import "DCConsts.h"
 #import "DCSpeedy.h"
 #import "DCStoreButton.h"
-#import "UIView+YKCExtension.h"
+#import "UIView+DCExtension.h"
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
 
