@@ -64,7 +64,6 @@
         
         //商城主页
         DCStoreMainViewController *storeMainVc = [[DCStoreMainViewController alloc] init];
-        storeMainVc.goodsid = _goodsid;
         storeMainVc.stockStr = _stockStr;
         storeMainVc.goodspics = _goodspics;
         storeMainVc.goods_title = _goods_title;
@@ -193,7 +192,6 @@
     __weak typeof(self)weakSelf = self;
     DCStoreItemSelectViewController *itemVc = [[DCStoreItemSelectViewController alloc] init];
     itemVc.stock = _stockStr;
-    itemVc.goodsid = _goodsid;
     itemVc.money = _shopPrice;
     itemVc.iconImage = _goodspics;
     [self xw_presentViewController:itemVc withAnimator:animator];

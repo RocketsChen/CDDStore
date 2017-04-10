@@ -10,8 +10,6 @@
 
 @interface DCStoreDetailViewController : UIPageViewController
 
-/* 商品 id*/
-@property (strong , nonatomic)NSString *goodsid;
 /* 商品头像 */
 @property (strong , nonatomic)NSString *goodspics;
 /* 商品库存*/

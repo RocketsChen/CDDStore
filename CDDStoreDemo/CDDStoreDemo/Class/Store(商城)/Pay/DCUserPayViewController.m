@@ -32,7 +32,7 @@ static NSString *DCPayWayCellID = @"DCPayWayCell";
 #pragma mark - 懒加载
 - (NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr=@[@{@"icon":@"zfb",@"name":@"支付宝支付",@"des":@"推荐有支付宝帐号的用户使用"},@{@"icon":@"wx_",@"name":@"微信支付",@"des":@"推荐安装微信的用户使用"},@{@"icon":@"yl_",@"name":@"银联支付",@"des":@"银联支付快捷又安全"}];
+        _dataArr=@[@{@"icon":@"zfb_",@"name":@"支付宝支付",@"des":@"推荐有支付宝帐号的用户使用"},@{@"icon":@"wx_",@"name":@"微信支付",@"des":@"推荐安装微信的用户使用"},@{@"icon":@"yl_",@"name":@"银联支付",@"des":@"银联支付快捷又安全"}];
     }
     return _dataArr;
 }

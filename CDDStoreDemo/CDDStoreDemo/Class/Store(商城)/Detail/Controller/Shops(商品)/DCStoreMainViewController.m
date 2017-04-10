@@ -7,8 +7,10 @@
 //
 
 #import "DCStoreMainViewController.h"
-#import "DCStoreItemSelectViewController.h"
+
 #import "DCBaseViewController.h"
+#import "DCSureOrderViewController.h"
+#import "DCStoreItemSelectViewController.h"
 
 #import "DCAdExCell.h"
 #import "DCIntroduceSelectCell.h"
@@ -79,9 +81,25 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
 }
 
 #pragma mark - 点击立即购买通知
+#pragma mark - 点击立即购买通知
 - (void)setUpNote
 {
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushToConfireOrderVc:) name:DCBuyButtonDidDismissClickNotificationCenter object:nil];
+}
 
+#pragma mark - 跳转到确定订单界面
+- (void)pushToConfireOrderVc:(NSNotification *)note
+{
+    DCSureOrderViewController *sureOrderVc = [[DCSureOrderViewController alloc] init];
+    sureOrderVc.showPriceStr = [_shopPrice floatValue];
+    sureOrderVc.showShopStr = _goods_title;
+    sureOrderVc.expressagePriceStr = _expressage;
+    sureOrderVc.iconimage = _goodspics;
+    NSInteger count = [note.userInfo[@"shopNum"] integerValue];
+    sureOrderVc.buyNum = count;
+    sureOrderVc.standard = note.userInfo[@"attFullStr"];
+    
+    [self.navigationController pushViewController:sureOrderVc animated:YES];
 }
 
 - (void)setUpTab

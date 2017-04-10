@@ -75,7 +75,7 @@
                                                 <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderShop" translatesAutoresizingMaskIntoConstraints="NO" id="8Dx-dy-6jL">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderShopUnderLine" translatesAutoresizingMaskIntoConstraints="NO" id="8Dx-dy-6jL">
                                             <rect key="frame" x="0.0" y="95" width="375" height="5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="a2o-qA-33x"/>
@@ -107,7 +107,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="FGV-YJ-E4E">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="FGV-YJ-E4E">
                                             <rect key="frame" x="10" y="37" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="c5U-ua-Xml"/>
@@ -129,7 +129,7 @@
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderShop" translatesAutoresizingMaskIntoConstraints="NO" id="2ww-kD-Wag">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderShopUnderLine" translatesAutoresizingMaskIntoConstraints="NO" id="2ww-kD-Wag">
                                             <rect key="frame" x="0.0" y="95" width="375" height="5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="3Sm-iZ-2wh"/>
@@ -286,7 +286,7 @@
     <resources>
         <image name="address" width="16" height="16"/>
         <image name="more_ad" width="16" height="16"/>
-        <image name="orderShop" width="16" height="16"/>
-        <image name="redAdd" width="16" height="16"/>
+        <image name="orderShopUnderLine" width="325" height="11"/>
+        <image name="redAdd" width="24" height="24"/>
     </resources>
 </document>

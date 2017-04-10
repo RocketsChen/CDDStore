@@ -617,6 +617,15 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
 - (void)buyItNow
 {
     NSLog(@"点击了立即购买");
+    NSString *num = (_buyNum < 1)? @"1" : [NSString stringWithFormat:@"%zd",_buyNum];
+    _attFullStr = [NSString stringWithFormat:@"%@ %@ %@ %@ %@",(self.label0.text.length != 0) ? self.label0.text : @"",(self.label1.text.length != 0) ? self.label1.text : @"",(self.label2.text.length != 0) ? self.label2.text : @"" ,(self.label3.text.length != 0) ? self.label3.text : @"" ,(self.label4.text.length != 0) ? self.label4.text : @"" ];
+    
+    NSString * chosePrice = [NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"%.2f",plusprice_ + [_money floatValue]]];
+    
+    NSDictionary *dict =[[NSDictionary alloc] initWithObjectsAndKeys:num,@"shopNum",_attFullStr,@"attFullStr",chosePrice,@"choseprice", nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:DCBuyButtonDidDismissClickNotificationCenter object:nil userInfo:dict];
+    }];
 }
 
 #pragma mark - 添加购物车

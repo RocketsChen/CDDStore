@@ -13,5 +13,8 @@
 /** 常量 */
 CGFloat const DCMargin = 10;
 
+/** 立即购买点击退出当前界面通知 */
+NSString * const DCBuyButtonDidDismissClickNotificationCenter = @"DCBuyButtonDidDismissClickNotificationCenter";
+
 
 @end
