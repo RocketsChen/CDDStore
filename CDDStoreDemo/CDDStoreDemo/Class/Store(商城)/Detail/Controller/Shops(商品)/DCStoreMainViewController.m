@@ -9,6 +9,7 @@
 #import "DCStoreMainViewController.h"
 
 #import "DCBaseViewController.h"
+#import "DCShareViewController.h"
 #import "DCSureOrderViewController.h"
 #import "DCStoreItemSelectViewController.h"
 
@@ -81,7 +82,6 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
 }
 
 #pragma mark - 点击立即购买通知
-#pragma mark - 点击立即购买通知
 - (void)setUpNote
 {
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushToConfireOrderVc:) name:DCBuyButtonDidDismissClickNotificationCenter object:nil];
@@ -148,6 +148,7 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     [shareButton setTitle:@"分享" forState:UIControlStateNormal];
     shareButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [shareButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(setUpShareView) forControlEvents:UIControlEventTouchUpInside];
     [shopTitleView addSubview:shareButton];
 
     UILabel *showMoneyLabel = [[UILabel alloc] init];
@@ -294,6 +295,25 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+}
+
+#pragma mark - 弹出分享View
+- (void)setUpShareView
+{
+    XWDrawerAnimatorDirection direction = XWDrawerAnimatorDirectionBottom;
+    CGFloat distance = 200; //分享窗口高度
+    XWDrawerAnimator *animator = [XWDrawerAnimator xw_animatorWithDirection:direction moveDistance:distance];
+    animator.toDuration = 0.5;
+    animator.scaleRatio = 1.0;
+    animator.backDuration = 0.5;
+
+    //点击当前界面返回
+    DCShareViewController *shareReferrerVc = [[DCShareViewController alloc] init];
+    [self xw_presentViewController:shareReferrerVc withAnimator:animator];
+    __weak typeof(self)weakSelf = self;
+    [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
+        [weakSelf selfAlterViewback];
+    }];
 }
 
 @end
