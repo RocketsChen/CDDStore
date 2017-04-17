@@ -78,6 +78,7 @@
     }else{
         NSLog(@"手机QQ");
     }
+    [self selfViewBack];
 }
 
 #pragma mark - 弹出弹框
