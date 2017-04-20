@@ -35,4 +35,11 @@
 /** cell行高 */
 @property (nonatomic , assign) CGFloat cellHeight;
 
+
+
+/** cell行高 */
+@property (nonatomic , assign) CGFloat isGardHeight;
+/** cell行高 */
+@property (nonatomic , assign) CGFloat isCellHeight;
+
 @end

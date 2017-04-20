@@ -61,6 +61,8 @@
 		187E68B11E7D8F0000722607 /* XWFilterTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68911E7D8F0000722607 /* XWFilterTransitionView.m */; };
 		187E68B21E7D8F0000722607 /* XWMagicMoveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68941E7D8F0000722607 /* XWMagicMoveAnimator.m */; };
 		187E68B51E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */; };
+		1891EE671EA8B044008EA054 /* DCStoreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891EE661EA8B044008EA054 /* DCStoreCollectionViewCell.m */; };
+		1891EE6A1EA8B2E4008EA054 /* DCStoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891EE691EA8B2E4008EA054 /* DCStoreCollectionViewController.m */; };
 		18D2A9F61EA0A22B00E181DA /* DCShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2A9F51EA0A22B00E181DA /* DCShareViewController.m */; };
 		18DAF90F1E843C38002A46E0 /* DCSpeedy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF90E1E843C38002A46E0 /* DCSpeedy.m */; };
 		18E8F6651E80D7D300D6F275 /* DCNavigationTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8F6641E80D7D300D6F275 /* DCNavigationTabBar.m */; };
@@ -219,6 +221,10 @@
 		187E68941E7D8F0000722607 /* XWMagicMoveAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMagicMoveAnimator.m; sourceTree = "<group>"; };
 		187E68B31E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DCBarButtonItem.h"; sourceTree = "<group>"; };
 		187E68B41E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DCBarButtonItem.m"; sourceTree = "<group>"; };
+		1891EE651EA8B044008EA054 /* DCStoreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreCollectionViewCell.h; sourceTree = "<group>"; };
+		1891EE661EA8B044008EA054 /* DCStoreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreCollectionViewCell.m; sourceTree = "<group>"; };
+		1891EE681EA8B2E4008EA054 /* DCStoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreCollectionViewController.h; sourceTree = "<group>"; };
+		1891EE691EA8B2E4008EA054 /* DCStoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreCollectionViewController.m; sourceTree = "<group>"; };
 		18D2A9F41EA0A22B00E181DA /* DCShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShareViewController.h; sourceTree = "<group>"; };
 		18D2A9F51EA0A22B00E181DA /* DCShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShareViewController.m; sourceTree = "<group>"; };
 		18DAF90D1E843C38002A46E0 /* DCSpeedy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSpeedy.h; sourceTree = "<group>"; };
@@ -747,6 +753,8 @@
 		18E8F6711E80DB8700D6F275 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1891EE681EA8B2E4008EA054 /* DCStoreCollectionViewController.h */,
+				1891EE691EA8B2E4008EA054 /* DCStoreCollectionViewController.m */,
 				18E8F6761E80DB8700D6F275 /* DCStoreViewController.h */,
 				18E8F6771E80DB8700D6F275 /* DCStoreViewController.m */,
 				18E8F6721E80DB8700D6F275 /* DCCustomViewController.h */,
@@ -772,6 +780,8 @@
 		18E8F67E1E80DB8700D6F275 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1891EE651EA8B044008EA054 /* DCStoreCollectionViewCell.h */,
+				1891EE661EA8B044008EA054 /* DCStoreCollectionViewCell.m */,
 				18E8F67F1E80DB8700D6F275 /* DCStoreItemCell.h */,
 				18E8F6801E80DB8700D6F275 /* DCStoreItemCell.m */,
 				18E8F6811E80DB8700D6F275 /* DCStoreItemCell.xib */,
@@ -1088,11 +1098,13 @@
 				187E68B51E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				187E68A61E7D8F0000722607 /* XWDrawerAnimator.m in Sources */,
 				187E689E1E7D8F0000722607 /* XWCoolAnimator+XWExplode.m in Sources */,
+				1891EE671EA8B044008EA054 /* DCStoreCollectionViewCell.m in Sources */,
 				187E689F1E7D8F0000722607 /* XWCoolAnimator+XWFold.m in Sources */,
 				187E68B21E7D8F0000722607 /* XWMagicMoveAnimator.m in Sources */,
 				1803B30F1E99EF90009F4925 /* DCSureOrderViewController.m in Sources */,
 				187E67D81E7D871600722607 /* UIView+DCExtension.m in Sources */,
 				18E8F6871E80DB8700D6F275 /* DCStoreViewController.m in Sources */,
+				1891EE6A1EA8B2E4008EA054 /* DCStoreCollectionViewController.m in Sources */,
 				187E68A11E7D8F0000722607 /* XWCoolAnimator+XWMiddlePageFlip.m in Sources */,
 				18E8F6AC1E81891D00D6F275 /* DCStoreCommentViewController.m in Sources */,
 				187E68AE1E7D8F0000722607 /* XWFilterAnimator+XWRipple.m in Sources */,
