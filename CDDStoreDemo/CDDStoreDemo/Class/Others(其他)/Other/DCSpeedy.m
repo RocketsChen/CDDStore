@@ -36,4 +36,16 @@
     return label;
 }
 
+
+#pragma mark -  根据传入字体大小计算字体宽高
++ (CGSize)calculateTextSizeWithText : (NSString *)text WithTextFont: (NSInteger)textFont WithMaxW : (CGFloat)maxW {
+    
+    CGFloat textMaxW = maxW;
+    CGSize textMaxSize = CGSizeMake(textMaxW, MAXFLOAT);
+    
+    CGSize textSize = [text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:textFont]} context:nil].size;
+    
+    return textSize;
+}
+
 @end

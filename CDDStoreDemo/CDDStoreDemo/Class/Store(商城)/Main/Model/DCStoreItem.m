@@ -26,10 +26,10 @@
 {
     if (_isCellHeight) return _isCellHeight;
     
-    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 4 - 20 - 77];
-    CGSize secondSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 4 - 20 - 77];
-    CGSize saleSize = [self calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:ScreenW - 4 - 20 - 77];
-    CGSize priceSize = [self calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:ScreenW - 4 - 20 - 77];
+    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 30 - 77];
+    CGSize secondSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 30 - 77];
+    CGSize saleSize = [self calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:ScreenW - 30 - 77];
+    CGSize priceSize = [self calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:ScreenW - 30 - 77];
     CGFloat margin = 32;
     
     _isCellHeight = titleSize.height + secondSize.height + saleSize.height + priceSize.height + margin;
@@ -39,19 +39,19 @@
 
 -(CGFloat)isGardHeight
 {
-    if (_isCellHeight) return _isCellHeight;
+    if (_isGardHeight) return _isGardHeight;
     
-    CGFloat imageH = (ScreenW - 6) / 2 - 20;
+    CGFloat imageH = ScreenW / 2 - 22;
     
-    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:(ScreenW - 6) / 2 - 20];
-    CGSize secondtSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:(ScreenW - 6) / 2 - 20];
-    CGSize saleSize = [self calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:(ScreenW - 6) / 2 - 20];
-    CGSize priceSize = [self calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:(ScreenW - 6) / 2 - 20];
+    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW / 2 - 22];
+    CGSize secondtSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW / 2 - 22];
+    CGSize saleSize = [self calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:ScreenW / 2 - 20];
+    CGSize priceSize = [self calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:ScreenW / 2 - 22];
     CGFloat margin = 42;
     
-    _isCellHeight = imageH + titleSize.height + secondtSize.height + saleSize.height + priceSize.height + margin;
+    _isGardHeight = imageH + titleSize.height + secondtSize.height + saleSize.height + priceSize.height + margin;
     
-    return _isCellHeight;
+    return _isGardHeight;
 }
 
 #pragma mark -  根据传入字体大小计算字体宽高

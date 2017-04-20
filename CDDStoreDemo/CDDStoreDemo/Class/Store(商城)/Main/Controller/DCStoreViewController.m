@@ -10,6 +10,7 @@
 #import "DCCustomViewController.h"
 #import "DCWebViewController.h"
 #import "DCStoreDetailViewController.h"
+#import "DCStoreCollectionViewController.h"
 
 #import "DCStoreItem.h"
 #import "DCStoreItemCell.h"
@@ -20,6 +21,7 @@
 #import "UIView+DCExtension.h"
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
+#import "UIBarButtonItem+DCBarButtonItem.h"
 
 #import <Masonry.h>
 #import <MJRefresh.h>
@@ -297,7 +299,14 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCStoreItemCell class]) bundle:nil] forCellReuseIdentifier:DCStoreItemCellID];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem ItemWithImage:[UIImage imageNamed:@"search"] WithHighlighted:[UIImage imageNamed:@"search"] Target:self action:@selector(searchButtonClick)];
 }
 
+-(void)searchButtonClick
+{
+    DCStoreCollectionViewController *storeVc = [[DCStoreCollectionViewController alloc]init];
+    [self.navigationController pushViewController:storeVc animated:YES];
+}
 
 @end

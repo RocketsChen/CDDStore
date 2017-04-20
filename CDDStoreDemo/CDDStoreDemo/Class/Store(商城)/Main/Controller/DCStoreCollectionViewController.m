@@ -8,11 +8,11 @@
 
 #import "DCStoreCollectionViewController.h"
 #import "DCCustomViewController.h"
-#import "DCWebViewController.h"
 #import "DCStoreDetailViewController.h"
 
 #import "DCStoreItem.h"
 #import "DCStoreCollectionViewCell.h"
+#import "DCStoreGridCollectionCell.h"
 
 #import "DCConsts.h"
 #import "DCSpeedy.h"
@@ -22,11 +22,7 @@
 #import "UIViewController+XWTransition.h"
 
 #import <Masonry.h>
-#import <MJRefresh.h>
 #import <MJExtension.h>
-#import <SVProgressHUD.h>
-#import <SDCycleScrollView.h>
-#import <TXScrollLabelView.h>
 
 @interface DCStoreCollectionViewController()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -39,35 +35,47 @@
 
 @end
 
-
 static NSString *DCStoreCollectionViewCellID = @"DCStoreCollectionViewCell";
+static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
 
 @implementation DCStoreCollectionViewController
 
 #pragma mark - 懒加载
+
+- (NSMutableArray<DCStoreItem *> *)storeItem
+{
+    if (!_storeItem) {
+        _storeItem = [NSMutableArray array];
+    }
+    return _storeItem;
+}
+
 - (UICollectionView *)collectionView
 {
     if (!_collectionView)
     {
         UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
-        //设置滚动方向
+        //设置滚动方向 左右上下间距
         [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-        //上下左右间距
+
         flowlayout.minimumInteritemSpacing = 2;
         flowlayout.minimumLineSpacing = 2;
-        
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(2 , 2 + 50, ScreenW - 4, ScreenH - 4) collectionViewLayout:flowlayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(1 ,  50, self.view.bounds.size.width - 2, self.view.bounds.size.height - 59) collectionViewLayout:flowlayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.alwaysBounceVertical = YES;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         [_collectionView setBackgroundColor:[UIColor clearColor]];
         //注册cell
         [_collectionView registerClass:[DCStoreCollectionViewCell class] forCellWithReuseIdentifier:DCStoreCollectionViewCellID];
-    
+        [_collectionView registerClass:[DCStoreGridCollectionCell class] forCellWithReuseIdentifier:DCStoreGridCollectionCellID];
+        
+        [self.view addSubview:self.collectionView];
     }
     return _collectionView;
 }
+
 
 #pragma mark - 初始化
 - (void)viewDidLoad {
@@ -170,7 +178,7 @@ static NSString *DCStoreCollectionViewCellID = @"DCStoreCollectionViewCell";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:self.collectionView];
+    _isGrid = NO;
 }
 
 
@@ -182,25 +190,41 @@ static NSString *DCStoreCollectionViewCellID = @"DCStoreCollectionViewCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DCStoreCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreCollectionViewCellID forIndexPath:indexPath];
-    cell.isGrid = _isGrid;
-    cell.storeItem = _storeItem[indexPath.row];
-    return cell;
+    if (_isGrid) {
+        DCStoreCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreCollectionViewCellID forIndexPath:indexPath];
+        cell.storeItem = self.storeItem[indexPath.row];
+        return cell;
+    } else {
+        DCStoreGridCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreGridCollectionCellID forIndexPath:indexPath];
+        cell.storeItem = self.storeItem[indexPath.row];
+        return cell;
+    }
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DCStoreDetailViewController *dcStoreDetailVc = [[DCStoreDetailViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    
+    //传商品属性
+    dcStoreDetailVc.goodspics = _storeItem[indexPath.row].goodspics;
+    dcStoreDetailVc.stockStr = _storeItem[indexPath.row].stock;
+    dcStoreDetailVc.shopPrice = _storeItem[indexPath.row].price;
+    dcStoreDetailVc.goods_title = _storeItem[indexPath.row].goods_title;
+    dcStoreDetailVc.expressage = _storeItem[indexPath.row].expressage;
+    dcStoreDetailVc.saleCount = _storeItem[indexPath.row].sale_count;
+    dcStoreDetailVc.site = _storeItem[indexPath.row].goods_address;
+    
+    [self.navigationController pushViewController:dcStoreDetailVc animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_isGrid) {
-        return CGSizeMake((ScreenW - 6) / 2, _storeItem[indexPath.row].isGardHeight);
+        return CGSizeMake(ScreenW / 2 - 3, _storeItem[indexPath.row].isGardHeight);
     } else {
-        return CGSizeMake(ScreenW - 4, _storeItem[indexPath.row].isCellHeight);
+        return CGSizeMake(ScreenW, _storeItem[indexPath.row].isCellHeight);
     }
-    
-//    if (_isGrid) {
-//        return CGSizeMake((ScreenW - 6) / 2, (ScreenW - 6) / 2 + 40);
-//    } else {
-//        return CGSizeMake(ScreenW - 4, (ScreenW - 6) / 4 + 20);
-//    }
 }
 
 @end

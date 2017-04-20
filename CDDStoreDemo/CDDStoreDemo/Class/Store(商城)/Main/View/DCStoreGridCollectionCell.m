@@ -1,12 +1,12 @@
 //
-//  DCStoreCollectionViewCell.m
+//  DCStoreGridCollectionCell.m
 //  CDDStoreDemo
 //
-//  Created by apple on 2017/4/20.
+//  Created by apple on 2017/4/21.
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
-#import "DCStoreCollectionViewCell.h"
+#import "DCStoreGridCollectionCell.h"
 
 #import "DCConsts.h"
 #import "DCStoreItem.h"
@@ -14,8 +14,7 @@
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
 
-@interface DCStoreCollectionViewCell()
-
+@interface DCStoreGridCollectionCell()
 @property (strong, nonatomic)  UIImageView *iconImageView;
 @property (strong, nonatomic)  UILabel *goodstitleLabel;
 @property (strong, nonatomic)  UILabel *salesLabel;
@@ -24,7 +23,7 @@
 
 @end
 
-@implementation DCStoreCollectionViewCell
+@implementation DCStoreGridCollectionCell
 
 #pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame
@@ -69,15 +68,13 @@
     
     [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         [make.left.mas_equalTo(self.contentView)setOffset:DCMargin];
-        [make.right.mas_equalTo(self.contentView)setOffset:-DCMargin];
         [make.top.mas_equalTo(self.contentView)setOffset:DCMargin];
-        make.height.mas_equalTo(_iconImageView.mas_width);
+        make.size.mas_equalTo(CGSizeMake(77, 77));
     }];
-    
     [_goodstitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(_iconImageView.mas_left);
-        make.width.mas_equalTo(_iconImageView);
-        [make.top.mas_equalTo(_iconImageView.mas_bottom)setOffset:DCMargin];;
+        [make.left.mas_equalTo(_iconImageView.mas_right)setOffset:DCMargin];
+        [make.right.mas_equalTo(self.contentView)setOffset:-DCMargin];
+        make.top.mas_equalTo(_iconImageView);
     }];
     
     [_introduceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,6 +94,7 @@
         make.right.mas_equalTo(_salesLabel);
         [make.top.mas_equalTo(_salesLabel.mas_bottom)setOffset:4];
     }];
+    
 }
 
 - (void)setStoreItem:(DCStoreItem *)storeItem
@@ -110,6 +108,5 @@
     self.introduceLabel.text = storeItem.secondtitle;
     
 }
-
 
 @end

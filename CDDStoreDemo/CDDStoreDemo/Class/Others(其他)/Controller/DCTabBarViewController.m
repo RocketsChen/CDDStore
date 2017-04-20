@@ -45,12 +45,12 @@
 #pragma mark - 添加子控制器
 -(void)setUpAllChildView
 {
-//    //商城
-//    DCStoreViewController *indentVc = [[DCStoreViewController alloc]init];
-//    [self setUpOneViewController:indentVc WithImage:@"home_home_tab" WithSelImage:@"home_home_tab_s" WithTitle:@"商城"];
-    
-    DCStoreCollectionViewController *indentVc = [[DCStoreCollectionViewController alloc]init];
+    //商城
+    DCStoreViewController *indentVc = [[DCStoreViewController alloc]init];
     [self setUpOneViewController:indentVc WithImage:@"home_home_tab" WithSelImage:@"home_home_tab_s" WithTitle:@"商城"];
+    
+//    DCStoreCollectionViewController *indentVc = [[DCStoreCollectionViewController alloc]init];
+//    [self setUpOneViewController:indentVc WithImage:@"home_home_tab" WithSelImage:@"home_home_tab_s" WithTitle:@"商城"];
     
 }
 
