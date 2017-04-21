@@ -48,7 +48,7 @@ static NSUInteger const DCCount = 2;
     }
 }
 
-//
+
 - (void)layoutItemAtIndexPath:(NSIndexPath *)indexPath {
     // 获取collectionView的edgeInsets
     UIEdgeInsets edgeInsets = self.sectionInset;
