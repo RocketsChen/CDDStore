@@ -9,60 +9,55 @@
 #import "DCStoreItem.h"
 #import "DCConsts.h"
 
+#import "DCSpeedy.h"
+
 @implementation DCStoreItem
 
+#pragma mark - 普通cell
 - (CGFloat)cellHeight
 {
     if (_cellHeight) return _cellHeight;
-    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 103];
-    CGSize secondttSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 103];
+    CGSize titleSize = [DCSpeedy calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 103];
+    CGSize secondttSize = [DCSpeedy calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 103];
     _cellHeight = 62 + titleSize.height + secondttSize.height;
     
     return _cellHeight;
 }
 
-
+#pragma mark - 列表cell
 - (CGFloat)isCellHeight
 {
     if (_isCellHeight) return _isCellHeight;
     
-    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 30 - 77];
-    CGSize secondSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 30 - 77];
-    CGSize saleSize = [self calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:ScreenW - 30 - 77];
-    CGSize priceSize = [self calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:ScreenW - 30 - 77];
-    CGFloat margin = 32;
+    CGSize titleSize = [DCSpeedy calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW - 30 - 77];
+    CGSize secondSize = [DCSpeedy calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW - 30 - 77];
+    CGSize saleSize = [DCSpeedy calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:ScreenW - 30 - 77];
+    CGSize priceSize = [DCSpeedy calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:ScreenW - 30 - 77];
+    CGFloat margin = 22;
     
     _isCellHeight = titleSize.height + secondSize.height + saleSize.height + priceSize.height + margin;
     
+    _cellHeight = (_isCellHeight < 77) ? 87:_isCellHeight;
     return _isCellHeight;
 }
 
+#pragma mark - 视图cell
 -(CGFloat)isGardHeight
 {
     if (_isGardHeight) return _isGardHeight;
     
-    CGFloat imageH = ScreenW / 2 - 22;
+    CGFloat imageH = (ScreenW - DCMargin) / 2.f;
     
-    CGSize titleSize = [self calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:ScreenW / 2 - 22];
-    CGSize secondtSize = [self calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:ScreenW / 2 - 22];
-    CGSize saleSize = [self calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:ScreenW / 2 - 20];
-    CGSize priceSize = [self calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:ScreenW / 2 - 22];
-    CGFloat margin = 42;
+    CGSize titleSize = [DCSpeedy calculateTextSizeWithText:_goods_title WithTextFont:14 WithMaxW:(ScreenW - DCMargin) / 2.f - 10];
+    CGSize secondtSize = [DCSpeedy calculateTextSizeWithText:_secondtitle WithTextFont:12 WithMaxW:(ScreenW - DCMargin) / 2.f - 10];
+    CGSize saleSize = [DCSpeedy calculateTextSizeWithText:_sale_count WithTextFont:12 WithMaxW:(ScreenW - DCMargin) / 2.f - 10];
+    CGSize priceSize = [DCSpeedy calculateTextSizeWithText:_price WithTextFont:16 WithMaxW:(ScreenW - DCMargin) / 2.f - 10];
+    CGFloat margin = 32;
     
     _isGardHeight = imageH + titleSize.height + secondtSize.height + saleSize.height + priceSize.height + margin;
     
     return _isGardHeight;
 }
 
-#pragma mark -  根据传入字体大小计算字体宽高
-- (CGSize)calculateTextSizeWithText : (NSString *)text WithTextFont: (NSInteger)textFont WithMaxW : (CGFloat)maxW {
-    
-    CGFloat textMaxW = maxW;
-    CGSize textMaxSize = CGSizeMake(textMaxW, MAXFLOAT);
-    
-    CGSize textSize = [text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:textFont]} context:nil].size;
-    
-    return textSize;
-}
 
 @end

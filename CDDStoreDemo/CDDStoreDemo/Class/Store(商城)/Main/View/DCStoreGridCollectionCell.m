@@ -68,7 +68,7 @@
     
     [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         [make.left.mas_equalTo(self.contentView)setOffset:DCMargin];
-        [make.top.mas_equalTo(self.contentView)setOffset:DCMargin];
+        [make.top.mas_equalTo(self.contentView)setOffset:0];
         make.size.mas_equalTo(CGSizeMake(77, 77));
     }];
     [_goodstitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

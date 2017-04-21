@@ -68,15 +68,15 @@
     [super layoutSubviews];
     
     [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        [make.left.mas_equalTo(self.contentView)setOffset:DCMargin];
-        [make.right.mas_equalTo(self.contentView)setOffset:-DCMargin];
-        [make.top.mas_equalTo(self.contentView)setOffset:DCMargin];
+        [make.left.mas_equalTo(self.contentView)setOffset:0];
+        [make.right.mas_equalTo(self.contentView)setOffset:-0];
+        [make.top.mas_equalTo(self.contentView)setOffset:0];
         make.height.mas_equalTo(_iconImageView.mas_width);
     }];
     
     [_goodstitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(_iconImageView.mas_left);
-        make.width.mas_equalTo(_iconImageView);
+        [make.left.mas_equalTo(_iconImageView.mas_left)setOffset:5];
+        [make.right.mas_equalTo(_iconImageView)setOffset:-5];
         [make.top.mas_equalTo(_iconImageView.mas_bottom)setOffset:DCMargin];;
     }];
     
