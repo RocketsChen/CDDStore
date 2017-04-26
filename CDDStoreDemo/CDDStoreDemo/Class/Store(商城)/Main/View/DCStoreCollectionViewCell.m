@@ -21,7 +21,7 @@
 @property (strong, nonatomic)  UILabel *salesLabel;
 @property (strong, nonatomic)  UILabel *priceLabel;
 @property (strong, nonatomic)  UILabel *introduceLabel;
-
+@property (strong, nonatomic)  UIButton *choseMoreBtn;
 @end
 
 @implementation DCStoreCollectionViewCell
@@ -61,6 +61,11 @@
     _priceLabel.font = [UIFont systemFontOfSize:16];
     [self.contentView addSubview:_priceLabel];
     
+    _choseMoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_choseMoreBtn addTarget:self action:@selector(choseMoreBynClick) forControlEvents:UIControlEventTouchUpInside];
+    [_choseMoreBtn setImage:[UIImage imageNamed:@"choseMore"] forState:UIControlStateNormal];
+    [self.contentView addSubview:_choseMoreBtn];
+    
 }
 
 - (void)layoutSubviews
@@ -97,6 +102,12 @@
         make.right.mas_equalTo(_salesLabel);
         [make.top.mas_equalTo(_salesLabel.mas_bottom)setOffset:4];
     }];
+    
+    [_choseMoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        [make.right.mas_equalTo(self.contentView.mas_right)setOffset:-10];
+        make.bottom.mas_equalTo(_priceLabel.mas_bottom);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
 }
 
 - (void)setStoreItem:(DCStoreItem *)storeItem
@@ -111,5 +122,8 @@
     
 }
 
-
+- (void)choseMoreBynClick
+{
+    _choseBlock ? : _choseBlock();
+}
 @end

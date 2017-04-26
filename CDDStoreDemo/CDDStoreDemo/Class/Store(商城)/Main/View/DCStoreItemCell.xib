@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -56,10 +56,22 @@
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wED-1C-DUQ">
+                        <rect key="frame" x="316" y="63.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="HKT-fr-bfN"/>
+                            <constraint firstAttribute="height" constant="20" id="RAa-QK-GtP"/>
+                        </constraints>
+                        <state key="normal" image="choseMore"/>
+                        <connections>
+                            <action selector="choseMoreButtonClick" destination="c1Y-uZ-GYG" eventType="touchUpInside" id="Lny-fy-QLd"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="aoK-1P-fIa" firstAttribute="top" secondItem="Kle-WW-UjV" secondAttribute="bottom" constant="2" id="3RY-A1-bVt"/>
                     <constraint firstItem="9Yk-qN-rPW" firstAttribute="top" secondItem="aoK-1P-fIa" secondAttribute="bottom" constant="2" id="4eJ-GT-fZN"/>
+                    <constraint firstItem="wED-1C-DUQ" firstAttribute="bottom" secondItem="5mn-OX-4Nt" secondAttribute="bottom" id="Fa7-fI-Esl"/>
                     <constraint firstAttribute="trailing" secondItem="Kle-WW-UjV" secondAttribute="trailing" constant="10" id="M69-5T-lvw"/>
                     <constraint firstItem="L3o-OD-OZO" firstAttribute="top" secondItem="hfx-JJ-Y1N" secondAttribute="top" constant="10" id="OIJ-9C-vvf"/>
                     <constraint firstItem="Vne-DN-yVR" firstAttribute="leading" secondItem="hfx-JJ-Y1N" secondAttribute="leading" id="Smc-nR-n3A"/>
@@ -70,6 +82,7 @@
                     <constraint firstAttribute="bottom" secondItem="Vne-DN-yVR" secondAttribute="bottom" id="kJw-GX-RjS"/>
                     <constraint firstItem="aoK-1P-fIa" firstAttribute="width" secondItem="Kle-WW-UjV" secondAttribute="width" id="nOF-pO-m6e"/>
                     <constraint firstItem="9Yk-qN-rPW" firstAttribute="leading" secondItem="aoK-1P-fIa" secondAttribute="leading" id="q9R-wo-ES4"/>
+                    <constraint firstAttribute="trailing" secondItem="wED-1C-DUQ" secondAttribute="trailing" constant="10" id="tOd-5W-Suu"/>
                     <constraint firstItem="aoK-1P-fIa" firstAttribute="leading" secondItem="Kle-WW-UjV" secondAttribute="leading" id="tek-dS-R1l"/>
                     <constraint firstItem="5mn-OX-4Nt" firstAttribute="top" secondItem="9Yk-qN-rPW" secondAttribute="bottom" constant="4" id="yiw-dN-lww"/>
                     <constraint firstItem="L3o-OD-OZO" firstAttribute="leading" secondItem="hfx-JJ-Y1N" secondAttribute="leading" constant="8" id="zDB-Vy-r7J"/>
@@ -85,4 +98,7 @@
             <point key="canvasLocation" x="-96" y="25.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="choseMore" width="32" height="32"/>
+    </resources>
 </document>

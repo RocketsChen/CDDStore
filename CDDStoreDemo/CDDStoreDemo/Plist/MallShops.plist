@@ -104,23 +104,23 @@
 	</dict>
 	<dict>
 		<key>goods_address</key>
-		<string>江苏 南京</string>
+		<string>北京 </string>
 		<key>sale_count</key>
 		<string>222</string>
 		<key>expressage</key>
 		<string>12</string>
 		<key>goods_title</key>
-		<string>Apple 苹果 iPhone7Plus 全网4G 5.5寸双摄像头 </string>
+		<string>Apple 苹果 iPhone7 国行 全网4G </string>
 		<key>goodspics</key>
 		<string>shopImage03</string>
 		<key>price</key>
 		<real>0.01</real>
 		<key>sales</key>
-		<integer>293</integer>
+		<integer>268</integer>
 		<key>secondtitle</key>
 		<string>采用iOS 10系统，配置A10芯片。图像防抖功能</string>
 		<key>stock</key>
-		<integer>12</integer>
+		<integer>55</integer>
 	</dict>
 </array>
 </plist>

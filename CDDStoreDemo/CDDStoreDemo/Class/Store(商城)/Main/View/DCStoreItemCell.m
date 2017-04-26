@@ -38,4 +38,9 @@
 
 }
 
+- (IBAction)choseMoreButtonClick {
+    !_choseBlock ? : _choseBlock();
+}
+
+
 @end

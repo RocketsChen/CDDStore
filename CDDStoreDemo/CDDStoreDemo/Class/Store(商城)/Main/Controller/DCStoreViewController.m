@@ -264,7 +264,7 @@ static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 {
     DCStoreItemCell *cell = [tableView dequeueReusableCellWithIdentifier:DCStoreItemCellID forIndexPath:indexPath];
     cell.storeItem = _storeItem[indexPath.row];
-    
+    cell.choseBlock = ^(){};
     return cell;
 }
 

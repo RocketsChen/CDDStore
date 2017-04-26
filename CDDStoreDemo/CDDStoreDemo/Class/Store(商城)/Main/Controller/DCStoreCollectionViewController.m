@@ -209,10 +209,12 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
     if (_isGrid) {
         DCStoreCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreCollectionViewCellID forIndexPath:indexPath];
         cell.storeItem = self.storeItem[indexPath.row];
+        cell.choseBlock = ^(){};
         return cell;
     } else {
         DCStoreGridCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreGridCollectionCellID forIndexPath:indexPath];
         cell.storeItem = self.storeItem[indexPath.row];
+        cell.choseBlock = ^(){};
         return cell;
     }
 }
