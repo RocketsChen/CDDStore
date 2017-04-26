@@ -45,7 +45,7 @@
         [btn setTitleColor:self.buttonSelectedTileColor forState:UIControlStateSelected];
         [btn setTitleColor:self.buttonSelectedTileColor forState:UIControlStateHighlighted | UIControlStateSelected];
         [btn setTitle:titleString forState:UIControlStateNormal];
-        btn.titleLabel.font = [UIFont systemFontOfSize:16];
+        btn.titleLabel.font = [UIFont systemFontOfSize:18];
         if(buttonIndex == 0){
             btn.selected = YES;
             self.selectedButton = btn;
