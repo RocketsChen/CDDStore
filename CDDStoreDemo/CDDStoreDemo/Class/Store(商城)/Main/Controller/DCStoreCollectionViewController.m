@@ -18,6 +18,7 @@
 #import "DCConsts.h"
 #import "DCSpeedy.h"
 #import "DCCustomButton.h"
+#import "DCStoreCoverLabel.h"
 #import "UIView+DCExtension.h"
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
@@ -36,12 +37,23 @@
 
 @property (nonatomic, strong) DCStoreGridFlowLayout *layout;
 
+@property (nonatomic, strong) DCStoreCollectionViewCell *collectionCell;
+@property (nonatomic, strong) DCStoreGridCollectionCell *gridCell;
 @end
-
+static UIView *coverView ;
 static NSString *DCStoreCollectionViewCellID = @"DCStoreCollectionViewCell";
 static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
 
 @implementation DCStoreCollectionViewController
+{
+    UIButton *diffButton;
+    UIButton *sameButton;
+    DCStoreCoverLabel *nameLabel;
+    DCStoreCoverLabel *desLabel;
+    DCStoreCoverLabel *serLabel;
+    DCStoreCoverLabel *exLabel;
+    
+}
 
 #pragma mark - 懒加载
 
@@ -208,11 +220,168 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
 {
     if (_isGrid) {
         DCStoreCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreCollectionViewCellID forIndexPath:indexPath];
+        _collectionCell = cell;
         cell.storeItem = self.storeItem[indexPath.row];
+        __weak typeof(cell)weakCell = cell;
+        cell.choseMoreBlock = ^(UIImageView *image) {
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                coverView = [UIButton buttonWithType:UIButtonTypeCustom];
+            });
+            
+            coverView.dc_width = weakCell.contentView.dc_width;
+            coverView.dc_height = 0;
+            coverView.dc_x = weakCell.contentView.dc_x;
+            [UIView animateWithDuration:0.5 animations:^{
+                coverView.dc_height = weakCell.contentView.dc_height;
+            }];
+            
+            coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
+            
+            diffButton = [[UIButton alloc] init];
+            [diffButton setTitle:@"无相同" forState:UIControlStateNormal];
+            diffButton.titleLabel.font = [UIFont systemFontOfSize:12];
+            [diffButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [diffButton setBackgroundColor:[UIColor redColor]];
+            [diffButton addTarget:self action:@selector(CollnoDiff) forControlEvents:UIControlEventTouchUpInside];
+            
+            sameButton = [[UIButton alloc] init];
+            [sameButton setTitle:@"找相似" forState:UIControlStateNormal];
+            sameButton.titleLabel.font = [UIFont systemFontOfSize:12];
+            [sameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [sameButton setBackgroundColor:[UIColor orangeColor]];
+            [sameButton addTarget:self action:@selector(ColllookSame) forControlEvents:UIControlEventTouchUpInside];
+            
+            [DCSpeedy chageControlCircularWith:diffButton AndSetCornerRadius:coverView.dc_width * 0.2 SetBorderWidth:0 SetBorderColor:0 canMasksToBounds:YES];
+            [DCSpeedy chageControlCircularWith:sameButton AndSetCornerRadius:coverView.dc_width * 0.2 SetBorderWidth:0 SetBorderColor:0 canMasksToBounds:YES];
+            
+            [weakCell.contentView addSubview:coverView];
+            [coverView addSubview:diffButton];
+            [coverView addSubview:sameButton];
+            
+            [diffButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+                [make.bottom.mas_equalTo(coverView.mas_centerY)setOffset:5];
+                make.centerX.mas_equalTo(coverView.mas_centerX);
+                make.width.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+            }];
+            
+            [sameButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+                [make.top.mas_equalTo(diffButton.mas_bottom)setOffset:5];
+                make.centerX.mas_equalTo(coverView.mas_centerX);
+                make.width.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+            }];
+            
+            coverView.userInteractionEnabled = YES;
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewRemoveCollCell)];
+            [coverView addGestureRecognizer:tap];
+
+        };
         return cell;
     } else {
         DCStoreGridCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreGridCollectionCellID forIndexPath:indexPath];
         cell.storeItem = self.storeItem[indexPath.row];
+        _gridCell = cell;
+        __weak typeof(cell)weakCell = cell;
+        cell.choseMoreBlock = ^(UIImageView *image) {
+            
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{ //单列
+                coverView = [UIButton buttonWithType:UIButtonTypeCustom];
+            });
+            coverView.dc_height = weakCell.contentView.dc_height;
+            coverView.dc_y = 0;
+            coverView.dc_width = weakCell.contentView.dc_width - CGRectGetMaxX(image.frame);
+            coverView.dc_x = weakCell.contentView.dc_width;
+            [UIView animateWithDuration:0.5 animations:^{
+                coverView.dc_x = CGRectGetMaxX(image.frame);
+            }];
+            
+            coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
+            [weakCell.contentView addSubview:coverView];
+            
+            diffButton = [[UIButton alloc] init];
+            [diffButton setTitle:@"无相同" forState:UIControlStateNormal];
+            diffButton.titleLabel.font = [UIFont systemFontOfSize:12];
+            [diffButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [diffButton setBackgroundColor:[UIColor redColor]];
+            [diffButton addTarget:self action:@selector(GridnoDiff) forControlEvents:UIControlEventTouchUpInside];
+            
+            sameButton = [[UIButton alloc] init];
+            [sameButton setTitle:@"找相似" forState:UIControlStateNormal];
+            sameButton.titleLabel.font = [UIFont systemFontOfSize:12];
+            [sameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [sameButton setBackgroundColor:[UIColor orangeColor]];
+            [sameButton addTarget:self action:@selector(GridlookSame) forControlEvents:UIControlEventTouchUpInside];
+            
+            nameLabel = [[DCStoreCoverLabel alloc] init];
+            nameLabel.text = @"RockectChen直营店";
+            
+            desLabel = [[DCStoreCoverLabel alloc] init];
+            desLabel.text = @"描述 4.9         评论（12）";
+            
+            serLabel = [[DCStoreCoverLabel alloc] init];
+            serLabel.text = @"服务 4.9         有图（4）";
+            
+            exLabel = [[DCStoreCoverLabel alloc] init];
+            exLabel.text = @"物流 4.9         追加（6）";
+            
+            NSArray *array = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"."];
+            [DCSpeedy setSomeOneChangeColor:desLabel SetSelectArray:array SetChangeColor:[UIColor orangeColor]];
+            [DCSpeedy setSomeOneChangeColor:serLabel SetSelectArray:array SetChangeColor:[UIColor orangeColor]];
+            [DCSpeedy setSomeOneChangeColor:exLabel SetSelectArray:array SetChangeColor:[UIColor orangeColor]];
+            
+            [coverView addSubview:diffButton];
+            [coverView addSubview:sameButton];
+            
+            [coverView addSubview:nameLabel];
+            [coverView addSubview:desLabel];
+            [coverView addSubview:serLabel];
+            [coverView addSubview:exLabel];
+            
+            
+            [diffButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(coverView).multipliedBy(0.5);
+                make.right.mas_equalTo(coverView);
+                make.top.mas_equalTo(coverView);
+                make.width.mas_equalTo(@(55));
+            }];
+            
+            [sameButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(coverView).multipliedBy(0.5);
+                make.right.mas_equalTo(coverView);
+                make.top.mas_equalTo(diffButton.mas_bottom);
+                make.width.mas_equalTo(@(55));
+            }];
+            
+            [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                [make.left.mas_equalTo(coverView.mas_left)setOffset:DCMargin];
+                [make.right.mas_equalTo(sameButton.mas_left)setOffset:DCMargin];
+                [make.top.mas_equalTo(coverView)setOffset:DCMargin];
+                
+            }];
+            
+            [desLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                [make.left.mas_equalTo(coverView.mas_left)setOffset:DCMargin];
+                [make.top.mas_equalTo(nameLabel.mas_bottom)setOffset:DCMargin];
+                
+            }];
+            [serLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                [make.left.mas_equalTo(coverView.mas_left)setOffset:DCMargin];
+                [make.top.mas_equalTo(desLabel.mas_bottom)setOffset:4];
+                
+            }];
+            [exLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                [make.left.mas_equalTo(coverView.mas_left)setOffset:DCMargin];
+                [make.top.mas_equalTo(serLabel.mas_bottom)setOffset:4];
+                
+            }];
+            
+            coverView.userInteractionEnabled = YES;
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewRemoveGridCell)];
+            [coverView addGestureRecognizer:tap];
+        };
         return cell;
     }
 }
@@ -244,4 +413,52 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
     }
 }
 
+#pragma mark - 按钮点击
+- (void)CollnoDiff
+{
+    [self coverViewRemoveCollCell];
+}
+
+- (void)ColllookSame
+{
+    [self coverViewRemoveCollCell];
+}
+
+- (void)GridnoDiff
+{
+    [self coverViewRemoveGridCell];
+}
+
+- (void)GridlookSame
+{
+    [self coverViewRemoveGridCell];
+}
+
+
+#pragma mark - 移除视图
+- (void)coverViewRemoveGridCell
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        coverView.dc_x = _gridCell.contentView.dc_width;
+    } completion:^(BOOL finished) {
+        [nameLabel removeFromSuperview];
+        [desLabel removeFromSuperview];
+        [serLabel removeFromSuperview];
+        [exLabel removeFromSuperview];
+        [diffButton removeFromSuperview];
+        [sameButton removeFromSuperview];
+        [coverView removeFromSuperview];
+    }];
+}
+
+- (void)coverViewRemoveCollCell
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        coverView.dc_height = 0;
+        [sameButton removeFromSuperview];
+        [diffButton removeFromSuperview];
+    } completion:^(BOOL finished) {
+        [coverView removeFromSuperview];
+    }];
+}
 @end

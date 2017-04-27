@@ -16,4 +16,7 @@
 @property (strong , nonatomic)DCStoreItem *storeItem;
 
 
+@property (nonatomic , copy) void(^choseMoreBlock)(UIImageView *image);
+
+
 @end
