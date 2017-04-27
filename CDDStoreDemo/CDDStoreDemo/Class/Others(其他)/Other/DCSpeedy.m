@@ -23,6 +23,9 @@
 
 +(id)setSomeOneChangeColor:(UILabel *)label SetSelectArray:(NSArray *)arrray SetChangeColor:(UIColor *)color
 {
+    if (label.text.length == 0) {
+        return 0;
+    }
     int i;
     NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc]initWithString:label.text];
     for (i = 0; i < label.text.length; i ++) {

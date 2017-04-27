@@ -21,6 +21,7 @@
 		181F05F21E882B08008E88F4 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F05ED1E882B08008E88F4 /* UIPlaceHolderTextView.m */; };
 		181F05F41E882B08008E88F4 /* WJYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F05F11E882B08008E88F4 /* WJYAlertView.m */; };
 		186AD0FD1EA9C9D40004C1B8 /* DCStoreGridFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AD0FC1EA9C9D40004C1B8 /* DCStoreGridFlowLayout.m */; };
+		187102C81EB2443200327790 /* DCStoreCoverLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187102C71EB2443200327790 /* DCStoreCoverLabel.m */; };
 		187E678B1E7D793100722607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E678A1E7D793100722607 /* main.m */; };
 		187E67961E7D793100722607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187E67951E7D793100722607 /* Assets.xcassets */; };
 		187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E67971E7D793100722607 /* LaunchScreen.storyboard */; };
@@ -145,6 +146,8 @@
 		181F05F11E882B08008E88F4 /* WJYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJYAlertView.m; sourceTree = "<group>"; };
 		186AD0FB1EA9C9D40004C1B8 /* DCStoreGridFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreGridFlowLayout.h; sourceTree = "<group>"; };
 		186AD0FC1EA9C9D40004C1B8 /* DCStoreGridFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreGridFlowLayout.m; sourceTree = "<group>"; };
+		187102C61EB2443200327790 /* DCStoreCoverLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreCoverLabel.h; sourceTree = "<group>"; };
+		187102C71EB2443200327790 /* DCStoreCoverLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreCoverLabel.m; sourceTree = "<group>"; };
 		187E67861E7D793000722607 /* CDDStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E678A1E7D793100722607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187E67951E7D793100722607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -797,6 +800,8 @@
 				1803B3151E99F0A8009F4925 /* DCPayWayCell.m */,
 				186AD0FB1EA9C9D40004C1B8 /* DCStoreGridFlowLayout.h */,
 				186AD0FC1EA9C9D40004C1B8 /* DCStoreGridFlowLayout.m */,
+				187102C61EB2443200327790 /* DCStoreCoverLabel.h */,
+				187102C71EB2443200327790 /* DCStoreCoverLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1107,6 +1112,7 @@
 				187E68AB1E7D8F0000722607 /* XWFilterAnimator+XWMask.m in Sources */,
 				187E67C91E7D79E100722607 /* AppDelegate.m in Sources */,
 				187E68B51E7D952F00722607 /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
+				187102C81EB2443200327790 /* DCStoreCoverLabel.m in Sources */,
 				187E68A61E7D8F0000722607 /* XWDrawerAnimator.m in Sources */,
 				187E689E1E7D8F0000722607 /* XWCoolAnimator+XWExplode.m in Sources */,
 				1891EE671EA8B044008EA054 /* DCStoreCollectionViewCell.m in Sources */,

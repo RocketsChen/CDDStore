@@ -16,8 +16,4 @@
 @property (strong , nonatomic)DCStoreItem *storeItem;
 
 
-/** 更多选择回调 */
-@property (nonatomic, copy) void ((^choseBlock))();
-
-
 @end

@@ -9,6 +9,7 @@
 #import "DCStoreCollectionViewCell.h"
 
 #import "DCConsts.h"
+#import "DCSpeedy.h"
 #import "DCStoreItem.h"
 #import "UIView+DCExtension.h"
 #import <Masonry.h>
@@ -24,8 +25,13 @@
 @property (strong, nonatomic)  UIButton *choseMoreBtn;
 @end
 
-@implementation DCStoreCollectionViewCell
+static UIView *coverView;
 
+@implementation DCStoreCollectionViewCell
+{
+    UIButton *diffButton;
+    UIButton *sameButton;
+}
 #pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -124,6 +130,79 @@
 
 - (void)choseMoreBynClick
 {
-    _choseBlock ? : _choseBlock();
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        coverView = [UIButton buttonWithType:UIButtonTypeCustom];
+    });
+    
+    coverView.dc_width = self.contentView.dc_width;
+    coverView.dc_height = 0;
+    coverView.dc_x = self.contentView.dc_x;
+    [UIView animateWithDuration:0.5 animations:^{
+        coverView.dc_height = self.contentView.dc_height;
+    }];
+    
+    coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
+    
+    diffButton = [[UIButton alloc] init];
+    [diffButton setTitle:@"无相同" forState:UIControlStateNormal];
+    diffButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    [diffButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [diffButton setBackgroundColor:[UIColor redColor]];
+    [diffButton addTarget:self action:@selector(noDiff) forControlEvents:UIControlEventTouchUpInside];
+    
+    sameButton = [[UIButton alloc] init];
+    [sameButton setTitle:@"找相似" forState:UIControlStateNormal];
+    sameButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    [sameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [sameButton setBackgroundColor:[UIColor orangeColor]];
+    [sameButton addTarget:self action:@selector(lookSame) forControlEvents:UIControlEventTouchUpInside];
+    
+    [DCSpeedy chageControlCircularWith:diffButton AndSetCornerRadius:coverView.dc_width * 0.2 SetBorderWidth:0 SetBorderColor:0 canMasksToBounds:YES];
+    [DCSpeedy chageControlCircularWith:sameButton AndSetCornerRadius:coverView.dc_width * 0.2 SetBorderWidth:0 SetBorderColor:0 canMasksToBounds:YES];
+    
+    [self.contentView addSubview:coverView];
+    [coverView addSubview:diffButton];
+    [coverView addSubview:sameButton];
+    
+    [diffButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+        [make.bottom.mas_equalTo(coverView.mas_centerY)setOffset:5];
+        make.centerX.mas_equalTo(coverView.mas_centerX);
+        make.width.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+    }];
+    
+    [sameButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+        [make.top.mas_equalTo(diffButton.mas_bottom)setOffset:5];
+        make.centerX.mas_equalTo(coverView.mas_centerX);
+        make.width.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
+    }];
+    
+    coverView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewRemove)];
+    [coverView addGestureRecognizer:tap];
+}
+
+- (void)noDiff
+{
+    [self coverViewRemove];
+}
+
+- (void)lookSame
+{
+    [self coverViewRemove];
+}
+
+#pragma mark - 移除视图
+- (void)coverViewRemove
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        coverView.dc_height = 0;
+        [sameButton removeFromSuperview];
+        [diffButton removeFromSuperview];
+    } completion:^(BOOL finished) {
+        [coverView removeFromSuperview];
+    }];
 }
 @end
