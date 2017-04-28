@@ -25,13 +25,8 @@
 @property (strong, nonatomic)  UIButton *choseMoreBtn;
 @end
 
-static UIView *coverView;
-
 @implementation DCStoreCollectionViewCell
-{
-    UIButton *diffButton;
-    UIButton *sameButton;
-}
+
 #pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -128,30 +123,5 @@ static UIView *coverView;
     
 }
 
-- (void)choseMoreBynClick
-{
-    !_choseMoreBlock ? : _choseMoreBlock(_iconImageView);
-}
 
-- (void)noDiff
-{
-    [self coverViewRemove];
-}
-
-- (void)lookSame
-{
-    [self coverViewRemove];
-}
-
-#pragma mark - 移除视图
-- (void)coverViewRemove
-{
-    [UIView animateWithDuration:0.5 animations:^{
-        coverView.dc_height = 0;
-        [sameButton removeFromSuperview];
-        [diffButton removeFromSuperview];
-    } completion:^(BOOL finished) {
-        [coverView removeFromSuperview];
-    }];
-}
 @end
