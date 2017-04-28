@@ -284,7 +284,16 @@ static UIView *coverView;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{ //单列
             coverView = [UIButton buttonWithType:UIButtonTypeCustom];
+            
+            diffButton = [[UIButton alloc] init];
+            sameButton = [[UIButton alloc] init];
+            
+            nameLabel = [[DCStoreCoverLabel alloc] init];
+            desLabel = [[DCStoreCoverLabel alloc] init];
+            serLabel = [[DCStoreCoverLabel alloc] init];
+            exLabel = [[DCStoreCoverLabel alloc] init];
         });
+        
         coverView.dc_height = weakCell.contentView.dc_height;
         coverView.dc_y = 0;
         coverView.dc_width = weakCell.contentView.dc_width - CGRectGetMaxX(iconImageView.frame);
@@ -296,30 +305,25 @@ static UIView *coverView;
         coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
         [weakCell.contentView addSubview:coverView];
         
-        diffButton = [[UIButton alloc] init];
         [diffButton setTitle:@"无相同" forState:UIControlStateNormal];
         diffButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [diffButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [diffButton setBackgroundColor:[UIColor redColor]];
         [diffButton addTarget:self action:@selector(noDiff) forControlEvents:UIControlEventTouchUpInside];
         
-        sameButton = [[UIButton alloc] init];
         [sameButton setTitle:@"找相似" forState:UIControlStateNormal];
         sameButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [sameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [sameButton setBackgroundColor:[UIColor orangeColor]];
         [sameButton addTarget:self action:@selector(lookSame) forControlEvents:UIControlEventTouchUpInside];
         
-        nameLabel = [[DCStoreCoverLabel alloc] init];
+        
         nameLabel.text = @"RockectChen直营店";
         
-        desLabel = [[DCStoreCoverLabel alloc] init];
         desLabel.text = @"描述 4.9         评论（12）";
         
-        serLabel = [[DCStoreCoverLabel alloc] init];
         serLabel.text = @"服务 4.9         有图（4）";
         
-        exLabel = [[DCStoreCoverLabel alloc] init];
         exLabel.text = @"物流 4.9         追加（6）";
         
         NSArray *array = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"."];
