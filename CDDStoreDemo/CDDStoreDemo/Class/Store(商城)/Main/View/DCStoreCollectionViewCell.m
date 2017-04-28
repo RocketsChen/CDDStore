@@ -123,5 +123,10 @@
     
 }
 
+- (void)choseMoreBynClick
+{
+    !_choseMoreBlock ? : _choseMoreBlock(_iconImageView);
+}
+
 
 @end
