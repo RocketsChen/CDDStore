@@ -12,7 +12,7 @@
 #import "DCSpeedy.h"
 #import "DCStoreItem.h"
 #import "UIView+DCExtension.h"
-#import "DCStoreCoverLabel.h"
+
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
 

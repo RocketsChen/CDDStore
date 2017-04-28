@@ -31,15 +31,15 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 /* 数据 */
 @property (strong , nonatomic)NSMutableArray<DCStoreItem *> *storeItem;
-
 /* 视图状态 */
 @property (nonatomic, assign) BOOL isGrid;
 
 @property (nonatomic, strong) DCStoreGridFlowLayout *layout;
-
 @property (nonatomic, strong) DCStoreCollectionViewCell *collectionCell;
 @property (nonatomic, strong) DCStoreGridCollectionCell *gridCell;
+
 @end
+
 static UIView *coverView ;
 static NSString *DCStoreCollectionViewCellID = @"DCStoreCollectionViewCell";
 static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
@@ -52,7 +52,6 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
     DCStoreCoverLabel *desLabel;
     DCStoreCoverLabel *serLabel;
     DCStoreCoverLabel *exLabel;
-    
 }
 
 #pragma mark - 懒加载
@@ -218,26 +217,30 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    //选择喜欢和不喜欢相同View
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{ //单列
+        coverView = [UIButton buttonWithType:UIButtonTypeCustom];
+    });
+    coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
+    coverView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewRemoveGridCell)];
+    [coverView addGestureRecognizer:tap];
+    
     if (_isGrid) {
         DCStoreCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCStoreCollectionViewCellID forIndexPath:indexPath];
         _collectionCell = cell;
         cell.storeItem = self.storeItem[indexPath.row];
         __weak typeof(cell)weakCell = cell;
         cell.choseMoreBlock = ^(UIImageView *image) {
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{
-                coverView = [UIButton buttonWithType:UIButtonTypeCustom];
-            });
-            
+
             coverView.dc_width = weakCell.contentView.dc_width;
             coverView.dc_height = 0;
             coverView.dc_x = weakCell.contentView.dc_x;
             [UIView animateWithDuration:0.5 animations:^{
                 coverView.dc_height = weakCell.contentView.dc_height;
             }];
-            
-            coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
-            
+        
             diffButton = [[UIButton alloc] init];
             [diffButton setTitle:@"无相同" forState:UIControlStateNormal];
             diffButton.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -272,10 +275,6 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
                 make.centerX.mas_equalTo(coverView.mas_centerX);
                 make.width.mas_equalTo(coverView.mas_width).multipliedBy(0.4);
             }];
-            
-            coverView.userInteractionEnabled = YES;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewRemoveCollCell)];
-            [coverView addGestureRecognizer:tap];
 
         };
         return cell;
@@ -286,10 +285,6 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
         __weak typeof(cell)weakCell = cell;
         cell.choseMoreBlock = ^(UIImageView *image) {
             
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{ //单列
-                coverView = [UIButton buttonWithType:UIButtonTypeCustom];
-            });
             coverView.dc_height = weakCell.contentView.dc_height;
             coverView.dc_y = 0;
             coverView.dc_width = weakCell.contentView.dc_width - CGRectGetMaxX(image.frame);
@@ -297,8 +292,7 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
             [UIView animateWithDuration:0.5 animations:^{
                 coverView.dc_x = CGRectGetMaxX(image.frame);
             }];
-            
-            coverView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
+
             [weakCell.contentView addSubview:coverView];
             
             diffButton = [[UIButton alloc] init];
@@ -306,14 +300,14 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
             diffButton.titleLabel.font = [UIFont systemFontOfSize:12];
             [diffButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [diffButton setBackgroundColor:[UIColor redColor]];
-            [diffButton addTarget:self action:@selector(GridnoDiff) forControlEvents:UIControlEventTouchUpInside];
+            [diffButton addTarget:self action:@selector(CollnoDiff) forControlEvents:UIControlEventTouchUpInside];
             
             sameButton = [[UIButton alloc] init];
             [sameButton setTitle:@"找相似" forState:UIControlStateNormal];
             sameButton.titleLabel.font = [UIFont systemFontOfSize:12];
             [sameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [sameButton setBackgroundColor:[UIColor orangeColor]];
-            [sameButton addTarget:self action:@selector(GridlookSame) forControlEvents:UIControlEventTouchUpInside];
+            [sameButton addTarget:self action:@selector(ColllookSame) forControlEvents:UIControlEventTouchUpInside];
             
             nameLabel = [[DCStoreCoverLabel alloc] init];
             nameLabel.text = @"RockectChen直营店";
@@ -377,10 +371,6 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
                 [make.top.mas_equalTo(serLabel.mas_bottom)setOffset:4];
                 
             }];
-            
-            coverView.userInteractionEnabled = YES;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverViewRemoveGridCell)];
-            [coverView addGestureRecognizer:tap];
         };
         return cell;
     }
@@ -416,49 +406,39 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
 #pragma mark - 按钮点击
 - (void)CollnoDiff
 {
-    [self coverViewRemoveCollCell];
+    [self coverViewRemoveGridCell];
+    
 }
 
 - (void)ColllookSame
 {
-    [self coverViewRemoveCollCell];
-}
-
-- (void)GridnoDiff
-{
     [self coverViewRemoveGridCell];
 }
-
-- (void)GridlookSame
-{
-    [self coverViewRemoveGridCell];
-}
-
 
 #pragma mark - 移除视图
 - (void)coverViewRemoveGridCell
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        coverView.dc_x = _gridCell.contentView.dc_width;
-    } completion:^(BOOL finished) {
-        [nameLabel removeFromSuperview];
-        [desLabel removeFromSuperview];
-        [serLabel removeFromSuperview];
-        [exLabel removeFromSuperview];
-        [diffButton removeFromSuperview];
-        [sameButton removeFromSuperview];
-        [coverView removeFromSuperview];
-    }];
+    if (_isGrid) {
+        [UIView animateWithDuration:0.5 animations:^{
+            coverView.dc_height = 0;
+            [sameButton removeFromSuperview];
+            [diffButton removeFromSuperview];
+        } completion:^(BOOL finished) {
+            [coverView removeFromSuperview];
+        }];
+    }else{
+        [UIView animateWithDuration:0.5 animations:^{
+            coverView.dc_x = _gridCell.contentView.dc_width;
+        } completion:^(BOOL finished) {
+            [nameLabel removeFromSuperview];
+            [desLabel removeFromSuperview];
+            [serLabel removeFromSuperview];
+            [exLabel removeFromSuperview];
+            [diffButton removeFromSuperview];
+            [sameButton removeFromSuperview];
+            [coverView removeFromSuperview];
+        }];
+    }
 }
 
-- (void)coverViewRemoveCollCell
-{
-    [UIView animateWithDuration:0.5 animations:^{
-        coverView.dc_height = 0;
-        [sameButton removeFromSuperview];
-        [diffButton removeFromSuperview];
-    } completion:^(BOOL finished) {
-        [coverView removeFromSuperview];
-    }];
-}
 @end

@@ -11,7 +11,6 @@
 #import "DCStoreItem.h"
 #import "DCConsts.h"
 #import "DCSpeedy.h"
-#import "DCStoreCoverLabel.h"
 #import "UIView+DCExtension.h"
 
 #import <Masonry.h>
