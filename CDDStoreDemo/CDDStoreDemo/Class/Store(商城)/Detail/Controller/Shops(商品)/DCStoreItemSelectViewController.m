@@ -45,6 +45,8 @@
 @property (weak ,nonatomic) UIView *middleView;
 /** 评论Tag */
 @property (nonatomic ,weak) DCShopItemView *attributeView;
+/** 评论Tag */
+@property (nonatomic ,weak) DCStoreHeadPriceCell *headCell;
 /* 数据 */
 @property (strong , nonatomic)NSMutableArray <DCStoreAttribute *> *shopAttr;
 
@@ -417,7 +419,7 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DCStoreHeadPriceCell *cell = [tableView dequeueReusableCellWithIdentifier:DCStoreHeadPriceCellID forIndexPath:indexPath];
-
+    _headCell = cell;
     cell.icoImageView.image = [UIImage imageNamed:_iconImage];
     
     _iconImageView = cell.icoImageView;
@@ -673,6 +675,9 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
 #pragma mark - 添加购物车动画
 - (void)addShopCarAnimal
 {
+    UIImageView *anImage = [[UIImageView alloc]initWithFrame:_iconImageView.bounds];
+    anImage.image = _iconImageView.image;
+    [_headCell addSubview:anImage];
     CABasicAnimation* rotationAnimation;
     rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 15];
@@ -683,11 +688,11 @@ static NSString *const DCStoreHeadPriceCellID = @"DCStoreHeadPriceCell";
     // 让旋转动画慢于缩放动画执行
     __weak typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf.iconImageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+        [anImage.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     });
     
     [UIView animateWithDuration:1.0 animations:^{
-        weakSelf.iconImageView.frame = CGRectMake(weakSelf.view.frame.size.width - 55, - (weakSelf.view.frame.size.height - CGRectGetHeight(weakSelf.view.frame) - 40), 0, 0);
+        anImage.frame = CGRectMake(weakSelf.view.frame.size.width - 55, - (weakSelf.view.frame.size.height - CGRectGetHeight(weakSelf.view.frame) - 40), 0, 0);
     } completion:^(BOOL finished) {
         
         // 动画完成后弹框消失
