@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>adName</key>
+		<string>RocketsChen</string>
+		<key>adPhone</key>
+		<string>18066177451</string>
+		<key>adCity</key>
+		<string>江苏 苏州 吴中</string>
+		<key>adDetail</key>
+		<string>西安交通大学苏州科技园</string>
+		<key>isDefault</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>adName</key>
+		<string>D丶卩__陈</string>
+		<key>adPhone</key>
+		<string>13851007451</string>
+		<key>adCity</key>
+		<string>江苏 苏州</string>
+		<key>adDetail</key>
+		<string>南门汽车客运站</string>
+		<key>isDefault</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>adName</key>
+		<string>IOSChen</string>
+		<key>adPhone</key>
+		<string>13851007451</string>
+		<key>adCity</key>
+		<string>江苏 苏州</string>
+		<key>adDetail</key>
+		<string>丹凤街（公交站）等风来 118号路过此地</string>
+		<key>isDefault</key>
+		<false/>
+	</dict>
+</array>
+</plist>

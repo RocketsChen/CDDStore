@@ -1,12 +1,20 @@
-platform :ios, "8.0"
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '8.0'
 
-pod "AFNetworking"
-pod "SDWebImage"
-pod "MJExtension"
-pod "MJRefresh"
-pod "Masonry"
-pod "SDCycleScrollView"
-pod "TXScrollLabelView"
-pod "SVProgressHUD"
+pod 'SVProgressHUD'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'Masonry'
+pod 'SDCycleScrollView'
+pod 'FMDB'
+pod 'ZYCornerRadius'
+pod 'SDWebImage' ,"3.8.2"
+pod 'TZImagePickerController'
+pod 'IQKeyboardManager'
+pod 'AFNetworking'
+pod 'CDDPagerController'
 
-target :"CDDStoreDemo"
+target 'CDDStoreDemo' do
+
+
+end

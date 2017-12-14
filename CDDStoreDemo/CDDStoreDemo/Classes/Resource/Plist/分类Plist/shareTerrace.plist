@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>terrace</key>
+		<string>复制链接</string>
+		<key>iconImage</key>
+		<string>share_fuzhilianjie</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>QQ空间</string>
+		<key>iconImage</key>
+		<string>share_kjian</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>短信</string>
+		<key>iconImage</key>
+		<string>share_message</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>朋友圈</string>
+		<key>iconImage</key>
+		<string>share_pyq</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>QQ</string>
+		<key>iconImage</key>
+		<string>share_qq</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>新浪微博</string>
+		<key>iconImage</key>
+		<string>share_sina</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>腾讯微博</string>
+		<key>iconImage</key>
+		<string>share_weibo</string>
+	</dict>
+	<dict>
+		<key>terrace</key>
+		<string>微信好友</string>
+		<key>iconImage</key>
+		<string>share_wx</string>
+	</dict>
+</array>
+</plist>

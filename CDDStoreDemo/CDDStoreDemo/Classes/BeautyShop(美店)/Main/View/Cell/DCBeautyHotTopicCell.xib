@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3ow-V9-2mt" customClass="DCBeautyHotTopicCell">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="209"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="209"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpA-jV-wUz">
+                        <rect key="frame" x="0.0" y="164" width="417" height="35"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk3-8o-Rvg">
+                                <rect key="frame" x="347" y="0.0" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KM5-ht-yoK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="2.1万" image="mShop_broswer_icon">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guome" translatesAutoresizingMaskIntoConstraints="NO" id="wEU-j7-Ven">
+                                <rect key="frame" x="4" y="5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="WIq-Iq-F6F"/>
+                                    <constraint firstAttribute="height" constant="26" id="o01-ht-fwm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国美全攻略" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kL-Wn-5lb">
+                                <rect key="frame" x="38" y="8.5" width="66" height="19"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Uk3-8o-Rvg" secondAttribute="bottom" id="4de-Ma-LMV"/>
+                            <constraint firstAttribute="height" constant="35" id="9up-h2-UtY"/>
+                            <constraint firstItem="2kL-Wn-5lb" firstAttribute="leading" secondItem="wEU-j7-Ven" secondAttribute="trailing" constant="8" id="AIf-T4-LSO"/>
+                            <constraint firstItem="wEU-j7-Ven" firstAttribute="leading" secondItem="HpA-jV-wUz" secondAttribute="leading" constant="4" id="IJ1-u4-uwq"/>
+                            <constraint firstItem="Uk3-8o-Rvg" firstAttribute="top" secondItem="HpA-jV-wUz" secondAttribute="top" id="Maa-xr-FxR"/>
+                            <constraint firstItem="Uk3-8o-Rvg" firstAttribute="centerY" secondItem="HpA-jV-wUz" secondAttribute="centerY" id="SDV-nE-mJe"/>
+                            <constraint firstItem="2kL-Wn-5lb" firstAttribute="centerY" secondItem="wEU-j7-Ven" secondAttribute="centerY" id="bxU-eR-LpO"/>
+                            <constraint firstAttribute="trailing" secondItem="Uk3-8o-Rvg" secondAttribute="trailing" constant="10" id="dGe-bb-x6S"/>
+                            <constraint firstItem="wEU-j7-Ven" firstAttribute="centerY" secondItem="HpA-jV-wUz" secondAttribute="centerY" id="g2e-8r-RB5"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【美店秘籍】深入美店，分享指南" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-4t-IGG">
+                        <rect key="frame" x="15" y="10" width="387" height="26"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World Hello World Hello World Hello World Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpL-tl-Fpz">
+                        <rect key="frame" x="15" y="46" width="387" height="20"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qew-AK-anJ" userLabel="底部分割线">
+                        <rect key="frame" x="10" y="208" width="397" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="euI-GU-8YS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qew-AK-anJ" secondAttribute="trailing" constant="10" id="BJJ-0e-n6y"/>
+                <constraint firstAttribute="trailing" secondItem="pbO-4t-IGG" secondAttribute="trailing" constant="15" id="BzG-3D-oQG"/>
+                <constraint firstItem="fpL-tl-Fpz" firstAttribute="trailing" secondItem="pbO-4t-IGG" secondAttribute="trailing" id="LgO-wd-3U6"/>
+                <constraint firstItem="fpL-tl-Fpz" firstAttribute="leading" secondItem="pbO-4t-IGG" secondAttribute="leading" id="TC5-gF-xhq"/>
+                <constraint firstAttribute="bottom" secondItem="qew-AK-anJ" secondAttribute="bottom" id="UZg-Le-KZv"/>
+                <constraint firstItem="qew-AK-anJ" firstAttribute="leading" secondItem="3ow-V9-2mt" secondAttribute="leading" constant="10" id="Y0e-8U-vUQ"/>
+                <constraint firstItem="fpL-tl-Fpz" firstAttribute="top" secondItem="pbO-4t-IGG" secondAttribute="bottom" constant="10" id="d0j-lD-RJv"/>
+                <constraint firstAttribute="trailing" secondItem="HpA-jV-wUz" secondAttribute="trailing" id="hmn-Sh-vvI"/>
+                <constraint firstAttribute="bottom" secondItem="HpA-jV-wUz" secondAttribute="bottom" constant="10" id="otf-6k-U2c"/>
+                <constraint firstItem="pbO-4t-IGG" firstAttribute="top" secondItem="3ow-V9-2mt" secondAttribute="top" constant="10" id="snD-zw-khB"/>
+                <constraint firstItem="HpA-jV-wUz" firstAttribute="leading" secondItem="3ow-V9-2mt" secondAttribute="leading" id="wtS-vS-5zH"/>
+                <constraint firstItem="pbO-4t-IGG" firstAttribute="leading" secondItem="3ow-V9-2mt" secondAttribute="leading" constant="15" id="z2k-os-cuH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="iYg-z4-5m6"/>
+            <size key="customSize" width="417" height="209"/>
+            <connections>
+                <outlet property="hotTitleLabel" destination="pbO-4t-IGG" id="XTV-Du-tM8"/>
+                <outlet property="subTitleLabel" destination="fpL-tl-Fpz" id="Zsk-kb-6VB"/>
+                <outlet property="watchNumLabel" destination="Uk3-8o-Rvg" id="Dso-3d-osH"/>
+            </connections>
+            <point key="canvasLocation" x="-19.5" y="-357.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="guome" width="30" height="30"/>
+        <image name="mShop_broswer_icon" width="14" height="14"/>
+    </resources>
+</document>

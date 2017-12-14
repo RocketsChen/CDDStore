@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>beautyTitle</key>
+		<string>【美店秘籍】深入美店，分享指南</string>
+		<key>secondTitle</key>
+		<string>Hello，今天小美要给大家带来各种分销的好玩的好吃的好用的。。。。。。</string>
+		<key>watchNum</key>
+		<string>4.4</string>
+		<key>groupImage</key>
+		<array>
+			<string>http://gfs12.gomein.net.cn/T1A_JvB7KT1RCvBVdK-800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1pMWvB4V_1RCvBVdK-800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1A_JvB7KT1RCvBVdK-800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1UndvByxQ1RCvBVdK-800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1MhxvBXdT1RCvBVdK-800.jpg</string>
+			<string>http://gfs16.gomein.net.cn/T1v2bvB7Lv1RCvBVdK-800.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>beautyTitle</key>
+		<string>【美店秘籍】初次驾到，开店指南</string>
+		<key>secondTitle</key>
+		<string>Hello，美店已经推出一段时间了，很多小朋友都。。。。。</string>
+		<key>watchNum</key>
+		<string>6.3</string>
+		<key>groupImage</key>
+		<array>
+			<string>http://gfs14.gomein.net.cn/T177EvBgJb1RCvBVdK-800.png</string>
+			<string>http://gfs15.gomein.net.cn/T10OLvBXYT1RCvBVdK-800.png</string>
+			<string>http://gfs12.gomein.net.cn/T1A_JvB7KT1RCvBVdK-800.jpg</string>
+			<string>http://gfs16.gomein.net.cn/T1v2bvB7Lv1RCvBVdK-800.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>beautyTitle</key>
+		<string>【美店秘籍】如何做到分享多样化，第一季</string>
+		<key>secondTitle</key>
+		<string>Hello，今天小美要给大家带来各种分销的好玩的好吃的好用的。。。。。。</string>
+		<key>watchNum</key>
+		<string>5.2</string>
+		<key>groupImage</key>
+		<array>
+			<string>http://gfs12.gomein.net.cn/T1UndvByxQ1RCvBVdK-800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1pMWvB4V_1RCvBVdK-800.jpg</string>
+			<string>http://gfs16.gomein.net.cn/T13OhvBgJj1RCvBVdK-800.png</string>
+			<string>http://gfs12.gomein.net.cn/T1MhxvBXdT1RCvBVdK-800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1A_JvB7KT1RCvBVdK-800.jpg</string>
+		</array>
+	</dict>
+</array>
+</plist>

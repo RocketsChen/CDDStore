@@ -1,9 +1,9 @@
-//
+ //
 //  main.m
-//  CDDStoreDemo
+//  CDDMall
 //
-//  Created by apple on 2017/3/18.
-//  Copyright © 2017年 apple. All rights reserved.
+//  Created by apple on 2017/5/26.
+//  Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

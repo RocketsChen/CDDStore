@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>233</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>戴尔笔记本</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1d6YTBXCT1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<real>5399</real>
+		<key>sales</key>
+		<integer>2323</integer>
+		<key>main_title</key>
+		<string>戴尔（DELL）燃15-7560-R1525S 15.6英寸（1920*1080）</string>
+		<key>stock</key>
+		<integer>232</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>233</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>华硕笔记本</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1aVWvBmEg1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>4599</integer>
+		<key>sales</key>
+		<integer>2323</integer>
+		<key>main_title</key>
+		<string>华硕（ASUS）U310UQ 15-3568 13.3英寸 高清超薄笔记本</string>
+		<key>stock</key>
+		<integer>232</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>233</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>联想</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1SE_TB5Jv1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>5699</integer>
+		<key>sales</key>
+		<integer>2323</integer>
+		<key>main_title</key>
+		<string>[自营] 联想（Lenovo）ideapad710S </string>
+		<key>stock</key>
+		<integer>232</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>233</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>雷神笔记本</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1_SCTBCJT1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>8099</integer>
+		<key>sales</key>
+		<integer>2323</integer>
+		<key>main_title</key>
+		<string>雷神（THUNDEROBOT）911-M3w 15.6</string>
+		<key>stock</key>
+		<integer>232</integer>
+	</dict>
+</array>
+</plist>

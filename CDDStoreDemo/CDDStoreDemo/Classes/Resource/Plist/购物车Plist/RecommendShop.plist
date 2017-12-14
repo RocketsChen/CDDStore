@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>小米9号平衡车</string>
+		<key>image_url</key>
+		<string>http://gfs13.gomein.net.cn/T1kCLvB4K_1RCvBVdK.jpg</string>
+		<key>price</key>
+		<integer>1999</integer>
+		<key>sales</key>
+		<integer>1222</integer>
+		<key>main_title</key>
+		<string>小米(MI) 定制版Ninebot 九号平衡车 智能代步电动体感车 白【 品质保证 悦享生活】</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>33</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>西门子电冰箱</string>
+		<key>image_url</key>
+		<string>http://gfs13.gomein.net.cn/T1TV_vB4dg1RCvBVdK.jpg</string>
+		<key>price</key>
+		<real>4333</real>
+		<key>sales</key>
+		<real>1233</real>
+		<key>main_title</key>
+		<string>西门子(SIEMENS) KG28FA29EC 274升 三门冰箱(银色)</string>
+		<key>stock</key>
+		<real>2207</real>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>30</string>
+		<key>goods_title</key>
+		<string>TCL彩电</string>
+		<key>image_url</key>
+		<string>http://gfs13.gomein.net.cn/T1E5JvBmEv1RCvBVdK.jpg</string>
+		<key>price</key>
+		<real>2999</real>
+		<key>sales</key>
+		<real>1224</real>
+		<key>main_title</key>
+		<string>TCL 55英寸 4K 平面 液晶 国产电视55C2 电视机商品官方标配</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>33</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>神舟战神游戏本</string>
+		<key>image_url</key>
+		<string>http://gfs13.gomein.net.cn/T1DZWvBgZ_1RCvBVdK.jpg</string>
+		<key>price</key>
+		<real>17899</real>
+		<key>sales</key>
+		<real>1233</real>
+		<key>main_title</key>
+		<string>神舟战神 GX10-KP7S1 I7-7700K GTX1080 17.3英寸游戏笔记本</string>
+		<key>stock</key>
+		<real>233</real>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>夏普电视</string>
+		<key>image_url</key>
+		<string>http://gfs14.gomein.net.cn/T1qC_vBTJg1RCvBVdK.jpg</string>
+		<key>price</key>
+		<integer>9999</integer>
+		<key>sales</key>
+		<integer>4444</integer>
+		<key>main_title</key>
+		<string>夏普（SHARP ）LCD-50SU460A 50英寸 4K超高清智能超薄液晶电视</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>小米智能设备</string>
+		<key>image_url</key>
+		<string>http://gfs10.gomein.net.cn/T1RoEvB5d_1RCvBVdK.jpg</string>
+		<key>price</key>
+		<integer>1999</integer>
+		<key>sales</key>
+		<integer>1222</integer>
+		<key>main_title</key>
+		<string>米家（MIJIA）小方智能 构建和谐家庭</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>vivo X9</string>
+		<key>image_url</key>
+		<string>http://gfs12.gomein.net.cn/T1MVVvBQE_1RCvBVdK.jpg</string>
+		<key>price</key>
+		<integer>5933</integer>
+		<key>sales</key>
+		<integer>2459</integer>
+		<key>main_title</key>
+		<string>vivo X9 全网通 4GB+64GB 移动联通电信4G手机 双卡双待 活力蓝</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>小米9号平衡车</string>
+		<key>image_url</key>
+		<string>http://gfs13.gomein.net.cn/T1kCLvB4K_1RCvBVdK.jpg</string>
+		<key>price</key>
+		<integer>1999</integer>
+		<key>sales</key>
+		<integer>1222</integer>
+		<key>main_title</key>
+		<string>小米(MI) 定制版Ninebot 九号平衡车 智能代步电动体感车 白【 品质保证 悦享生活】</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>30</string>
+		<key>goods_title</key>
+		<string>TCL彩电</string>
+		<key>image_url</key>
+		<string>http://gfs13.gomein.net.cn/T1E5JvBmEv1RCvBVdK.jpg</string>
+		<key>price</key>
+		<real>2999</real>
+		<key>sales</key>
+		<real>1224</real>
+		<key>main_title</key>
+		<string>TCL 55英寸 4K 平面 液晶 国产电视55C2 电视机商品官方标配</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>夏普电视</string>
+		<key>image_url</key>
+		<string>http://gfs14.gomein.net.cn/T1qC_vBTJg1RCvBVdK.jpg</string>
+		<key>price</key>
+		<integer>9999</integer>
+		<key>sales</key>
+		<integer>4444</integer>
+		<key>main_title</key>
+		<string>夏普（SHARP ）LCD-50SU460A 50英寸 4K超高清智能超薄液晶电视</string>
+		<key>stock</key>
+		<integer>2233</integer>
+	</dict>
+</array>
+</plist>

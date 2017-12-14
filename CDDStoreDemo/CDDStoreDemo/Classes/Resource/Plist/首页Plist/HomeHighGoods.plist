@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>苹果手机</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1SyVvB7dT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>7688</integer>
+		<key>sales</key>
+		<integer>213</integer>
+		<key>main_title</key>
+		<string>苹果/APPLE iphone7P 移动联通电信全网通4G手机 中国红</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>苹果手机</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1gVDTB4E_1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>6088</integer>
+		<key>sales</key>
+		<integer>213</integer>
+		<key>main_title</key>
+		<string>苹果/APPLE iphone7P（128）双网通 磨砂黑</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>小米手机</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1zwxTBXdT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>2799</integer>
+		<key>sales</key>
+		<integer>43</integer>
+		<key>main_title</key>
+		<string>小米Note2 全网通标准版 4GB内存+128G超大内存畅想4G</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>Zee手机</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1WEVTBCYT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>599</integer>
+		<key>sales</key>
+		<integer>32</integer>
+		<key>main_title</key>
+		<string>Zee Z10手机 黑色双卡双待 移动联通电信4G 全网通</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>华为手机</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1CvZTBsbv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>4699</integer>
+		<key>sales</key>
+		<integer>32</integer>
+		<key>main_title</key>
+		<string>华为 HUAWEI Mate9/MATE9 全网通4G手机</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>华为手机</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1cRbvBmWv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<real>2518</real>
+		<key>sales</key>
+		<integer>434</integer>
+		<key>main_title</key>
+		<string>华为（HUAWEI）荣耀V7 全网通 （5.7英寸FHD）</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+</array>
+</plist>

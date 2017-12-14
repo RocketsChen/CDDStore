@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>情侣折叠伞</string>
+		<key>image_url</key>
+		<string>http://gfs4.gomein.net.cn/T1GBLTBKDT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>19</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>情侣花色短柄三折伞8k便携迷你纯色雨伞</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>湿巾</string>
+		<key>image_url</key>
+		<string>http://gfs7.gomein.net.cn/T1aiATBgVT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<real>12.9</real>
+		<key>sales</key>
+		<integer>333</integer>
+		<key>main_title</key>
+		<string>漂亮宝贝西柚湿巾 含VC的湿巾 100片带盖*2</string>
+		<key>stock</key>
+		<integer>54234</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>3232</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>家具</string>
+		<key>image_url</key>
+		<string>http://gfs6.gomein.net.cn/T1T8DvBjdT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>35</integer>
+		<key>sales</key>
+		<integer>3232</integer>
+		<key>main_title</key>
+		<string>窝家 居家方便使用厨房 浴室 办公小桌 隔板置物</string>
+		<key>stock</key>
+		<integer>2323</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>剃须刀</string>
+		<key>image_url</key>
+		<string>http://gfs4.gomein.net.cn/T1FE_TB7Ev1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>59</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>朗威剃须刀全身水洗电动剃须刀三头男士充电</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>实木床</string>
+		<key>image_url</key>
+		<string>http://gfs3.gomein.net.cn/T1uXxvB5Lv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>3058</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>名佳实木床 中式 简约现代双人床1.8/1.5 C80882</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>北京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>贝赛斯蛋糕</string>
+		<key>image_url</key>
+		<string>http://gfs9.gomein.net.cn/T1ogCTBXdv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>418</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>贝赛斯Bestcake新鲜红丝生日蛋糕上海北京苏州热销</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>3424</string>
+		<key>expressage</key>
+		<string>34</string>
+		<key>goods_title</key>
+		<string>苏泊尔电磁炉</string>
+		<key>image_url</key>
+		<string>http://gfs1.gomein.net.cn/T1V.JTBCdv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>189</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>苏泊尔电磁炉 SDHCB8E45-210J（SDHCB）</string>
+		<key>stock</key>
+		<integer>3242</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>20</string>
+		<key>goods_title</key>
+		<string>三用数据线</string>
+		<key>image_url</key>
+		<string>http://gfs2.gomein.net.cn/T1.7hTBvhv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<real>39.9</real>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>一拖三用数据线 安卓苹果两不误 type-c三合一</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 南京</string>
+		<key>sale_count</key>
+		<string>333</string>
+		<key>expressage</key>
+		<string>23</string>
+		<key>goods_title</key>
+		<string>插座</string>
+		<key>image_url</key>
+		<string>http://gfs.gomein.net.cn/T1pCATBXhv1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>36</integer>
+		<key>sales</key>
+		<integer>323</integer>
+		<key>main_title</key>
+		<string>佳航插座（HUNKET）SSH601 6位 3米 新国际标准</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>12312</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>手机膜</string>
+		<key>image_url</key>
+		<string>http://gfs2.gomein.net.cn/T1UkCTB5JT1RCvBVdK_400.jpg</string>
+		<key>price</key>
+		<integer>49</integer>
+		<key>sales</key>
+		<integer>213</integer>
+		<key>main_title</key>
+		<string>黑客手机膜套装 Iphone7/plus 在线热销中</string>
+		<key>stock</key>
+		<integer>2131</integer>
+	</dict>
+</array>
+</plist>

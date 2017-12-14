@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs17.gomein.net.cn/T1CvZTBsbv1RCvBVdK_800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1evhTBydv1RCvBVdK_800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T1oGxTBXA_1RCvBVdK_800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T18PbTBCdT1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>&quot;一眼一世界，开启你的虹膜空间&quot;</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1CvZTBsbv1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>5299</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>华为 HUAWEI Mate9 Pro （LON-AL00）6GB+128GB 琥珀金</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg</string>
+			<string>http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg</string>
+			<string>http://gfs10.gomein.net.cn/T1LS_TBgZg1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>“人像摄影大师”新一代徕卡双镜头 一体化前置指纹 5.1英寸显示屏 麒麟960芯片</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1owDTBCLs1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>599</integer>
+		<key>sales</key>
+		<integer>344</integer>
+		<key>main_title</key>
+		<string>小米 （MI）红米4A 2GB+16GB 全网通双卡双带手机</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs10.gomein.net.cn/T1VPhTB_Zv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T1LIbTByJT1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T18vJTB5AT1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>前置双像素自拍摄像头，前置OIS光学防抖，来自AI的美颜黑科技</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1wKATBbJv1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>3999</integer>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>美图（Metitu）T8 MP16002美图拍照 4GB+128GB 自拍美颜手机 全网通</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs17.gomein.net.cn/T1peVTB7A_1RCvBVdK_360.jpg</string>
+			<string>http://gfs17.gomein.net.cn/T1zebTBsZg1RCvBVdK_360.jpg</string>
+			<string>http://gfs17.gomein.net.cn/T1BwbTBvJg1RCvBVdK_360.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1aT_TBbEg1RCvBVdK_800.jpg</string>
+			<string>http://gfs12.gomein.net.cn/T12SLTB4xv1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>三星S8！全视野曲面屏！突破所限，大有可能！</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1oe_TB5Wj1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<real>5628</real>
+		<key>sales</key>
+		<real>4444</real>
+		<key>main_title</key>
+		<string>三星（SAMSUNG）Galaxy S8(G9500) 全网通 手机 绮梦金</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs14.gomein.net.cn/T12TCTByWQ1RCvBVdK_800.jpg</string>
+			<string>http://gfs14.gomein.net.cn/T1PwKTB5_g1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1ES_TBTAg1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>采用IOS 10 系统，配置A9芯片，更高速</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1WkxTB7Dv1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>2588</integer>
+		<key>sales</key>
+		<integer>973</integer>
+		<key>main_title</key>
+		<string>Apple iPhone SE 玫瑰金 16G 4G 手机（全网通）</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>222</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>【领券立减100，再送6重好礼】</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1SsbTByAv1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>1298</integer>
+		<key>sales</key>
+		<integer>973</integer>
+		<key>main_title</key>
+		<string>618手机节 vivo Y66 3GB+32GB全网通4G 自拍美颜手机大屏超薄</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>34</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>麒麟960芯片，第二代徕卡双摄镜头，2倍双摄变焦，4000mAh大电池 </string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1xVVvBTWg1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>1155</integer>
+		<key>sales</key>
+		<integer>973</integer>
+		<key>main_title</key>
+		<string>华为（Huawei）荣耀8青春版 全网通4G版 （5.2英寸 指纹识别）</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>34</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>【领券立减100，再送6重好礼】</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1cqATBjLT1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>2178</integer>
+		<key>sales</key>
+		<integer>973</integer>
+		<key>main_title</key>
+		<string>华为（Huawei）荣耀8青春版 全网通4G版 （双镜头，双指纹）</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+			<string>http://gfs13.gomein.net.cn/T1CkDvBXLv1RCvBVdK_800.jpg</string>
+			<string>http://gfs11.gomein.net.cn/T19kCvB4ET1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>34</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>骁龙八核处理器，小米无处不在！</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1FjVTByWT1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>775</integer>
+		<key>sales</key>
+		<integer>232</integer>
+		<key>main_title</key>
+		<string>Xiaomi/小米 红米4手机 全网通版本（5.0英寸 MIUI8系统，双卡双待）</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs8.gomein.net.cn/T1CuKTBgET1RCvBVdK_800.jpg</string>
+			<string>http://gfs9.gomein.net.cn/T1FQxTBTCv1RCvBVdK_800.jpg</string>
+			<string>http://gfs9.gomein.net.cn/T1ufVTB5DT1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>34</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>精致外观，黑白+彩色双1200万像素平行镜头，5.7英寸2K屏，搭载麒麟960芯片，4000mAh电池长久续航，EMUI 5.1操作</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1nZbvBbWg1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>1280</integer>
+		<key>sales</key>
+		<integer>23</integer>
+		<key>main_title</key>
+		<string>魅族（MiZu）魅族科比定制版 指纹识别全网通手机 4GB+64GB</string>
+		<key>stock</key>
+		<integer>864</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs8.gomein.net.cn/T1CuKTBgET1RCvBVdK_800.jpg</string>
+			<string>http://gfs9.gomein.net.cn/T1FQxTBTCv1RCvBVdK_800.jpg</string>
+			<string>http://gfs9.gomein.net.cn/T1ufVTB5DT1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>34</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>骁龙八核处理器，指纹解锁</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T1LJATB5Kv1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>835</integer>
+		<key>sales</key>
+		<integer>232</integer>
+		<key>main_title</key>
+		<string>魅族（MiZu）魅族英雄联盟定制版 指纹识别全网通手机 4GB+64GB</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>http://gfs3.gomein.net.cn/T1fDYTBKbT1RCvBVdK_800.jpg</string>
+			<string>http://gfs6.gomein.net.cn/T1uLdTBQCT1RCvBVdK_800.jpg</string>
+			<string>http://gfs17.gomein.net.cn/T1GLETBvYv1RCvBVdK_800.jpg</string>
+		</array>
+		<key>goods_address</key>
+		<string>江苏 苏州</string>
+		<key>sale_count</key>
+		<string>34</string>
+		<key>expressage</key>
+		<string>0</string>
+		<key>goods_title</key>
+		<string>【领券立减100，再送6重好礼】</string>
+		<key>image_url</key>
+		<string>http://gfs17.gomein.net.cn/T14gZTByJT1RCvBVdK_360.jpg</string>
+		<key>price</key>
+		<integer>835</integer>
+		<key>sales</key>
+		<integer>232</integer>
+		<key>main_title</key>
+		<string>中兴（ZTE）A910 Blade BA910高配版 支持指纹识别</string>
+		<key>stock</key>
+		<integer>233</integer>
+	</dict>
+</array>
+</plist>

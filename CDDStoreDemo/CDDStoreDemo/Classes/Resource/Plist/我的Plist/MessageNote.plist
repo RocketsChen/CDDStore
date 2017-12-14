@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>DC客服</string>
+		<key>imageName</key>
+		<string>XXZX_xiaomei</string>
+		<key>message</key>
+		<string>点击查看与客服的沟通记录</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>物流消息</string>
+		<key>imageName</key>
+		<string>XXZX_wuliu</string>
+		<key>message</key>
+		<string>点击查看物流消息</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>商城公告</string>
+		<key>imageName</key>
+		<string>XXZX_shangcheng</string>
+		<key>message</key>
+		<string>点击查看商城公告</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>优惠促销</string>
+		<key>imageName</key>
+		<string>XXZX_youhui</string>
+		<key>message</key>
+		<string>8888抢砖石版移动电源，你值得拥有不容错过</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>资讯回复</string>
+		<key>imageName</key>
+		<string>wodezichan</string>
+		<key>message</key>
+		<string>点击查看您的资讯回复</string>
+	</dict>
+</array>
+</plist>

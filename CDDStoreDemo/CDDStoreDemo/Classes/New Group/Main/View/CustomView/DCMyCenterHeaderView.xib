@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gz4-N8-2p0" customClass="DCMyCenterHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="248"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYw-fg-9e8">
+                    <rect key="frame" x="0.0" y="64" width="443" height="129"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqH-vI-SYt">
+                            <rect key="frame" x="25" y="10" width="54" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="dXj-IM-DM8"/>
+                                <constraint firstAttribute="width" constant="54" id="u6B-3W-q3Y"/>
+                            </constraints>
+                            <state key="normal" image="icon"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好的太简单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9W-rF-SdF">
+                            <rect key="frame" x="89" y="14" width="75" height="21"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G6" translatesAutoresizingMaskIntoConstraints="NO" id="i8P-ax-VXe">
+                            <rect key="frame" x="174" y="16.5" width="55" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="ZAN-hH-gYN"/>
+                                <constraint firstAttribute="height" constant="16" id="um4-K4-L3p"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-KX-Ygm">
+                            <rect key="frame" x="393" y="19.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="gtR-vg-UBY"/>
+                                <constraint firstAttribute="width" constant="35" id="v8X-B2-qlU"/>
+                            </constraints>
+                            <state key="normal" image="icon_ma"/>
+                            <connections>
+                                <action selector="qrCodeClick" destination="gz4-N8-2p0" eventType="touchUpInside" id="uCz-my-aqV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-M3-0hj">
+                            <rect key="frame" x="89" y="39" width="70" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="AKO-pQ-8mJ"/>
+                                <constraint firstAttribute="width" constant="70" id="blg-eY-Mrb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="10"/>
+                            <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="查看会员" image="G1Price">
+                                <color key="titleColor" red="0.92156862745098034" green="0.40392156862745099" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="seeMyPriceClick" destination="gz4-N8-2p0" eventType="touchUpInside" id="HdX-vf-rZ9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7KS-KX-Ygm" secondAttribute="trailing" constant="15" id="CaC-La-LQf"/>
+                        <constraint firstItem="TqH-vI-SYt" firstAttribute="top" secondItem="VYw-fg-9e8" secondAttribute="top" constant="10" id="HjE-s9-2ry"/>
+                        <constraint firstItem="TqH-vI-SYt" firstAttribute="leading" secondItem="VYw-fg-9e8" secondAttribute="leading" constant="25" id="O3p-Vu-5SS"/>
+                        <constraint firstItem="a9W-rF-SdF" firstAttribute="top" secondItem="TqH-vI-SYt" secondAttribute="top" constant="4" id="YKR-5V-zN2"/>
+                        <constraint firstItem="i8P-ax-VXe" firstAttribute="leading" secondItem="a9W-rF-SdF" secondAttribute="trailing" constant="10" id="asV-WF-T5I"/>
+                        <constraint firstItem="Edu-M3-0hj" firstAttribute="leading" secondItem="a9W-rF-SdF" secondAttribute="leading" id="l5F-b8-Svv"/>
+                        <constraint firstItem="Edu-M3-0hj" firstAttribute="top" secondItem="a9W-rF-SdF" secondAttribute="bottom" constant="4" id="mN8-Mp-4N7"/>
+                        <constraint firstItem="7KS-KX-Ygm" firstAttribute="centerY" secondItem="TqH-vI-SYt" secondAttribute="centerY" id="pJw-Ws-9Fy"/>
+                        <constraint firstItem="i8P-ax-VXe" firstAttribute="centerY" secondItem="a9W-rF-SdF" secondAttribute="centerY" id="w0h-2M-c5X"/>
+                        <constraint firstItem="a9W-rF-SdF" firstAttribute="leading" secondItem="TqH-vI-SYt" secondAttribute="trailing" constant="10" id="wED-Hb-f8W"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhW-03-IeR" userLabel="底部BottomView">
+                    <rect key="frame" x="0.0" y="193" width="443" height="55"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APq-WF-uer" userLabel="分割线">
+                            <rect key="frame" x="221" y="21.5" width="1" height="12"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="0.80000000000000004" id="UFi-Yb-b6u"/>
+                                <constraint firstAttribute="height" constant="12" id="qDx-QQ-5fq"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6O-Tq-13d">
+                            <rect key="frame" x="10" y="0.0" width="201" height="55"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="朋友圈" image="myFrendCircle"/>
+                            <connections>
+                                <action selector="friendsCircleClick" destination="gz4-N8-2p0" eventType="touchUpInside" id="j02-uk-RwB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDK-d8-wkQ">
+                            <rect key="frame" x="232" y="0.0" width="201" height="55"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="我的好友" image="myFrend"/>
+                            <connections>
+                                <action selector="myFriendClick" destination="gz4-N8-2p0" eventType="touchUpInside" id="Ps9-Nk-Nrh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="3W6-V7-aeo"/>
+                        <constraint firstItem="APq-WF-uer" firstAttribute="leading" secondItem="L6O-Tq-13d" secondAttribute="trailing" constant="10" id="F4s-SK-YnH"/>
+                        <constraint firstItem="L6O-Tq-13d" firstAttribute="top" secondItem="hhW-03-IeR" secondAttribute="top" id="FCo-t3-ePZ"/>
+                        <constraint firstItem="APq-WF-uer" firstAttribute="centerY" secondItem="hhW-03-IeR" secondAttribute="centerY" id="Glq-wj-pXF"/>
+                        <constraint firstAttribute="bottom" secondItem="L6O-Tq-13d" secondAttribute="bottom" id="TGF-Ly-3fB"/>
+                        <constraint firstItem="hDK-d8-wkQ" firstAttribute="top" secondItem="hhW-03-IeR" secondAttribute="top" id="VD3-KQ-bS6"/>
+                        <constraint firstAttribute="trailing" secondItem="hDK-d8-wkQ" secondAttribute="trailing" constant="10" id="a1A-Jf-Tdc"/>
+                        <constraint firstItem="APq-WF-uer" firstAttribute="centerX" secondItem="hhW-03-IeR" secondAttribute="centerX" id="gzq-Yv-Qms"/>
+                        <constraint firstAttribute="bottom" secondItem="hDK-d8-wkQ" secondAttribute="bottom" id="i3e-DT-Rqy"/>
+                        <constraint firstItem="hDK-d8-wkQ" firstAttribute="leading" secondItem="APq-WF-uer" secondAttribute="trailing" constant="10" id="jdb-BW-Pzk"/>
+                        <constraint firstItem="L6O-Tq-13d" firstAttribute="leading" secondItem="hhW-03-IeR" secondAttribute="leading" constant="10" id="nfB-GG-iVy"/>
+                        <constraint firstItem="APq-WF-uer" firstAttribute="leading" secondItem="L6O-Tq-13d" secondAttribute="trailing" constant="10" id="sRH-dA-HGk"/>
+                        <constraint firstItem="hDK-d8-wkQ" firstAttribute="leading" secondItem="APq-WF-uer" secondAttribute="trailing" constant="10" id="wc0-q5-PoG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VYw-fg-9e8" firstAttribute="top" secondItem="gz4-N8-2p0" secondAttribute="top" constant="64" id="2Un-6a-CMl"/>
+                <constraint firstItem="hhW-03-IeR" firstAttribute="leading" secondItem="gz4-N8-2p0" secondAttribute="leading" id="8PK-m2-Mu2"/>
+                <constraint firstAttribute="trailing" secondItem="VYw-fg-9e8" secondAttribute="trailing" id="HYp-CJ-7A1"/>
+                <constraint firstAttribute="trailing" secondItem="hhW-03-IeR" secondAttribute="trailing" id="UU5-Mm-VcX"/>
+                <constraint firstItem="hhW-03-IeR" firstAttribute="top" secondItem="VYw-fg-9e8" secondAttribute="bottom" id="akx-V2-aXU"/>
+                <constraint firstItem="VYw-fg-9e8" firstAttribute="leading" secondItem="gz4-N8-2p0" secondAttribute="leading" id="euf-4z-FLS"/>
+                <constraint firstAttribute="bottom" secondItem="hhW-03-IeR" secondAttribute="bottom" id="hQK-4I-4K4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="myIconButton" destination="TqH-vI-SYt" id="MRb-8Q-RGH"/>
+                <outlet property="seeMyPriceButton" destination="Edu-M3-0hj" id="mmn-4h-GoF"/>
+            </connections>
+            <point key="canvasLocation" x="-283.5" y="-315"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="G1Price" width="21" height="21"/>
+        <image name="G6" width="55" height="16"/>
+        <image name="icon" width="700" height="700"/>
+        <image name="icon_ma" width="22" height="22"/>
+        <image name="myFrend" width="22" height="22"/>
+        <image name="myFrendCircle" width="22" height="22"/>
+    </resources>
+</document>
