@@ -29,6 +29,10 @@
     
 }
 
+#pragma mark - 头像点击
+- (IBAction)headButtonClick {
+    !_headClickBlock ? : _headClickBlock();
+}
 
 #pragma mark - 朋友圈点击
 - (IBAction)friendsCircleClick {

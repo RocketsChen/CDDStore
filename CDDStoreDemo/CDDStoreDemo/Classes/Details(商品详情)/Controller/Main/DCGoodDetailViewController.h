@@ -20,6 +20,6 @@
 @property (strong , nonatomic)NSString *goodImageView;
 
 /* 商品轮播图 */
-@property (strong , nonatomic)NSArray *shufflingArray;
+@property (copy , nonatomic)NSArray *shufflingArray;
 
 @end

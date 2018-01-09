@@ -45,7 +45,7 @@
 {
     WEAKSELF
     [[NSNotificationCenter defaultCenter]addObserverForName:LOGINSELECTCENTERINDEX object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        weakSelf.tabBarController.selectedIndex = 3; //跳转到我的界面
+        weakSelf.tabBarController.selectedIndex = 4; //跳转到我的界面
     }];
 }
 
@@ -59,7 +59,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = DCBGColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 

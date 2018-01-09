@@ -50,6 +50,7 @@
 #define PFR11Font [UIFont fontWithName:PFR size:11];
 #define PFR10Font [UIFont fontWithName:PFR size:10];
 #define PFR9Font [UIFont fontWithName:PFR size:9];
+#define PFR8Font [UIFont fontWithName:PFR size:8];
 
 #define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
@@ -57,6 +58,9 @@
 
 #define UserInfoData [DCUserInfo findAll].lastObject
 
+
+//判断设备是否为iphoneX
+#define DCIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 //数组
 #define GoodsRecommendArray  @[@"http://gfs5.gomein.net.cn/T1blDgB5CT1RCvBVdK.jpg",@"http://gfs1.gomein.net.cn/T1loYvBCZj1RCvBVdK.jpg",@"http://gfs1.gomein.net.cn/T1w5bvB7K_1RCvBVdK.jpg",@"http://gfs1.gomein.net.cn/T1w5bvB7K_1RCvBVdK.jpg",@"http://gfs6.gomein.net.cn/T1L.VvBCxv1RCvBVdK.jpg",@"http://gfs9.gomein.net.cn/T1joLvBKhT1RCvBVdK.jpg",@"http://gfs5.gomein.net.cn/T1AoVvB7_v1RCvBVdK.jpg"]
@@ -101,9 +105,8 @@
 //获取当前版本号
 #define BUNDLE_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
 //获取当前版本的biuld
-#define BIULD_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-
-
+#define BIULD_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
+//获取当前设备的UDID
 #define DIV_UUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
 #endif /* Macros_h */

@@ -18,7 +18,7 @@ PODS:
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
-  - IQKeyboardManager (5.0.6)
+  - IQKeyboardManager (5.0.7)
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.1)
@@ -28,7 +28,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.2.2)
-  - TZImagePickerController (1.9.6)
+  - TZImagePickerController (1.9.8)
   - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
@@ -49,14 +49,14 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CDDPagerController: 252632078b543e57ca3c052bf1f25759b6c862a6
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
-  IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
+  IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
-  TZImagePickerController: 276dc7c0cc70da9ee354046474b405d87ef81c89
+  TZImagePickerController: 3b9413ae5d049b1fdc5b0c720ad283f35b679a50
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
 PODFILE CHECKSUM: adc19bad3e3fdf02016c798c9356f04877291789

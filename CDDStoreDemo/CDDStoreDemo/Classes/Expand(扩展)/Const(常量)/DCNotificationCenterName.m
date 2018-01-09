@@ -34,4 +34,8 @@ NSString *const SHOPITEMSELECTBACK = @"SHOPITEMSELECTBACK";
 
 /** 分享弹出通知 */
 NSString *const SHAREALTERVIEW= @"SHAREALTERVIEW";
+
+/** 美信消息Item改变通知 */
+NSString *const DCMESSAGECOUNTCHANGE = @"DCMESSAGECOUNTCHANGE";
+
 @end

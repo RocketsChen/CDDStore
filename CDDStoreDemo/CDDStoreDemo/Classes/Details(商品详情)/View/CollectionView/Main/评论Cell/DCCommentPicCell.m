@@ -29,7 +29,7 @@
 @property (strong , nonatomic)UILabel *picNum;
 
 /* imageArray */
-@property (strong , nonatomic)NSArray *imagesArray;
+@property (copy , nonatomic)NSArray *imagesArray;
 
 @end
 

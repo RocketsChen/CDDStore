@@ -12,7 +12,11 @@
 
 #import "RequestTool.h"
 #import "NetworkUnit.h"
+#import "DCAppVersionTool.h"
 #import <SVProgressHUD.h>
+#import "UIImageView+WebCache.h"
+
+#import "DCNewFeatureViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +29,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [[DCTabBarController alloc] init];
+    [self setUpRootVC]; //跟控制器判断
     
     [self.window makeKeyAndVisible];
     
@@ -37,6 +41,29 @@
     
     
     return YES;
+}
+
+
+#pragma mark - 根控制器
+- (void)setUpRootVC
+{
+    if ([BUNDLE_VERSION isEqualToString:[DCAppVersionTool dc_GetLastOneAppVersion]]) {//判断是否当前版本号等于上一次储存版本号
+
+        self.window.rootViewController = [[DCTabBarController alloc] init];
+    }else{
+        
+        [DCAppVersionTool dc_SaveNewAppVersion:BUNDLE_VERSION]; //储存当前版本号
+
+        // 设置窗口的根控制器
+        DCNewFeatureViewController *dcFVc = [[DCNewFeatureViewController alloc] init];
+        [dcFVc setUpFeatureAttribute:^(NSArray *__autoreleasing *imageArray, UIColor *__autoreleasing *selColor, BOOL *showSkip, BOOL *showPageCount) {
+            
+            *imageArray = @[@"guide1",@"guide2",@"guide3",@"guide4"];
+            *showPageCount = YES;
+            *showSkip = YES;
+        }];
+        self.window.rootViewController = dcFVc;
+    }
 }
 
 
@@ -98,6 +125,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - 当APP接收到内存警告的时候
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    [[SDWebImageManager sharedManager]cancelAll]; //取消所有下载
+    [[SDWebImageManager sharedManager].imageCache clearMemory]; //立即清除缓存
+}
 
 #pragma mark - 蒲公英版本更新检测
 - (void)CDDMallVersionInformationFromPGY

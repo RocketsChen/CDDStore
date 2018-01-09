@@ -12,7 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *myIconButton;
 
-
+/* 头像点击回调 */
+@property (nonatomic, copy) dispatch_block_t headClickBlock;
 /** 二维码点击回调 */
 @property (nonatomic, copy) dispatch_block_t qrClickBlock;
 /** 我的朋友点击回调 */

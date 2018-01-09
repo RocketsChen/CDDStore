@@ -102,7 +102,7 @@
 }
 
 #pragma mark - 设置圆角
-+ (void)dc_setUpBezierPathCircularLayerWith:(UIButton *)control :(CGSize)size
++ (void)dc_setUpBezierPathCircularLayerWithControl:(UIButton *)control size:(CGSize)size;
 {
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:control.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight | UIRectCornerTopLeft |UIRectCornerTopRight cornerRadii:size];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];

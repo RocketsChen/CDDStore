@@ -10,49 +10,49 @@
 
 @implementation UIBarButtonItem (DCBarButtonItem)
 
-+(UIBarButtonItem *)ItemWithImage:(UIImage *)image WithHighlighted:(UIImage *)HighlightedImage Target:(id)target action:(SEL)action
++ (UIBarButtonItem *)ItemWithImage:(UIImage *)image WithHighlighted:(UIImage *)HighlightedImage Target:(id)target action:(SEL)action
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:HighlightedImage forState:UIControlStateHighlighted];
-    [btn sizeToFit];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -15;
     
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *contentView = [[UIView alloc]initWithFrame:btn.frame];
-    [contentView addSubview:btn];
-    
-    return [[UIBarButtonItem alloc]initWithCustomView:contentView];
+    UIButton *button = [[UIButton alloc] init];
+    [button setImage:image forState:UIControlStateNormal];
+    [button setImage:HighlightedImage forState:UIControlStateHighlighted];
+    button.frame = CGRectMake(0, 0, 44, 44);
+    [button setTitleColor:[UIColor blackColor] forState:0];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
-+(UIBarButtonItem *)ItemWithImage:(UIImage *)image WithSelected:(UIImage *)SelectedImage Target:(id)target action:(SEL)action
++ (UIBarButtonItem *)ItemWithImage:(UIImage *)image WithSelected:(UIImage *)SelectedImage Target:(id)target action:(SEL)action
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:SelectedImage forState:UIControlStateSelected];
-    [btn sizeToFit];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -15;
     
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *contentView = [[UIView alloc]initWithFrame:btn.frame];
-    [contentView addSubview:btn];
-    
-    return [[UIBarButtonItem alloc]initWithCustomView:contentView];
+    UIButton *button = [[UIButton alloc] init];
+    [button setImage:image forState:UIControlStateNormal];
+    [button setImage:SelectedImage forState:UIControlStateSelected];
+    button.frame = CGRectMake(0, 0, 44, 44);
+    [button setTitleColor:[UIColor blackColor] forState:0];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
 
-+(UIBarButtonItem *)backItemWithImage:(UIImage *)image WithHighlightedImage:(UIImage *)HighlightedImage Target:(id)target action:(SEL)action title:(NSString *)title
++ (UIBarButtonItem *)backItemWithImage:(UIImage *)image WithHighlightedImage:(UIImage *)HighlightedImage Target:(id)target action:(SEL)action title:(NSString *)title
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn sizeToFit];
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:HighlightedImage forState:UIControlStateHighlighted];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -15;
     
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    btn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, -20);
+    UIButton *button = [[UIButton alloc] init];
+    [button setImage:image forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setImage:HighlightedImage forState:UIControlStateHighlighted];
+    button.frame = CGRectMake(0, 0, 44, 44);
+    [button setTitleColor:[UIColor blackColor] forState:0];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     
-    return [[UIBarButtonItem alloc]initWithCustomView:btn];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
 

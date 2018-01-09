@@ -30,6 +30,9 @@
                                 <constraint firstAttribute="width" constant="54" id="u6B-3W-q3Y"/>
                             </constraints>
                             <state key="normal" image="icon"/>
+                            <connections>
+                                <action selector="headButtonClick" destination="gz4-N8-2p0" eventType="touchUpInside" id="ONN-TE-gzW"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好的太简单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9W-rF-SdF">
                             <rect key="frame" x="89" y="14" width="75" height="21"/>

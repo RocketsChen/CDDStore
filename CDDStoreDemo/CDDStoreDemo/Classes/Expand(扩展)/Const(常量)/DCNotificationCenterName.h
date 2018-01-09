@@ -36,5 +36,8 @@ UIKIT_EXTERN NSString *const SHOPITEMSELECTBACK;
 /** 分享弹出通知 */
 UIKIT_EXTERN NSString *const SHAREALTERVIEW;
 
+/** 美信消息Item改变通知 */
+UIKIT_EXTERN NSString *const DCMESSAGECOUNTCHANGE;
+
 @end
 

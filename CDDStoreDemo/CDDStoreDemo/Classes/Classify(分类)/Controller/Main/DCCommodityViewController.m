@@ -140,7 +140,7 @@ static NSString *const DCBrandSortCellID = @"DCBrandSortCell";
     self.navigationItem.rightBarButtonItems = @[negativeSpacer, backButton];
     
     _topSearchView = [[UIView alloc] init];
-    _topSearchView.backgroundColor = [UIColor whiteColor];
+    _topSearchView.backgroundColor = RGBA(240, 240, 240, 1);
     _topSearchView.layer.cornerRadius = 16;
     [_topSearchView.layer masksToBounds];
     _topSearchView.frame = CGRectMake(50, 6, ScreenW - 110, 32);
@@ -162,12 +162,10 @@ static NSString *const DCBrandSortCellID = @"DCBrandSortCell";
     
     _voiceButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _voiceButton.adjustsImageWhenHighlighted = NO;
-    _voiceButton.frame = CGRectMake(_topSearchView.dc_width - 35, 0, 35, _topSearchView.dc_height);
+    _voiceButton.frame = CGRectMake(_topSearchView.dc_width - 40, 0, 35, _topSearchView.dc_height);
     [_voiceButton addTarget:self action:@selector(voiceButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [_voiceButton setImage:[UIImage imageNamed:@"icon_voice_search"] forState:0];
     [_topSearchView addSubview:_voiceButton];
-    
-    
     
 }
 

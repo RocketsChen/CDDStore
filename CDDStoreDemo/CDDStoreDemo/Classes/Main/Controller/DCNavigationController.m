@@ -41,13 +41,14 @@
     [GQGesVCTransition validateGesBackWithType:GQGesVCTransitionTypePanWithPercentRight withRequestFailToLoopScrollView:YES]; //手势返回
 }
 
-#pragma mark - <初始化>
+#pragma mark - 初始化
 + (void)setUpBase
 {
     UINavigationBar *bar = [UINavigationBar appearance];
     bar.barTintColor = DCBGColor;
-    [bar setShadowImage:[UIImage new]];
-    [bar setTintColor:[UIColor clearColor]];
+    [bar setTintColor:[UIColor darkGrayColor]];
+    bar.translucent = YES; 
+    [bar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     // 设置导航栏字体颜色
@@ -57,7 +58,7 @@
     bar.titleTextAttributes = attributes;
 }
 
-#pragma mark - <返回>
+#pragma mark - 返回
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     if (self.childViewControllers.count >= 1) {

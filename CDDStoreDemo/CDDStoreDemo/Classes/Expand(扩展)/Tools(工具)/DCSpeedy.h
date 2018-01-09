@@ -59,7 +59,7 @@
  @param control 按钮
  @param size 圆角尺寸
  */
-+ (void)dc_setUpBezierPathCircularLayerWith:(id)control :(CGSize)size;
++ (void)dc_setUpBezierPathCircularLayerWithControl:(UIButton *)control size:(CGSize)size;
 
 
 /**
