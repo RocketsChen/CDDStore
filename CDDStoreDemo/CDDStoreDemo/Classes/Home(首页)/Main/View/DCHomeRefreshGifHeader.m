@@ -37,15 +37,15 @@
     // 设置普通状态的动画图片
     NSMutableArray *idleImages = [NSMutableArray array];
     for (NSUInteger i = 1; i<= 60; i++) {
-        UIImage *image = [UIImage imageNamed:@"icon_refresh_1"];
+        UIImage *image = [UIImage imageNamed:@"comm_loading_01"];
         [idleImages addObject:image];
     }
     [self setImages:idleImages forState:MJRefreshStateIdle];
     
     // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
     NSMutableArray *refreshingImages = [NSMutableArray array];
-    for (NSUInteger i = 1; i < 3; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"icon_refresh_%zd", i]];
+    for (NSUInteger i = 1; i < 7; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"comm_loading_0%zd", i]];
         [refreshingImages addObject:image];
     }
     [self setImages:refreshingImages forState:MJRefreshStatePulling];
@@ -57,7 +57,7 @@
     self.lastUpdatedTimeLabel.hidden = YES;
     [self setTitle:@"上拉加载数据" forState:MJRefreshStateIdle];
     [self setTitle:@"帮您加载数据" forState:MJRefreshStatePulling];
-    [self setTitle:@"数据加载中" forState:MJRefreshStateRefreshing];
+    [self setTitle:@"数据加载中~" forState:MJRefreshStateRefreshing];
     self.refreshImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"refresh"]];
     [self addSubview:self.refreshImage];
 }

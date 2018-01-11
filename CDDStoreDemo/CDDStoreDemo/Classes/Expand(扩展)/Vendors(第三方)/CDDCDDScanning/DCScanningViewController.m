@@ -110,6 +110,7 @@
     }
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    [picker.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarScanBg"] forBarMetrics:UIBarMetricsDefault];
     picker.view.backgroundColor = [UIColor whiteColor];
     picker.delegate = self;
     

@@ -11,6 +11,7 @@
 
 // Controllers
 #import "DCManagementViewController.h" //账户管理
+#import "DCGMScanViewController.h"  //扫一扫
 // Models
 #import "DCGridItem.h"
 // Views
@@ -103,6 +104,12 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
 }
 
 #pragma mark - LifeCyle
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -126,8 +133,11 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
 - (void)setUpNavTopView
 {
     _topToolView = [[DCCenterTopToolView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 64)];
+    WEAKSELF
     _topToolView.leftItemClickBlock = ^{
         NSLog(@"点击了扫描");
+        DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
+        [weakSelf.navigationController pushViewController:dcGMvC animated:YES];
     };
     _topToolView.rightItemClickBlock = ^{
         NSLog(@"点击设置");
@@ -145,7 +155,6 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.tableView.tableFooterView = [UIView new]; //去除多余分割线
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 #pragma mark - 初始化头部
