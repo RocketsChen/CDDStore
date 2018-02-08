@@ -196,8 +196,6 @@
 		92B4F85A1F8DBBED003C2E76 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8541F8DB7B4003C2E76 /* Reachability.m */; };
 		92CE3CDD1FD67CAB005F0A11 /* DCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE3CDB1FD67CAB005F0A11 /* DCUserInfo.m */; };
 		92CE3CE21FD68D85005F0A11 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CE3CE11FD68D85005F0A11 /* DCHeaderReusableView.xib */; };
-		92CE3CE71FD68FAE005F0A11 /* DCLoginMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CE3CE41FD68FAE005F0A11 /* DCLoginMeViewController.xib */; };
-		92CE3CE81FD68FAE005F0A11 /* DCLoginMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE3CE61FD68FAE005F0A11 /* DCLoginMeViewController.m */; };
 		92CE3CED1FD69489005F0A11 /* DCMyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE3CEC1FD69489005F0A11 /* DCMyCenterViewController.m */; };
 		9C13F4C920072F6300CCE89F /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C13F4C820072F6300CCE89F /* GQGesVCTransition.m */; };
 		9C147D441FE0EE2E00CA3BB4 /* DCCenterTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C147D431FE0EE2E00CA3BB4 /* DCCenterTopToolView.m */; };
@@ -233,6 +231,15 @@
 		9C7338D820059B2700D30900 /* navigationbarScanBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7338D720059B2700D30900 /* navigationbarScanBg.png */; };
 		9C7338DD2006022100D30900 /* DCBeautyMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7338DB2006022100D30900 /* DCBeautyMsgCell.m */; };
 		9C7338DE2006022100D30900 /* DCBeautyMsgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7338DC2006022100D30900 /* DCBeautyMsgCell.xib */; };
+		9C7A1E29202AC6570051DB5D /* DCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A1E25202AC6570051DB5D /* DCLoginViewController.xib */; };
+		9C7A1E2A202AC6570051DB5D /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A1E27202AC6570051DB5D /* DCLoginViewController.m */; };
+		9C7A1E2B202AC6570051DB5D /* DCRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A1E28202AC6570051DB5D /* DCRegisteredViewController.m */; };
+		9C7A1E32202AC66E0051DB5D /* DCAccountPsdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A1E2D202AC66E0051DB5D /* DCAccountPsdView.m */; };
+		9C7A1E33202AC66E0051DB5D /* DCVerificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A1E2F202AC66E0051DB5D /* DCVerificationView.m */; };
+		9C7A1E34202AC66E0051DB5D /* DCVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A1E30202AC66E0051DB5D /* DCVerificationView.xib */; };
+		9C7A1E35202AC66E0051DB5D /* DCAccountPsdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A1E31202AC66E0051DB5D /* DCAccountPsdView.xib */; };
+		9C7A1E39202AD6D40051DB5D /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A1E38202AD6D40051DB5D /* UIView+Toast.m */; };
+		9C7A1E3C202AE1C20051DB5D /* DCAdressDateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A1E3B202AE1C20051DB5D /* DCAdressDateBase.m */; };
 		9C7FE1E01FD9143800D32EEA /* DCStoresRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FE1DE1FD9143800D32EEA /* DCStoresRecommendCell.m */; };
 		9C7FE1E11FD9143800D32EEA /* DCStoresRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FE1DF1FD9143800D32EEA /* DCStoresRecommendCell.xib */; };
 		9C7FE1E81FD9230100D32EEA /* DCStoresRecommendHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FE1E61FD9230100D32EEA /* DCStoresRecommendHeaderView.m */; };
@@ -244,6 +251,7 @@
 		9C7FE1F61FD9331A00D32EEA /* DCBestBeautyShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FE1F41FD9331A00D32EEA /* DCBestBeautyShopCell.xib */; };
 		9C7FE1FA1FD933C700D32EEA /* DCBeautyHotTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7FE1F81FD933C700D32EEA /* DCBeautyHotTopicCell.m */; };
 		9C7FE1FB1FD933C700D32EEA /* DCBeautyHotTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7FE1F91FD933C700D32EEA /* DCBeautyHotTopicCell.xib */; };
+		9C8135182022B7EE00F8F7E8 /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8135172022B7EE00F8F7E8 /* JPFPSStatus.m */; };
 		9C8CC8642004A25E00515926 /* DCFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC85A2004A25E00515926 /* DCFlashButton.m */; };
 		9C8CC8652004A25E00515926 /* DCScanIdentifyAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC85C2004A25E00515926 /* DCScanIdentifyAreaView.m */; };
 		9C8CC8662004A25E00515926 /* DCScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC85E2004A25E00515926 /* DCScanningViewController.m */; };
@@ -254,6 +262,16 @@
 		9C8CC86D2004A2A900515926 /* DCGMScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC86C2004A2A900515926 /* DCGMScanViewController.m */; };
 		9C8CC8702004B19B00515926 /* DCCameraTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC86E2004B19B00515926 /* DCCameraTopView.m */; };
 		9CAB04141FECA1B300B1C879 /* NSObject+DCNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */; };
+		9CCC207B202BEBC700B6CD44 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC205E202BEBC700B6CD44 /* UIView+Frame.m */; };
+		9CCC207C202BEBC700B6CD44 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2062202BEBC700B6CD44 /* AddressItem.m */; };
+		9CCC207D202BEBC700B6CD44 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2065202BEBC700B6CD44 /* AddressTableViewCell.m */; };
+		9CCC207E202BEBC700B6CD44 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC2066202BEBC700B6CD44 /* AddressTableViewCell.xib */; };
+		9CCC207F202BEBC700B6CD44 /* AddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2068202BEBC700B6CD44 /* AddressView.m */; };
+		9CCC2080202BEBC700B6CD44 /* ChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC206A202BEBC700B6CD44 /* ChooseLocationView.m */; };
+		9CCC2087202BEBC700B6CD44 /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC207A202BEBC700B6CD44 /* CitiesDataTool.m */; };
+		9CCC2089202BF18A00B6CD44 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC2088202BF18A00B6CD44 /* Cities.json */; };
+		9CCC208C202C243600B6CD44 /* DCCheckRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC208B202C243600B6CD44 /* DCCheckRegular.m */; };
+		9CCC2091202C28C700B6CD44 /* DCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2090202C28C700B6CD44 /* DCSettingViewController.m */; };
 		9CE9CB641FE899610033322E /* DCUserAdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9CB621FE899610033322E /* DCUserAdressCell.m */; };
 		9CE9CB651FE899610033322E /* DCUserAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9CB631FE899610033322E /* DCUserAdressCell.xib */; };
 		9CE9CB681FE8B4700033322E /* DCAdressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9CB671FE8B4700033322E /* DCAdressItem.m */; };
@@ -637,9 +655,6 @@
 		92CE3CDB1FD67CAB005F0A11 /* DCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUserInfo.m; sourceTree = "<group>"; };
 		92CE3CDC1FD67CAB005F0A11 /* DCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUserInfo.h; sourceTree = "<group>"; };
 		92CE3CE11FD68D85005F0A11 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
-		92CE3CE41FD68FAE005F0A11 /* DCLoginMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCLoginMeViewController.xib; sourceTree = "<group>"; };
-		92CE3CE51FD68FAE005F0A11 /* DCLoginMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLoginMeViewController.h; sourceTree = "<group>"; };
-		92CE3CE61FD68FAE005F0A11 /* DCLoginMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLoginMeViewController.m; sourceTree = "<group>"; };
 		92CE3CEB1FD69489005F0A11 /* DCMyCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCMyCenterViewController.h; sourceTree = "<group>"; };
 		92CE3CEC1FD69489005F0A11 /* DCMyCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCMyCenterViewController.m; sourceTree = "<group>"; };
 		9C13F4C720072F6300CCE89F /* GQGesVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQGesVCTransition.h; sourceTree = "<group>"; };
@@ -699,6 +714,21 @@
 		9C7338DA2006022100D30900 /* DCBeautyMsgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCBeautyMsgCell.h; sourceTree = "<group>"; };
 		9C7338DB2006022100D30900 /* DCBeautyMsgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCBeautyMsgCell.m; sourceTree = "<group>"; };
 		9C7338DC2006022100D30900 /* DCBeautyMsgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCBeautyMsgCell.xib; sourceTree = "<group>"; };
+		9C7A1E24202AC6560051DB5D /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLoginViewController.h; sourceTree = "<group>"; };
+		9C7A1E25202AC6570051DB5D /* DCLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCLoginViewController.xib; sourceTree = "<group>"; };
+		9C7A1E26202AC6570051DB5D /* DCRegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRegisteredViewController.h; sourceTree = "<group>"; };
+		9C7A1E27202AC6570051DB5D /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLoginViewController.m; sourceTree = "<group>"; };
+		9C7A1E28202AC6570051DB5D /* DCRegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRegisteredViewController.m; sourceTree = "<group>"; };
+		9C7A1E2C202AC66E0051DB5D /* DCAccountPsdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAccountPsdView.h; sourceTree = "<group>"; };
+		9C7A1E2D202AC66E0051DB5D /* DCAccountPsdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAccountPsdView.m; sourceTree = "<group>"; };
+		9C7A1E2E202AC66E0051DB5D /* DCVerificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCVerificationView.h; sourceTree = "<group>"; };
+		9C7A1E2F202AC66E0051DB5D /* DCVerificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCVerificationView.m; sourceTree = "<group>"; };
+		9C7A1E30202AC66E0051DB5D /* DCVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCVerificationView.xib; sourceTree = "<group>"; };
+		9C7A1E31202AC66E0051DB5D /* DCAccountPsdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCAccountPsdView.xib; sourceTree = "<group>"; };
+		9C7A1E37202AD6D40051DB5D /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		9C7A1E38202AD6D40051DB5D /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		9C7A1E3A202AE1C20051DB5D /* DCAdressDateBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCAdressDateBase.h; sourceTree = "<group>"; };
+		9C7A1E3B202AE1C20051DB5D /* DCAdressDateBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCAdressDateBase.m; sourceTree = "<group>"; };
 		9C7FE1DD1FD9143800D32EEA /* DCStoresRecommendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCStoresRecommendCell.h; sourceTree = "<group>"; };
 		9C7FE1DE1FD9143800D32EEA /* DCStoresRecommendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCStoresRecommendCell.m; sourceTree = "<group>"; };
 		9C7FE1DF1FD9143800D32EEA /* DCStoresRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCStoresRecommendCell.xib; sourceTree = "<group>"; };
@@ -716,6 +746,8 @@
 		9C7FE1F71FD933C700D32EEA /* DCBeautyHotTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCBeautyHotTopicCell.h; sourceTree = "<group>"; };
 		9C7FE1F81FD933C700D32EEA /* DCBeautyHotTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCBeautyHotTopicCell.m; sourceTree = "<group>"; };
 		9C7FE1F91FD933C700D32EEA /* DCBeautyHotTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCBeautyHotTopicCell.xib; sourceTree = "<group>"; };
+		9C8135162022B7EE00F8F7E8 /* JPFPSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPFPSStatus.h; sourceTree = "<group>"; };
+		9C8135172022B7EE00F8F7E8 /* JPFPSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
 		9C8CC8592004A25E00515926 /* DCFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFlashButton.h; sourceTree = "<group>"; };
 		9C8CC85A2004A25E00515926 /* DCFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFlashButton.m; sourceTree = "<group>"; };
 		9C8CC85B2004A25E00515926 /* DCScanIdentifyAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScanIdentifyAreaView.h; sourceTree = "<group>"; };
@@ -733,6 +765,24 @@
 		9C8CC86F2004B19B00515926 /* DCCameraTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCameraTopView.h; sourceTree = "<group>"; };
 		9CAB04121FECA1B300B1C879 /* NSObject+DCNull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DCNull.h"; sourceTree = "<group>"; };
 		9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DCNull.m"; sourceTree = "<group>"; };
+		9CCC205D202BEBC700B6CD44 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		9CCC205E202BEBC700B6CD44 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		9CCC2061202BEBC700B6CD44 /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
+		9CCC2062202BEBC700B6CD44 /* AddressItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItem.m; sourceTree = "<group>"; };
+		9CCC2064202BEBC700B6CD44 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
+		9CCC2065202BEBC700B6CD44 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
+		9CCC2066202BEBC700B6CD44 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		9CCC2067202BEBC700B6CD44 /* AddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressView.h; sourceTree = "<group>"; };
+		9CCC2068202BEBC700B6CD44 /* AddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressView.m; sourceTree = "<group>"; };
+		9CCC2069202BEBC700B6CD44 /* ChooseLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationView.h; sourceTree = "<group>"; };
+		9CCC206A202BEBC700B6CD44 /* ChooseLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationView.m; sourceTree = "<group>"; };
+		9CCC2079202BEBC700B6CD44 /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
+		9CCC207A202BEBC700B6CD44 /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
+		9CCC2088202BF18A00B6CD44 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		9CCC208A202C243500B6CD44 /* DCCheckRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCheckRegular.h; sourceTree = "<group>"; };
+		9CCC208B202C243600B6CD44 /* DCCheckRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCheckRegular.m; sourceTree = "<group>"; };
+		9CCC208F202C28C700B6CD44 /* DCSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSettingViewController.h; sourceTree = "<group>"; };
+		9CCC2090202C28C700B6CD44 /* DCSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSettingViewController.m; sourceTree = "<group>"; };
 		9CE9CB611FE899610033322E /* DCUserAdressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCUserAdressCell.h; sourceTree = "<group>"; };
 		9CE9CB621FE899610033322E /* DCUserAdressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCUserAdressCell.m; sourceTree = "<group>"; };
 		9CE9CB631FE899610033322E /* DCUserAdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCUserAdressCell.xib; sourceTree = "<group>"; };
@@ -1391,6 +1441,8 @@
 		18DCA1EA1F1F4186008BF67E /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				9CCC208A202C243500B6CD44 /* DCCheckRegular.h */,
+				9CCC208B202C243600B6CD44 /* DCCheckRegular.m */,
 				9CE9CB741FE8F3630033322E /* DCPlaceholderTextView.h */,
 				9CE9CB731FE8F3620033322E /* DCPlaceholderTextView.m */,
 				92565C031FD7E42E00828060 /* DCObjManager.h */,
@@ -1424,6 +1476,9 @@
 		18DCA1F91F1F4186008BF67E /* Vendors(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				9CCC205B202BEBC700B6CD44 /* ChooseLocation */,
+				9C7A1E36202AD6D40051DB5D /* ToastView */,
+				9C8135152022B7EE00F8F7E8 /* JPFPSStatus */,
 				9C13F4C620072F6300CCE89F /* GQGesVCTransition */,
 				9C8CC8582004A25E00515926 /* CDDCDDScanning */,
 				9C1752541FE24E5200A531B4 /* CDDTopTip */,
@@ -2046,9 +2101,8 @@
 		92CE3CE31FD68FA2005F0A11 /* LoginMe(登录) */ = {
 			isa = PBXGroup;
 			children = (
-				92CE3CE51FD68FAE005F0A11 /* DCLoginMeViewController.h */,
-				92CE3CE61FD68FAE005F0A11 /* DCLoginMeViewController.m */,
-				92CE3CE41FD68FAE005F0A11 /* DCLoginMeViewController.xib */,
+				9C7A1E21202AC62F0051DB5D /* Controller */,
+				9C7A1E22202AC6350051DB5D /* View */,
 			);
 			path = "LoginMe(登录)";
 			sourceTree = "<group>";
@@ -2056,6 +2110,7 @@
 		92CE3CE91FD69450005F0A11 /* MyCenter(个人中心) */ = {
 			isa = PBXGroup;
 			children = (
+				9CCC208D202C288D00B6CD44 /* Setting */,
 				92CE3CEA1FD6947A005F0A11 /* Main */,
 			);
 			name = "MyCenter(个人中心)";
@@ -2213,6 +2268,8 @@
 				9C147D4C1FE0F28100CA3BB4 /* DCStateItem.m */,
 				9CE9CB661FE8B4700033322E /* DCAdressItem.h */,
 				9CE9CB671FE8B4700033322E /* DCAdressItem.m */,
+				9C7A1E3A202AE1C20051DB5D /* DCAdressDateBase.h */,
+				9C7A1E3B202AE1C20051DB5D /* DCAdressDateBase.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2292,6 +2349,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9C7A1E21202AC62F0051DB5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A1E24202AC6560051DB5D /* DCLoginViewController.h */,
+				9C7A1E27202AC6570051DB5D /* DCLoginViewController.m */,
+				9C7A1E25202AC6570051DB5D /* DCLoginViewController.xib */,
+				9C7A1E26202AC6570051DB5D /* DCRegisteredViewController.h */,
+				9C7A1E28202AC6570051DB5D /* DCRegisteredViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9C7A1E22202AC6350051DB5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A1E2C202AC66E0051DB5D /* DCAccountPsdView.h */,
+				9C7A1E2D202AC66E0051DB5D /* DCAccountPsdView.m */,
+				9C7A1E31202AC66E0051DB5D /* DCAccountPsdView.xib */,
+				9C7A1E2E202AC66E0051DB5D /* DCVerificationView.h */,
+				9C7A1E2F202AC66E0051DB5D /* DCVerificationView.m */,
+				9C7A1E30202AC66E0051DB5D /* DCVerificationView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C7A1E36202AD6D40051DB5D /* ToastView */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A1E37202AD6D40051DB5D /* UIView+Toast.h */,
+				9C7A1E38202AD6D40051DB5D /* UIView+Toast.m */,
+			);
+			path = ToastView;
+			sourceTree = "<group>";
+		};
 		9C7FE1E21FD920A800D32EEA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2332,6 +2423,15 @@
 				9C215E8D1FDBE626002152F1 /* DCPageControl.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		9C8135152022B7EE00F8F7E8 /* JPFPSStatus */ = {
+			isa = PBXGroup;
+			children = (
+				9C8135162022B7EE00F8F7E8 /* JPFPSStatus.h */,
+				9C8135172022B7EE00F8F7E8 /* JPFPSStatus.m */,
+			);
+			path = JPFPSStatus;
 			sourceTree = "<group>";
 		};
 		9C8CC853200495AC00515926 /* Main */ = {
@@ -2388,6 +2488,84 @@
 				9C8CC8632004A25E00515926 /* sqr_line@2x.png */,
 			);
 			path = CDDCDDScanning;
+			sourceTree = "<group>";
+		};
+		9CCC205B202BEBC700B6CD44 /* ChooseLocation */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC205C202BEBC700B6CD44 /* Category */,
+				9CCC205F202BEBC700B6CD44 /* ChooseLocation */,
+				9CCC2078202BEBC700B6CD44 /* Tool */,
+			);
+			path = ChooseLocation;
+			sourceTree = "<group>";
+		};
+		9CCC205C202BEBC700B6CD44 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC205D202BEBC700B6CD44 /* UIView+Frame.h */,
+				9CCC205E202BEBC700B6CD44 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9CCC205F202BEBC700B6CD44 /* ChooseLocation */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC2060202BEBC700B6CD44 /* Model */,
+				9CCC2063202BEBC700B6CD44 /* View */,
+			);
+			path = ChooseLocation;
+			sourceTree = "<group>";
+		};
+		9CCC2060202BEBC700B6CD44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC2088202BF18A00B6CD44 /* Cities.json */,
+				9CCC2061202BEBC700B6CD44 /* AddressItem.h */,
+				9CCC2062202BEBC700B6CD44 /* AddressItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CCC2063202BEBC700B6CD44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC2064202BEBC700B6CD44 /* AddressTableViewCell.h */,
+				9CCC2065202BEBC700B6CD44 /* AddressTableViewCell.m */,
+				9CCC2066202BEBC700B6CD44 /* AddressTableViewCell.xib */,
+				9CCC2067202BEBC700B6CD44 /* AddressView.h */,
+				9CCC2068202BEBC700B6CD44 /* AddressView.m */,
+				9CCC2069202BEBC700B6CD44 /* ChooseLocationView.h */,
+				9CCC206A202BEBC700B6CD44 /* ChooseLocationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CCC2078202BEBC700B6CD44 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC2079202BEBC700B6CD44 /* CitiesDataTool.h */,
+				9CCC207A202BEBC700B6CD44 /* CitiesDataTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		9CCC208D202C288D00B6CD44 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC208E202C289600B6CD44 /* Controller */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		9CCC208E202C289600B6CD44 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CCC208F202C28C700B6CD44 /* DCSettingViewController.h */,
+				9CCC2090202C28C700B6CD44 /* DCSettingViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		9CEB3B771FEB555100B636F9 /* BeautyMessage(美信) */ = {
@@ -2531,21 +2709,25 @@
 			files = (
 				9C67DC6A1FE79E5900C04F25 /* DCUserMgHeadView.xib in Resources */,
 				9C7338D820059B2700D30900 /* navigationbarScanBg.png in Resources */,
+				9CCC207E202BEBC700B6CD44 /* AddressTableViewCell.xib in Resources */,
 				18DCA3B41F1F4187008BF67E /* ClassiftyGoods02.plist in Resources */,
 				9C7FE1E11FD9143800D32EEA /* DCStoresRecommendCell.xib in Resources */,
 				9C147D5F1FE14EF900CA3BB4 /* DCCenterBeaShopCell.xib in Resources */,
 				926CED321FCEB64400002DDF /* T1cdxgB5_T1RCvBVdK.gif in Resources */,
 				9C215E801FDA5BD1002152F1 /* BeautyShop.plist in Resources */,
+				9CCC2089202BF18A00B6CD44 /* Cities.json in Resources */,
 				9C7FE1F11FD9302300D32EEA /* DCBeautyShopRecommendCell.xib in Resources */,
 				18DCA3BC1F1F4187008BF67E /* CommentPic.plist in Resources */,
 				9C7338DE2006022100D30900 /* DCBeautyMsgCell.xib in Resources */,
 				92A761DF1FCD921000017DFE /* loading2.gif in Resources */,
+				9C7A1E35202AC66E0051DB5D /* DCAccountPsdView.xib in Resources */,
 				9C7FE1E91FD9230100D32EEA /* DCStoresRecommendHeaderView.xib in Resources */,
 				18DCA3711F1F4187008BF67E /* restrictedshine.tiff in Resources */,
 				9C215E8B1FDBDF46002152F1 /* BeautyRecommendShop.plist in Resources */,
 				18DCA36F1F1F4187008BF67E /* line.png in Resources */,
 				9CE9CB651FE899610033322E /* DCUserAdressCell.xib in Resources */,
 				18DCA3B31F1F4187008BF67E /* ClassiftyGoods01.plist in Resources */,
+				9C7A1E29202AC6570051DB5D /* DCLoginViewController.xib in Resources */,
 				9C5F52AD1FDF94DF0061728E /* DCMyCenterHeaderView.xib in Resources */,
 				92CE3CE21FD68D85005F0A11 /* DCHeaderReusableView.xib in Resources */,
 				9C67DC641FE79DC100C04F25 /* DCUserMgCell.xib in Resources */,
@@ -2564,7 +2746,6 @@
 				18DCA3BE1F1F4187008BF67E /* MessageNote.plist in Resources */,
 				187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */,
 				18DCA3C11F1F4187008BF67E /* YouLikeGoods.plist in Resources */,
-				92CE3CE71FD68FAE005F0A11 /* DCLoginMeViewController.xib in Resources */,
 				18DCA3C41F1F4187008BF67E /* GoodsGrid.plist in Resources */,
 				18DCA3701F1F4187008BF67E /* mask.jpg in Resources */,
 				18DCA3C01F1F4187008BF67E /* MyServiceFlow.plist in Resources */,
@@ -2583,6 +2764,7 @@
 				9C7FE1F61FD9331A00D32EEA /* DCBestBeautyShopCell.xib in Resources */,
 				9C147D651FE1526D00CA3BB4 /* DCCenterBackCell.xib in Resources */,
 				18DCA3BB1F1F4187008BF67E /* ShopItem.plist in Resources */,
+				9C7A1E34202AC66E0051DB5D /* DCVerificationView.xib in Resources */,
 				18DCA3B61F1F4187008BF67E /* ClassifyTitles.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2670,10 +2852,12 @@
 				92B4F8591F8DBBD2003C2E76 /* NetworkUnit.m in Sources */,
 				9C7FE1F51FD9331A00D32EEA /* DCBestBeautyShopCell.m in Sources */,
 				92B4F8581F8DBBCC003C2E76 /* EGOCache.m in Sources */,
+				9C7A1E2A202AC6570051DB5D /* DCLoginViewController.m in Sources */,
 				92B4F8571F8DBBBE003C2E76 /* RequestTool.m in Sources */,
 				18DCA3911F1F4187008BF67E /* DCGoodsSurplusCell.m in Sources */,
 				18DCA3C91F1F4187008BF67E /* DCRecommendCell.m in Sources */,
 				18DCA30C1F1F4187008BF67E /* DCFootprintGoodsViewController.m in Sources */,
+				9CCC207B202BEBC700B6CD44 /* UIView+Frame.m in Sources */,
 				18DCA3C71F1F4187008BF67E /* DCRecommendItem.m in Sources */,
 				181AED811F4BC646003DB950 /* DCFeatureSelectionViewController.m in Sources */,
 				18DCA33E1F1F4187008BF67E /* DCPartCommentHeadView.m in Sources */,
@@ -2683,6 +2867,7 @@
 				9C13F4C920072F6300CCE89F /* GQGesVCTransition.m in Sources */,
 				18DCA30A1F1F4187008BF67E /* DCCommodityViewController.m in Sources */,
 				18DCA3421F1F4187008BF67E /* DCFeatureChoseTopCell.m in Sources */,
+				9C7A1E32202AC66E0051DB5D /* DCAccountPsdView.m in Sources */,
 				18DCA33F1F1F4187008BF67E /* DCShareItemCell.m in Sources */,
 				18DCA3771F1F4187008BF67E /* XWCoolAnimator+XWFold.m in Sources */,
 				9C8CC8642004A25E00515926 /* DCFlashButton.m in Sources */,
@@ -2718,7 +2903,7 @@
 				18DCA39C1F1F4187008BF67E /* DCZuoWenRightButton.m in Sources */,
 				18DCA3531F1F4187008BF67E /* JKDBHelper.m in Sources */,
 				9C215E831FDA5EBA002152F1 /* DCBeautyHotItem.m in Sources */,
-				92CE3CE81FD68FAE005F0A11 /* DCLoginMeViewController.m in Sources */,
+				9CCC2091202C28C700B6CD44 /* DCSettingViewController.m in Sources */,
 				18DCA3811F1F4187008BF67E /* XWFilterAnimator+XWCopyMachine.m in Sources */,
 				92A761E51FCD933200017DFE /* DCHomeRefreshGifHeader.m in Sources */,
 				9C58D42E1FEA518000639225 /* DCNewFeatureCell.m in Sources */,
@@ -2740,8 +2925,11 @@
 				18DCA3131F1F4187008BF67E /* DCGoodsSortCell.m in Sources */,
 				18DCA3871F1F4187008BF67E /* XWFilterAnimator+XWSwipe.m in Sources */,
 				92B37E711FD1015F0045A4A5 /* DCBaseSetViewController.m in Sources */,
+				9C7A1E33202AC66E0051DB5D /* DCVerificationView.m in Sources */,
 				18DCA31C1F1F4187008BF67E /* DCClassCategoryCell.m in Sources */,
+				9C7A1E2B202AC6570051DB5D /* DCRegisteredViewController.m in Sources */,
 				18DCA34C1F1F4187008BF67E /* DCSelPhotos.m in Sources */,
+				9CCC207C202BEBC700B6CD44 /* AddressItem.m in Sources */,
 				18DCA3721F1F4187008BF67E /* SDBrowserImageView.m in Sources */,
 				18DCA3761F1F4187008BF67E /* XWCoolAnimator+XWExplode.m in Sources */,
 				9CE9CB701FE8E6700033322E /* DCNewAdressView.m in Sources */,
@@ -2753,6 +2941,7 @@
 				9C7FE1E01FD9143800D32EEA /* DCStoresRecommendCell.m in Sources */,
 				18DCA3251F1F4187008BF67E /* DCGoodDetailViewController.m in Sources */,
 				18DCA3501F1F4187008BF67E /* AddressPickerView.m in Sources */,
+				9C8135182022B7EE00F8F7E8 /* JPFPSStatus.m in Sources */,
 				18DCA3261F1F4187008BF67E /* DCShareItem.m in Sources */,
 				18DCA3171F1F4187008BF67E /* DCBrandsSortHeadView.m in Sources */,
 				18DCA37C1F1F4187008BF67E /* XWCoolAnimator+XWScanning.m in Sources */,
@@ -2772,6 +2961,7 @@
 				18DCA3521F1F4187008BF67E /* WJYAlertView.m in Sources */,
 				927DD4391FD51E8C00D19889 /* DCMQViewController.m in Sources */,
 				9C1752571FE24E7000A531B4 /* CDDTopTip.m in Sources */,
+				9CCC207D202BEBC700B6CD44 /* AddressTableViewCell.m in Sources */,
 				18DCA32F1F1F4187008BF67E /* DCDetailLikeCell.m in Sources */,
 				9C8CC86D2004A2A900515926 /* DCGMScanViewController.m in Sources */,
 				18DCA30F1F1F4187008BF67E /* DCClassGoodsItem.m in Sources */,
@@ -2787,12 +2977,14 @@
 				18DCA38F1F1F4187008BF67E /* DCGoodsGridCell.m in Sources */,
 				18DCA38E1F1F4187008BF67E /* DCGoodsCountDownCell.m in Sources */,
 				9CE9CB681FE8B4700033322E /* DCAdressItem.m in Sources */,
+				9CCC207F202BEBC700B6CD44 /* AddressView.m in Sources */,
 				18DCA3971F1F4187008BF67E /* DCSlideshowHeadView.m in Sources */,
 				18DCA3471F1F4187008BF67E /* DCConsts.m in Sources */,
 				181AED981F4BC94D003DB950 /* DCContentItem.m in Sources */,
 				18DCA32D1F1F4187008BF67E /* DCDetailShufflingHeadView.m in Sources */,
 				9C67DC5D1FE7997900C04F25 /* DCManagementViewController.m in Sources */,
 				18DCA3491F1F4187008BF67E /* DCLIRLButton.m in Sources */,
+				9CCC208C202C243600B6CD44 /* DCCheckRegular.m in Sources */,
 				9C8CC8662004A25E00515926 /* DCScanningViewController.m in Sources */,
 				18DCA32B1F1F4187008BF67E /* DCDetailOverFooterView.m in Sources */,
 				18DCA30D1F1F4187008BF67E /* DCGoodsSetViewController.m in Sources */,
@@ -2804,7 +2996,9 @@
 				18DCA3401F1F4187008BF67E /* DCFeatureItemCell.m in Sources */,
 				926CED301FCEA48900002DDF /* DCNewWelfareLayout.m in Sources */,
 				18DCA3121F1F4187008BF67E /* DCBrandSortCell.m in Sources */,
+				9C7A1E3C202AE1C20051DB5D /* DCAdressDateBase.m in Sources */,
 				18DCA3101F1F4187008BF67E /* DCClassMianItem.m in Sources */,
+				9C7A1E39202AD6D40051DB5D /* UIView+Toast.m in Sources */,
 				92B37E6E1FD0FCAE0045A4A5 /* DCMediaListViewController.m in Sources */,
 				18DCA3371F1F4187008BF67E /* DCShowTypeTwoCell.m in Sources */,
 				92B37E7D1FD129090045A4A5 /* DCBeautyTopToolView.m in Sources */,
@@ -2818,6 +3012,7 @@
 				18DCA39A1F1F4187008BF67E /* DCNavSearchBarView.m in Sources */,
 				18DCA3841F1F4187008BF67E /* XWFilterAnimator+XWMod.m in Sources */,
 				18DCA3291F1F4187008BF67E /* DCFeatureList.m in Sources */,
+				9CCC2087202BEBC700B6CD44 /* CitiesDataTool.m in Sources */,
 				9C8CC8652004A25E00515926 /* DCScanIdentifyAreaView.m in Sources */,
 				9C67DC631FE79DC100C04F25 /* DCUserMgCell.m in Sources */,
 				18DCA39D1F1F4187008BF67E /* DCNavigationController.m in Sources */,
@@ -2827,6 +3022,7 @@
 				18DCA33A1F1F4187008BF67E /* DCCommentFooterCell.m in Sources */,
 				18DCA3741F1F4187008BF67E /* SDWaitingView.m in Sources */,
 				18DCA3281F1F4187008BF67E /* DCFeatureItem.m in Sources */,
+				9CCC2080202BEBC700B6CD44 /* ChooseLocationView.m in Sources */,
 				18DCA37B1F1F4187008BF67E /* XWCoolAnimator+XWPortal.m in Sources */,
 				9C5F52AC1FDF94DF0061728E /* DCMyCenterHeaderView.m in Sources */,
 				18DCA37F1F1F4187008BF67E /* XWFilterAnimator+XWBarSwipe.m in Sources */,

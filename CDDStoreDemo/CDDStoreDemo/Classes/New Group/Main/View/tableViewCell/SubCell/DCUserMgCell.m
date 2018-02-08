@@ -33,7 +33,7 @@
 #pragma mark - Intial
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+
     self.selectionStyle = UITableViewCellSelectionStyleGray;
 }
 

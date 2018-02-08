@@ -11,22 +11,29 @@
 // Controllers
 
 // Models
-
+#import "DCAdressDateBase.h"
+#import "DCAdressItem.h"
 // Views
 #import "DCNewAdressView.h"
 // Vendors
-
+#import "UIView+Toast.h"
+#import <SVProgressHUD.h>
+#import "ChooseLocationView.h"
+#import "CitiesDataTool.h"
 // Categories
 
 // Others
+#import "DCCheckRegular.h"
 
-@interface DCNewAdressViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface DCNewAdressViewController ()<UITableViewDelegate,UITableViewDataSource,NSURLSessionDelegate,UIGestureRecognizerDelegate>
 
 /* tableView */
 @property (strong , nonatomic)UITableView *tableView;
-
+@property (nonatomic,strong) ChooseLocationView *chooseLocationView;
+@property (nonatomic,strong) UIView  *cover;
 /* headView */
 @property (strong , nonatomic)DCNewAdressView *adressHeadView;
+@property (weak, nonatomic) IBOutlet UIButton *saveChangeButton;
 
 @end
 
@@ -61,10 +68,13 @@
 
 - (void)setUpBase
 {
-    self.title = @"新增收货人地址";
+    self.title = (_saveType == DCSaveAdressNewType) ? @"新增收货人地址" : @"编辑收货人地址";
     self.view.backgroundColor = DCBGColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView.backgroundColor = self.view.backgroundColor;
+
+    [[CitiesDataTool sharedManager] requestGetData];
+    [self.view addSubview:self.cover];
     
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpacer.width = -15;
@@ -89,8 +99,19 @@
     self.tableView.tableHeaderView = _adressHeadView;
     self.tableView.tableFooterView = [UIView new];
     
+    if (_saveType == DCSaveAdressChangeType) {
+        _adressHeadView.rePersonField.text = _adressItem.userName;
+        _adressHeadView.addressLabel.text = _adressItem.chooseAdress;
+        _adressHeadView.rePhoneField.text = _adressItem.userPhone;
+        _adressHeadView.detailTextView.text = _adressItem.userAdress;
+    }
+    WEAKSELF
     _adressHeadView.selectAdBlock = ^{
-        NSLog(@"选择地址");
+        [weakSelf.view endEditing:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            weakSelf.cover.hidden = !weakSelf.cover.hidden;
+            weakSelf.chooseLocationView.hidden = weakSelf.cover.hidden;
+        });
     };
 }
 
@@ -119,13 +140,97 @@
 
 #pragma mark - 保存新地址
 - (IBAction)saveNewAdressClick {
+    if (_adressHeadView.rePersonField.text.length == 0 || _adressHeadView.rePhoneField.text.length == 0 || _adressHeadView.detailTextView.text.length == 0 || _adressHeadView.addressLabel.text.length == 0) {
+        [self.view makeToast:@"请填写完整地址信息" duration:0.5 position:CSToastPositionCenter];
+        [DCSpeedy dc_callFeedback]; //触动
+        return;
+    }
+
+    if (![DCCheckRegular dc_checkTelNumber:_adressHeadView.rePhoneField.text]) {
+        [self.view makeToast:@"手机号码格式错误" duration:0.5 position:CSToastPositionCenter];
+        
+        return;
+    }
+    DCAdressItem *adressItem =  (_saveType == DCSaveAdressNewType) ? [DCAdressItem new] : _adressItem;
+    adressItem.userName = _adressHeadView.rePersonField.text;
+    adressItem.userPhone = _adressHeadView.rePhoneField.text;
+    adressItem.userAdress = _adressHeadView.detailTextView.text;
+    adressItem.chooseAdress = _adressHeadView.addressLabel.text;
+    adressItem.isDefault = @"1"; // 默认不选择
+    if (_saveType == DCSaveAdressNewType) { //新建
+        [[DCAdressDateBase sharedDataBase]addNewAdress:adressItem];
+        
+    }else if (_saveType == DCSaveAdressChangeType){ //更新
+        
+        [[DCAdressDateBase sharedDataBase]updateAdress:adressItem];
+    }
+
+    WEAKSELF
+    [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD dismiss];
+        [weakSelf.view makeToast:@"保存成功" duration:0.5 position:CSToastPositionCenter];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UpDateUI" object:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        });
+    });
+}
+
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    
+    CGPoint point = [gestureRecognizer locationInView:gestureRecognizer.view];
+    if (CGRectContainsPoint(_chooseLocationView.frame, point)){
+        return NO;
+    }
+    return YES;
+}
+
+
+- (void)tapCover:(UITapGestureRecognizer *)tap{
+    
+    if (_chooseLocationView.chooseFinish) {
+        _chooseLocationView.chooseFinish();
+    }
+}
+
+- (ChooseLocationView *)chooseLocationView{
+    
+    if (!_chooseLocationView) {
+        _chooseLocationView = [[ChooseLocationView alloc]initWithFrame:CGRectMake(0, ScreenH - 350, ScreenW, 350)];
+        
+    }
+    return _chooseLocationView;
+}
+
+- (UIView *)cover{
+    
+    if (!_cover) {
+        _cover = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        _cover.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+        [_cover addSubview:self.chooseLocationView];
+        __weak typeof (self) weakSelf = self;
+        _chooseLocationView.chooseFinish = ^{
+            [UIView animateWithDuration:0.25 animations:^{
+                weakSelf.adressHeadView.addressLabel.text = weakSelf.chooseLocationView.address;
+                weakSelf.cover.hidden = YES;
+            }];
+        };
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapCover:)];
+        [_cover addGestureRecognizer:tap];
+        tap.delegate = self;
+        _cover.hidden = YES;
+    }
+    return _cover;
 }
 
 #pragma mark - 点击保存
 - (void)saveButtonBarItemClick
 {
-    
+    [self.view endEditing:YES];
 }
 
 @end

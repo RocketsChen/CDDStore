@@ -10,7 +10,7 @@
 
 // Controllers
 #import "DCNavigationController.h"
-#import "DCLoginMeViewController.h"
+#import "DCLoginViewController.h"
 #import "DCBeautyMessageViewController.h"
 // Models
 
@@ -123,11 +123,11 @@
 #pragma mark - 控制器跳转拦截
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     
-    if(viewController == [tabBarController.viewControllers objectAtIndex:4]){
+    if(viewController == [tabBarController.viewControllers objectAtIndex:DCTabBarControllerPerson]){
         
         if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
             
-            DCLoginMeViewController *dcLoginVc = [DCLoginMeViewController new];
+            DCLoginViewController *dcLoginVc = [DCLoginViewController new];
             [self presentViewController:dcLoginVc animated:YES completion:nil];
             return NO;
         }

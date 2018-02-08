@@ -97,7 +97,7 @@
     
     [_pciImageView sd_setImageWithURL:[NSURL URLWithString:picItem.images[0]]];
     _picNum.text = [NSString stringWithFormat:@"%zd张",picItem.images.count];
-    _nickName.text = [DCSpeedy dc_EncryptionDisplayMessageWith:picItem.nickName WithFirstIndex:2];
+    _nickName.text = [DCSpeedy dc_encryptionDisplayMessageWith:picItem.nickName WithFirstIndex:2];
     
     _imagesArray = picItem.images;
 }

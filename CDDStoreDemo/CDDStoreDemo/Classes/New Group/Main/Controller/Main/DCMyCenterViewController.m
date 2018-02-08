@@ -12,6 +12,7 @@
 // Controllers
 #import "DCManagementViewController.h" //账户管理
 #import "DCGMScanViewController.h"  //扫一扫
+#import "DCSettingViewController.h" //设置
 // Models
 #import "DCGridItem.h"
 // Views
@@ -134,13 +135,13 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
 {
     _topToolView = [[DCCenterTopToolView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 64)];
     WEAKSELF
-    _topToolView.leftItemClickBlock = ^{
-        NSLog(@"点击了扫描");
+    _topToolView.leftItemClickBlock = ^{ //点击了扫描
         DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
         [weakSelf.navigationController pushViewController:dcGMvC animated:YES];
     };
-    _topToolView.rightItemClickBlock = ^{
-        NSLog(@"点击设置");
+    _topToolView.rightItemClickBlock = ^{ //点击设置
+        DCSettingViewController *dcSetVc = [DCSettingViewController new];
+        [weakSelf.navigationController pushViewController:dcSetVc animated:YES];
     };
     
     [self.view addSubview:_topToolView];

@@ -10,7 +10,7 @@
 #import "DCBaseSetViewController.h"
 
 // Controllers
-
+#import "DCTabBarController.h"
 // Models
 
 // Views
@@ -45,7 +45,7 @@
 {
     WEAKSELF
     [[NSNotificationCenter defaultCenter]addObserverForName:LOGINSELECTCENTERINDEX object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        weakSelf.tabBarController.selectedIndex = 4; //跳转到我的界面
+        weakSelf.tabBarController.selectedIndex = DCTabBarControllerPerson; //跳转到我的界面
     }];
 }
 

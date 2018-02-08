@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DCNewAdressViewController">
             <connections>
+                <outlet property="saveChangeButton" destination="N1e-cZ-qHL" id="f7l-ug-Fza"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,10 +26,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1e-cZ-qHL">
-                    <rect key="frame" x="0.0" y="557" width="350" height="45"/>
+                    <rect key="frame" x="0.0" y="552" width="350" height="50"/>
                     <color key="backgroundColor" red="0.92156862745098034" green="0.40392156862745099" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="m76-FQ-WAf"/>
+                        <constraint firstAttribute="height" constant="50" id="m76-FQ-WAf"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                     <state key="normal" title="保存">

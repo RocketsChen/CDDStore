@@ -112,14 +112,14 @@
 }
 
 #pragma mark - 字符串加星处理
-+ (NSString *)dc_EncryptionDisplayMessageWith:(NSString *)content WithFirstIndex:(NSInteger)findex
++ (NSString *)dc_encryptionDisplayMessageWith:(NSString *)content WithFirstIndex:(NSInteger)findex
 {
     if (findex <= 0) {
         findex = 2;
-    }else if (findex + 1 > content.length) {
+    }else if (findex + findex > content.length) {
         findex --;
     }
-    return [NSString stringWithFormat:@"%@***%@",[content substringToIndex:findex],[content substringFromIndex:content.length - 1]];
+    return [NSString stringWithFormat:@"%@***%@",[content substringToIndex:findex],[content substringFromIndex:content.length - findex]];
 }
 
 +(NSString *)UIImageToBase64Str:(UIImage *) image
@@ -153,5 +153,17 @@
     
     [vc presentViewController:alertController animated:YES completion:nil];
 }
+
+#pragma mark - 触动
++ (void)dc_callFeedback
+{
+    if (@available(iOS 10.0, *)) {
+        UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc] initWithStyle: UIImpactFeedbackStyleHeavy];
+        [generator prepare];
+        [generator impactOccurred];
+    }
+    
+}
+
 
 @end

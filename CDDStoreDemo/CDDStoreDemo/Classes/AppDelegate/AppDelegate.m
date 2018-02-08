@@ -10,6 +10,7 @@
 #import "JKDBModel.h"
 #import "DCTabBarController.h"
 
+#import "JPFPSStatus.h"
 #import "RequestTool.h"
 #import "NetworkUnit.h"
 #import "DCAppVersionTool.h"
@@ -33,9 +34,11 @@
     
     [self.window makeKeyAndVisible];
     
-    [self setUpUserData]; //设置数据
-    
 //    [self CDDMallVersionInformationFromPGY]; //蒲公英自动更新
+    
+#if defined(DEBUG)||defined(_DEBUG) //仅仅在模拟器上跑测试会显示FPS
+    [[JPFPSStatus sharedInstance] open];
+#endif
     
     [self setUpFixiOS11]; //适配IOS 11
     
@@ -65,28 +68,6 @@
         self.window.rootViewController = dcFVc;
     }
 }
-
-
-/**
- 是否登录
- */
-- (void)setUpUserData
-{
-    DCUserInfo *userInfo = UserInfoData;
-    if (userInfo.username.length == 0) { //userName为指定id不可改动用来判断是否有用户数据
-        DCUserInfo *userInfo = [[DCUserInfo alloc] init];
-        userInfo.nickname = @"RocketsChen";
-        userInfo.sex = @"男";
-        userInfo.birthDay = @"1996-02-10";
-        userInfo.userimage = @"icon";
-        userInfo.username = @"qq-w923740293";
-        userInfo.defaultAddress = @"中国 上海";
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{//异步保存
-            [userInfo save];
-        });
-    }
-}
-
 
 #pragma mark - 适配
 - (void)setUpFixiOS11

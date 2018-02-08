@@ -79,20 +79,20 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="商城" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZQG-iv-GJl">
-                    <rect key="frame" x="95" y="4" width="150" height="38"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZQG-iv-GJl">
+                    <rect key="frame" x="95" y="4" width="200" height="38"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="Hhr-20-R9k"/>
+                        <constraint firstAttribute="width" constant="200" id="Hhr-20-R9k"/>
                         <constraint firstAttribute="height" constant="38" id="jCX-gr-AOb"/>
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="哈哈" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LAC-AC-ovP">
-                    <rect key="frame" x="95" y="51" width="150" height="38"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="联系方式" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LAC-AC-ovP">
+                    <rect key="frame" x="95" y="51" width="200" height="38"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="AY2-1G-zHe"/>
+                        <constraint firstAttribute="width" constant="200" id="AY2-1G-zHe"/>
                         <constraint firstAttribute="height" constant="38" id="YyX-YO-Dhd"/>
                     </constraints>
                     <nil key="textColor"/>

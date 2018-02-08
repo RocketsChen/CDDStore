@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    DCSaveAdressNewType = 0,
+    DCSaveAdressChangeType = 1,
+} DCSaveAdressType;
+
+@class DCAdressItem;
 @interface DCNewAdressViewController : UIViewController
+
+
+/* type */
+@property (nonatomic,assign) DCSaveAdressType saveType;
+
+/* 更改数据 */
+@property (strong , nonatomic)DCAdressItem *adressItem;
 
 @end

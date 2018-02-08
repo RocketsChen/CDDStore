@@ -9,7 +9,7 @@
 #import "DCBeautyMessageViewController.h"
 
 // Controllers
-#import "DCLoginMeViewController.h"
+#import "DCLoginViewController.h"
 // Models
 
 // Views
@@ -108,15 +108,16 @@ static NSString *const DCBeautyMsgCellID = @"DCBeautyMsgCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"12"]) {
+    if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
         
-        DCLoginMeViewController *dcLoginVc = [DCLoginMeViewController new];
+        DCLoginViewController *dcLoginVc = [DCLoginViewController new];
         [self presentViewController:dcLoginVc animated:YES completion:nil];
         
     }else{
-        [DCSpeedy dc_SetUpAlterWithView:self Message:@"小圆点需要为您改变为12么" Sure:^{
+        [DCSpeedy dc_SetUpAlterWithView:self Message:@"小圆点需要为您改变为一个随机数么" Sure:^{
             
-            [DCObjManager dc_saveUserData:@"12" forKey:@"isLogin"]; //暂时以登录记录字段相关联，后续会新建字段
+             NSInteger value = arc4random() % 100;
+            [DCObjManager dc_saveUserData:[NSString stringWithFormat:@"%zd",value] forKey:@"isLogin"]; //暂时以登录记录字段相关联，后续会新建字段
             [[NSNotificationCenter defaultCenter]postNotificationName:DCMESSAGECOUNTCHANGE object:nil];
             
         } Cancel:nil];

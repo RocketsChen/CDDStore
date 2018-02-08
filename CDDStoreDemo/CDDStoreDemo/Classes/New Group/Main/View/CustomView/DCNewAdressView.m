@@ -24,12 +24,6 @@
 
 @interface DCNewAdressView ()
 
-@property (weak, nonatomic) IBOutlet DCPlaceholderTextView *detailTextView;
-@property (weak, nonatomic) IBOutlet UITextField *rePersonField;
-
-@property (weak, nonatomic) IBOutlet UITextField *rePhoneField;
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-
 @end
 
 @implementation DCNewAdressView
@@ -44,8 +38,7 @@
 
 - (void)setUpBase
 {
-//    self.detailTextView.placeholder = @"请输入您的详细地址";
-//    self.detailTextView.placeholderColor = [UIColor darkGrayColor];
+    
 }
 
 #pragma mark - 选择地址

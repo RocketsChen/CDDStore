@@ -9,7 +9,7 @@
 #import "DCBeautyShopViewController.h"
 
 // Controllers
-#import "DCLoginMeViewController.h"
+#import "DCLoginViewController.h"
 // Models
 #import "DCBeautyHotItem.h"
 #import "DCBeautyShopItem.h"

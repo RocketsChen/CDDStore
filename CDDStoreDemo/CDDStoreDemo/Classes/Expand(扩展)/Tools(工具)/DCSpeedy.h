@@ -78,7 +78,7 @@
  @param findex 第几位开始加星
  @return 返回加星后的字符串
  */
-+ (NSString *)dc_EncryptionDisplayMessageWith:(NSString *)content WithFirstIndex:(NSInteger)findex;
++ (NSString *)dc_encryptionDisplayMessageWith:(NSString *)content WithFirstIndex:(NSInteger)findex;
 
 
 
@@ -99,4 +99,14 @@
 + (UIImage *)Base64StrToUIImage:(NSString *)_encodedImageStr;
 
 + (void)dc_SetUpAlterWithView:(UIViewController *)vc Message:(NSString *)message Sure:(dispatch_block_t)sureBlock Cancel:(dispatch_block_t)cancelBlock;
+
+
+
+/**
+ 触动
+ */
++ (void)dc_callFeedback;
+
+
+
 @end
