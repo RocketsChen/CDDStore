@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    DCSaveAdressNewType = 0,
-    DCSaveAdressChangeType = 1,
+    DCSaveAdressNewType = 0,  //保存
+    DCSaveAdressChangeType = 1, //编辑
 } DCSaveAdressType;
 
 @class DCAdressItem;
