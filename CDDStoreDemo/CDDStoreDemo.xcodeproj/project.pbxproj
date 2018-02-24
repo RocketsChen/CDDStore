@@ -197,6 +197,7 @@
 		92CE3CDD1FD67CAB005F0A11 /* DCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE3CDB1FD67CAB005F0A11 /* DCUserInfo.m */; };
 		92CE3CE21FD68D85005F0A11 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CE3CE11FD68D85005F0A11 /* DCHeaderReusableView.xib */; };
 		92CE3CED1FD69489005F0A11 /* DCMyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE3CEC1FD69489005F0A11 /* DCMyCenterViewController.m */; };
+		9C0D22F22041A5A600BD3714 /* CommentBadData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C0D22F12041A5A600BD3714 /* CommentBadData.plist */; };
 		9C13F4C920072F6300CCE89F /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C13F4C820072F6300CCE89F /* GQGesVCTransition.m */; };
 		9C147D441FE0EE2E00CA3BB4 /* DCCenterTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C147D431FE0EE2E00CA3BB4 /* DCCenterTopToolView.m */; };
 		9C147D491FE0F0BF00CA3BB4 /* DCStateItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C147D471FE0F0BF00CA3BB4 /* DCStateItemCell.m */; };
@@ -215,6 +216,11 @@
 		9C215E861FDA75CA002152F1 /* DCGroupImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C215E851FDA75CA002152F1 /* DCGroupImageCell.m */; };
 		9C215E8B1FDBDF46002152F1 /* BeautyRecommendShop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C215E8A1FDBDF46002152F1 /* BeautyRecommendShop.plist */; };
 		9C215E8E1FDBE626002152F1 /* DCPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C215E8D1FDBE626002152F1 /* DCPageControl.m */; };
+		9C2AB0AA2040378700B01353 /* DCComImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2AB0A92040378700B01353 /* DCComImagesView.m */; };
+		9C2AB0AC204041DB00B01353 /* CommentData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C2AB0AB204041DA00B01353 /* CommentData.plist */; };
+		9C2D84142041307A00C27E0E /* DCItemImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D84132041307A00C27E0E /* DCItemImageCell.m */; };
+		9C2D841720413CAE00C27E0E /* DCComPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D841620413CAE00C27E0E /* DCComPicViewController.m */; };
+		9C2D841A2041495500C27E0E /* DCDetailPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D84192041495500C27E0E /* DCDetailPicCell.m */; };
 		9C58D4211FEA08D900639225 /* UILabel+DCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C58D4201FEA08D900639225 /* UILabel+DCLabel.m */; };
 		9C58D4251FEA3C7D00639225 /* DCAppVersionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C58D4241FEA3C7D00639225 /* DCAppVersionTool.m */; };
 		9C58D42B1FEA511200639225 /* DCNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C58D42A1FEA511200639225 /* DCNewFeatureViewController.m */; };
@@ -261,6 +267,11 @@
 		9C8CC86A2004A25E00515926 /* sqr_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8CC8632004A25E00515926 /* sqr_line@2x.png */; };
 		9C8CC86D2004A2A900515926 /* DCGMScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC86C2004A2A900515926 /* DCGMScanViewController.m */; };
 		9C8CC8702004B19B00515926 /* DCCameraTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CC86E2004B19B00515926 /* DCCameraTopView.m */; };
+		9C95E95E203FBE5C0084CB37 /* DCComHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C95E95D203FBE5C0084CB37 /* DCComHeadView.m */; };
+		9C95E962203FE4670084CB37 /* DCCommentsCntCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C95E960203FE4670084CB37 /* DCCommentsCntCell.m */; };
+		9C95E963203FE4670084CB37 /* DCCommentsCntCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C95E961203FE4670084CB37 /* DCCommentsCntCell.xib */; };
+		9C95E966203FF2570084CB37 /* DCCometItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C95E965203FF2570084CB37 /* DCCometItemCell.m */; };
+		9C95E969204004C70084CB37 /* DCCommentsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C95E968204004C70084CB37 /* DCCommentsItem.m */; };
 		9CAB04141FECA1B300B1C879 /* NSObject+DCNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */; };
 		9CCC207B202BEBC700B6CD44 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC205E202BEBC700B6CD44 /* UIView+Frame.m */; };
 		9CCC207C202BEBC700B6CD44 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2062202BEBC700B6CD44 /* AddressItem.m */; };
@@ -657,6 +668,7 @@
 		92CE3CE11FD68D85005F0A11 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
 		92CE3CEB1FD69489005F0A11 /* DCMyCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCMyCenterViewController.h; sourceTree = "<group>"; };
 		92CE3CEC1FD69489005F0A11 /* DCMyCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCMyCenterViewController.m; sourceTree = "<group>"; };
+		9C0D22F12041A5A600BD3714 /* CommentBadData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CommentBadData.plist; sourceTree = "<group>"; };
 		9C13F4C720072F6300CCE89F /* GQGesVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQGesVCTransition.h; sourceTree = "<group>"; };
 		9C13F4C820072F6300CCE89F /* GQGesVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQGesVCTransition.m; sourceTree = "<group>"; };
 		9C147D421FE0EE2E00CA3BB4 /* DCCenterTopToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCenterTopToolView.h; sourceTree = "<group>"; };
@@ -687,6 +699,15 @@
 		9C215E8A1FDBDF46002152F1 /* BeautyRecommendShop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BeautyRecommendShop.plist; sourceTree = "<group>"; };
 		9C215E8C1FDBE626002152F1 /* DCPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPageControl.h; sourceTree = "<group>"; };
 		9C215E8D1FDBE626002152F1 /* DCPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPageControl.m; sourceTree = "<group>"; };
+		9C2AB0A82040378700B01353 /* DCComImagesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCComImagesView.h; sourceTree = "<group>"; };
+		9C2AB0A92040378700B01353 /* DCComImagesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCComImagesView.m; sourceTree = "<group>"; };
+		9C2AB0AB204041DA00B01353 /* CommentData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CommentData.plist; sourceTree = "<group>"; };
+		9C2D84122041307A00C27E0E /* DCItemImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCItemImageCell.h; sourceTree = "<group>"; };
+		9C2D84132041307A00C27E0E /* DCItemImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCItemImageCell.m; sourceTree = "<group>"; };
+		9C2D841520413CAE00C27E0E /* DCComPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCComPicViewController.h; sourceTree = "<group>"; };
+		9C2D841620413CAE00C27E0E /* DCComPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCComPicViewController.m; sourceTree = "<group>"; };
+		9C2D84182041495500C27E0E /* DCDetailPicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDetailPicCell.h; sourceTree = "<group>"; };
+		9C2D84192041495500C27E0E /* DCDetailPicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCDetailPicCell.m; sourceTree = "<group>"; };
 		9C58D41F1FEA08D900639225 /* UILabel+DCLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+DCLabel.h"; sourceTree = "<group>"; };
 		9C58D4201FEA08D900639225 /* UILabel+DCLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DCLabel.m"; sourceTree = "<group>"; };
 		9C58D4231FEA3C7D00639225 /* DCAppVersionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCAppVersionTool.h; sourceTree = "<group>"; };
@@ -763,6 +784,15 @@
 		9C8CC86C2004A2A900515926 /* DCGMScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCGMScanViewController.m; sourceTree = "<group>"; };
 		9C8CC86E2004B19B00515926 /* DCCameraTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCameraTopView.m; sourceTree = "<group>"; };
 		9C8CC86F2004B19B00515926 /* DCCameraTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCameraTopView.h; sourceTree = "<group>"; };
+		9C95E95C203FBE5C0084CB37 /* DCComHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCComHeadView.h; sourceTree = "<group>"; };
+		9C95E95D203FBE5C0084CB37 /* DCComHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCComHeadView.m; sourceTree = "<group>"; };
+		9C95E95F203FE4670084CB37 /* DCCommentsCntCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCommentsCntCell.h; sourceTree = "<group>"; };
+		9C95E960203FE4670084CB37 /* DCCommentsCntCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCommentsCntCell.m; sourceTree = "<group>"; };
+		9C95E961203FE4670084CB37 /* DCCommentsCntCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCCommentsCntCell.xib; sourceTree = "<group>"; };
+		9C95E964203FF2570084CB37 /* DCCometItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCometItemCell.h; sourceTree = "<group>"; };
+		9C95E965203FF2570084CB37 /* DCCometItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCometItemCell.m; sourceTree = "<group>"; };
+		9C95E967204004C70084CB37 /* DCCommentsItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCommentsItem.h; sourceTree = "<group>"; };
+		9C95E968204004C70084CB37 /* DCCommentsItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCommentsItem.m; sourceTree = "<group>"; };
 		9CAB04121FECA1B300B1C879 /* NSObject+DCNull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DCNull.h"; sourceTree = "<group>"; };
 		9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DCNull.m"; sourceTree = "<group>"; };
 		9CCC205D202BEBC700B6CD44 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -851,8 +881,9 @@
 		181AED741F4BC646003DB950 /* GoodsComments(商品评论) */ = {
 			isa = PBXGroup;
 			children = (
-				181AED751F4BC646003DB950 /* DCGoodCommentViewController.h */,
-				181AED761F4BC646003DB950 /* DCGoodCommentViewController.m */,
+				9C95E95B203FBE3C0084CB37 /* View */,
+				9C95E95A203FBE370084CB37 /* Model */,
+				9C95E959203FBE300084CB37 /* Controller */,
 			);
 			path = "GoodsComments(商品评论)";
 			sourceTree = "<group>";
@@ -1868,6 +1899,8 @@
 		18DCA2EE1F1F4187008BF67E /* 我的Plist */ = {
 			isa = PBXGroup;
 			children = (
+				9C0D22F12041A5A600BD3714 /* CommentBadData.plist */,
+				9C2AB0AB204041DA00B01353 /* CommentData.plist */,
 				18DCA2EF1F1F4187008BF67E /* CommentPic.plist */,
 				18DCA2F01F1F4187008BF67E /* DeliveryAdress.plist */,
 				18DCA2F11F1F4187008BF67E /* MessageNote.plist */,
@@ -2490,6 +2523,46 @@
 			path = CDDCDDScanning;
 			sourceTree = "<group>";
 		};
+		9C95E959203FBE300084CB37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				181AED751F4BC646003DB950 /* DCGoodCommentViewController.h */,
+				181AED761F4BC646003DB950 /* DCGoodCommentViewController.m */,
+				9C2D841520413CAE00C27E0E /* DCComPicViewController.h */,
+				9C2D841620413CAE00C27E0E /* DCComPicViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9C95E95A203FBE370084CB37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C95E967204004C70084CB37 /* DCCommentsItem.h */,
+				9C95E968204004C70084CB37 /* DCCommentsItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C95E95B203FBE3C0084CB37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C95E95C203FBE5C0084CB37 /* DCComHeadView.h */,
+				9C95E95D203FBE5C0084CB37 /* DCComHeadView.m */,
+				9C95E95F203FE4670084CB37 /* DCCommentsCntCell.h */,
+				9C95E960203FE4670084CB37 /* DCCommentsCntCell.m */,
+				9C95E961203FE4670084CB37 /* DCCommentsCntCell.xib */,
+				9C95E964203FF2570084CB37 /* DCCometItemCell.h */,
+				9C95E965203FF2570084CB37 /* DCCometItemCell.m */,
+				9C2AB0A82040378700B01353 /* DCComImagesView.h */,
+				9C2AB0A92040378700B01353 /* DCComImagesView.m */,
+				9C2D84122041307A00C27E0E /* DCItemImageCell.h */,
+				9C2D84132041307A00C27E0E /* DCItemImageCell.m */,
+				9C2D84182041495500C27E0E /* DCDetailPicCell.h */,
+				9C2D84192041495500C27E0E /* DCDetailPicCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9CCC205B202BEBC700B6CD44 /* ChooseLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -2727,6 +2800,7 @@
 				18DCA36F1F1F4187008BF67E /* line.png in Resources */,
 				9CE9CB651FE899610033322E /* DCUserAdressCell.xib in Resources */,
 				18DCA3B31F1F4187008BF67E /* ClassiftyGoods01.plist in Resources */,
+				9C0D22F22041A5A600BD3714 /* CommentBadData.plist in Resources */,
 				9C7A1E29202AC6570051DB5D /* DCLoginViewController.xib in Resources */,
 				9C5F52AD1FDF94DF0061728E /* DCMyCenterHeaderView.xib in Resources */,
 				92CE3CE21FD68D85005F0A11 /* DCHeaderReusableView.xib in Resources */,
@@ -2751,6 +2825,7 @@
 				18DCA3C01F1F4187008BF67E /* MyServiceFlow.plist in Resources */,
 				18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */,
 				18DD85C71F0650F400F47095 /* Assets.xcassets in Resources */,
+				9C2AB0AC204041DB00B01353 /* CommentData.plist in Resources */,
 				9CE9CB721FE8E67D0033322E /* DCNewAdressView.xib in Resources */,
 				18DCA34F1F1F4187008BF67E /* addressData.plist in Resources */,
 				18DCA3C31F1F4187008BF67E /* CountDownShop.plist in Resources */,
@@ -2759,6 +2834,7 @@
 				18DCA3B21F1F4187008BF67E /* ClasiftyGoods.plist in Resources */,
 				18DCA3B71F1F4187008BF67E /* DetailRecommend.plist in Resources */,
 				18DCA3B51F1F4187008BF67E /* ClassiftyGoods03.plist in Resources */,
+				9C95E963203FE4670084CB37 /* DCCommentsCntCell.xib in Resources */,
 				9C8CC86A2004A25E00515926 /* sqr_line@2x.png in Resources */,
 				92A761DD1FCD91FC00017DFE /* loading.gif in Resources */,
 				9C7FE1F61FD9331A00D32EEA /* DCBestBeautyShopCell.xib in Resources */,
@@ -2849,6 +2925,7 @@
 			files = (
 				92B4F85A1F8DBBED003C2E76 /* Reachability.m in Sources */,
 				9CEB3B7B1FEB559300B636F9 /* DCBeautyMessageViewController.m in Sources */,
+				9C2AB0AA2040378700B01353 /* DCComImagesView.m in Sources */,
 				92B4F8591F8DBBD2003C2E76 /* NetworkUnit.m in Sources */,
 				9C7FE1F51FD9331A00D32EEA /* DCBestBeautyShopCell.m in Sources */,
 				92B4F8581F8DBBCC003C2E76 /* EGOCache.m in Sources */,
@@ -2874,6 +2951,7 @@
 				18DCA3931F1F4187008BF67E /* DCOverFootView.m in Sources */,
 				18DCA3461F1F4187008BF67E /* UIView+DCExtension.m in Sources */,
 				18DCA3311F1F4187008BF67E /* DCDetailServicetCell.m in Sources */,
+				9C95E95E203FBE5C0084CB37 /* DCComHeadView.m in Sources */,
 				9C7FE1FA1FD933C700D32EEA /* DCBeautyHotTopicCell.m in Sources */,
 				9C8CC8672004A25E00515926 /* DCScanTool.m in Sources */,
 				9CE9CB6C1FE8D9280033322E /* DCNewAdressViewController.m in Sources */,
@@ -2896,6 +2974,7 @@
 				9C58D4251FEA3C7D00639225 /* DCAppVersionTool.m in Sources */,
 				9CEB3B761FEB44AD00B636F9 /* DCTabBadgeView.m in Sources */,
 				925B5F021FCD529B00053A16 /* UIView+DCRolling.m in Sources */,
+				9C2D841A2041495500C27E0E /* DCDetailPicCell.m in Sources */,
 				18DCA3431F1F4187008BF67E /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				926CED2D1FCEA1AE00002DDF /* DCNewWelfareCell.m in Sources */,
 				9C7FE1EC1FD9287100D32EEA /* DCBeautyShopItem.m in Sources */,
@@ -2909,6 +2988,7 @@
 				9C58D42E1FEA518000639225 /* DCNewFeatureCell.m in Sources */,
 				186CFAB11F6156AD006A9A9A /* DCParticularsShowViewController.m in Sources */,
 				18DCA3381F1F4187008BF67E /* DCCommentCell.m in Sources */,
+				9C95E966203FF2570084CB37 /* DCCometItemCell.m in Sources */,
 				18DCA3141F1F4187008BF67E /* DCListGridCell.m in Sources */,
 				181AEDB01F4BC9A8003DB950 /* DCFooterReusableView.m in Sources */,
 				18DCA31A1F1F4187008BF67E /* DCCustionHeadView.m in Sources */,
@@ -2917,6 +2997,7 @@
 				9C7FE1E81FD9230100D32EEA /* DCStoresRecommendHeaderView.m in Sources */,
 				18DCA38A1F1F4187008BF67E /* XWMagicMoveAnimator.m in Sources */,
 				9C67DC681FE79E5200C04F25 /* DCUserMgHeadView.m in Sources */,
+				9C2D841720413CAE00C27E0E /* DCComPicViewController.m in Sources */,
 				181AED8A1F4BC646003DB950 /* DCGoodParticularsViewController.m in Sources */,
 				9C58D4211FEA08D900639225 /* UILabel+DCLabel.m in Sources */,
 				18DCA3981F1F4187008BF67E /* DCYouLikeHeadView.m in Sources */,
@@ -2924,9 +3005,11 @@
 				18DCA3481F1F4187008BF67E /* DCCustionButton.m in Sources */,
 				18DCA3131F1F4187008BF67E /* DCGoodsSortCell.m in Sources */,
 				18DCA3871F1F4187008BF67E /* XWFilterAnimator+XWSwipe.m in Sources */,
+				9C95E962203FE4670084CB37 /* DCCommentsCntCell.m in Sources */,
 				92B37E711FD1015F0045A4A5 /* DCBaseSetViewController.m in Sources */,
 				9C7A1E33202AC66E0051DB5D /* DCVerificationView.m in Sources */,
 				18DCA31C1F1F4187008BF67E /* DCClassCategoryCell.m in Sources */,
+				9C95E969204004C70084CB37 /* DCCommentsItem.m in Sources */,
 				9C7A1E2B202AC6570051DB5D /* DCRegisteredViewController.m in Sources */,
 				18DCA34C1F1F4187008BF67E /* DCSelPhotos.m in Sources */,
 				9CCC207C202BEBC700B6CD44 /* AddressItem.m in Sources */,
@@ -2939,6 +3022,7 @@
 				18DCA31B1F1F4187008BF67E /* DCHoverFlowLayout.m in Sources */,
 				9C7FE1EF1FD92CEA00D32EEA /* DCBeautyShopRecommendCell.m in Sources */,
 				9C7FE1E01FD9143800D32EEA /* DCStoresRecommendCell.m in Sources */,
+				9C2D84142041307A00C27E0E /* DCItemImageCell.m in Sources */,
 				18DCA3251F1F4187008BF67E /* DCGoodDetailViewController.m in Sources */,
 				18DCA3501F1F4187008BF67E /* AddressPickerView.m in Sources */,
 				9C8135182022B7EE00F8F7E8 /* JPFPSStatus.m in Sources */,

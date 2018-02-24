@@ -242,7 +242,7 @@
 }
 
 
-#pragma mark - lazy
+#pragma mark - LazyLoad
 // header 的布局属性数组
 - (NSMutableArray *)headerAttributes {
     if ( !_headerAttributes ) {

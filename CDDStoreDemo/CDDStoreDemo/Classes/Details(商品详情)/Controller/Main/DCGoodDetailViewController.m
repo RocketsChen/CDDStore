@@ -84,6 +84,9 @@
     self.scrollerView.backgroundColor = self.view.backgroundColor;
     self.scrollerView.contentSize = CGSizeMake(self.view.dc_width * self.childViewControllers.count, 0);
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
 #pragma mark - 接受通知
@@ -178,6 +181,7 @@
             weakSelf.scrollerView.contentSize = CGSizeMake(weakSelf.view.dc_width, 0);
         }else{
             weakSelf.title = nil;
+            [weakSelf.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
             weakSelf.navigationItem.titleView = weakSelf.bgView;
             weakSelf.scrollerView.contentSize = CGSizeMake(weakSelf.view.dc_width * weakSelf.childViewControllers.count, 0);
         }
@@ -342,6 +346,9 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:_dcObserve];
+    
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 }
 
 
