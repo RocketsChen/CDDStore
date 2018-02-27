@@ -100,7 +100,7 @@ static NSString *const DCItemImageCellID = @"DCItemImageCell";
     DCItemImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCItemImageCellID forIndexPath:indexPath];
     
     
-    [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:_picUrlArray[indexPath.row]]];
+    [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:_picUrlArray[indexPath.row]]placeholderImage:[UIImage imageNamed:@"default_50"]];
     
     return cell;
 }

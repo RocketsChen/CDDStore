@@ -68,7 +68,6 @@
     
     _gridLabel = [[UILabel alloc] init];
     _gridLabel.font = PFR14Font;
-    _gridLabel.numberOfLines = 1;
     [self addSubview:_gridLabel];
     
     _priceLabel = [[UILabel alloc] init];

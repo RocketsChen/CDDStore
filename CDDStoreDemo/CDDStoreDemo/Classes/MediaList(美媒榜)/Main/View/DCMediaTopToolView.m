@@ -65,11 +65,6 @@
     [self addSubview:_rightItemButton];
     [self addSubview:_leftItemButton];
     
-    CAGradientLayer * layer = [[CAGradientLayer alloc] init];
-    layer.frame = self.bounds;
-    layer.colors = @[(id)[UIColor colorWithWhite:0 alpha:0.2].CGColor,(id)[UIColor colorWithWhite:0 alpha:0.15].CGColor,(id)[UIColor colorWithWhite:0 alpha:0.1].CGColor,(id)[UIColor colorWithWhite:0 alpha:0.05].CGColor,(id)[UIColor colorWithWhite:0 alpha:0.03].CGColor,(id)[UIColor colorWithWhite:0 alpha:0.01].CGColor,(id)[UIColor colorWithWhite:0 alpha:0.0].CGColor];
-    [self.layer addSublayer:layer];
-    
     _topSearchView = [[UIView alloc] init];
     _topSearchView.backgroundColor = RGB(235, 235, 235);
     _topSearchView.layer.cornerRadius = 16;
@@ -125,7 +120,7 @@
 }
 #pragma 自定义右边导航Item点击
 - (void)rightButtonItemClick {
-    !_rightItemClickBlock ? : _rightItemClickBlock();
+    !_rightItemClickBlock ? : _rightItemClickBlock(_rightItemButton);
 }
 
 #pragma 自定义左边导航Item点击

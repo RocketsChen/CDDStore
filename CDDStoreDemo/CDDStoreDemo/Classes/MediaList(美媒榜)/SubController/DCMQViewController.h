@@ -6,8 +6,8 @@
 //Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DCMVViewController.h"
 
-@interface DCMQViewController : UIViewController
+@interface DCMQViewController : DCMVViewController
 
 @end

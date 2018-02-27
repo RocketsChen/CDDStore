@@ -14,6 +14,7 @@
 #import "DCToolsViewController.h"
 #import "DCFeatureSelectionViewController.h"
 #import "DCFillinOrderViewController.h"
+#import "DCLoginViewController.h"
 // Models
 
 // Views
@@ -307,7 +308,7 @@ static NSArray *lastSeleArray_;
         }else{
             if (indexPath.row == 0) {
                 DCShowTypeTwoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCShowTypeTwoCellID forIndexPath:indexPath];
-                cell.contentLabel.text = userInfo.defaultAddress;//地址
+                cell.contentLabel.text = (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) ? @"预送地址" : userInfo.defaultAddress;//地址
                 gridcell = cell;
             }else{
                 DCShowTypeThreeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCShowTypeThreeCellID forIndexPath:indexPath];
@@ -444,6 +445,11 @@ static NSArray *lastSeleArray_;
 #pragma mark - 更换地址
 - (void)chageUserAdress
 {
+    if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
+        DCLoginViewController *dcLoginVc = [DCLoginViewController new];
+        [self presentViewController:dcLoginVc animated:YES completion:nil];
+        return;
+    }
     _adPickerView = [AddressPickerView shareInstance];
     [_adPickerView showAddressPickView];
     [self.view addSubview:_adPickerView];

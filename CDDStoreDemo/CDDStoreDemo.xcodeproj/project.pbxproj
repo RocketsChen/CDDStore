@@ -273,6 +273,9 @@
 		9C95E966203FF2570084CB37 /* DCCometItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C95E965203FF2570084CB37 /* DCCometItemCell.m */; };
 		9C95E969204004C70084CB37 /* DCCommentsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C95E968204004C70084CB37 /* DCCommentsItem.m */; };
 		9CAB04141FECA1B300B1C879 /* NSObject+DCNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */; };
+		9CC5846120452D2B00F38F46 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5845C20452D2B00F38F46 /* YBPopupMenu.m */; };
+		9CC5846220452D2B00F38F46 /* YBPopupMenuPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5845E20452D2B00F38F46 /* YBPopupMenuPath.m */; };
+		9CC5846320452D2B00F38F46 /* YBRectConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5846020452D2B00F38F46 /* YBRectConst.m */; };
 		9CCC207B202BEBC700B6CD44 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC205E202BEBC700B6CD44 /* UIView+Frame.m */; };
 		9CCC207C202BEBC700B6CD44 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2062202BEBC700B6CD44 /* AddressItem.m */; };
 		9CCC207D202BEBC700B6CD44 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC2065202BEBC700B6CD44 /* AddressTableViewCell.m */; };
@@ -795,6 +798,12 @@
 		9C95E968204004C70084CB37 /* DCCommentsItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCommentsItem.m; sourceTree = "<group>"; };
 		9CAB04121FECA1B300B1C879 /* NSObject+DCNull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DCNull.h"; sourceTree = "<group>"; };
 		9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DCNull.m"; sourceTree = "<group>"; };
+		9CC5845B20452D2B00F38F46 /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
+		9CC5845C20452D2B00F38F46 /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		9CC5845D20452D2B00F38F46 /* YBPopupMenuPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenuPath.h; sourceTree = "<group>"; };
+		9CC5845E20452D2B00F38F46 /* YBPopupMenuPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenuPath.m; sourceTree = "<group>"; };
+		9CC5845F20452D2B00F38F46 /* YBRectConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBRectConst.h; sourceTree = "<group>"; };
+		9CC5846020452D2B00F38F46 /* YBRectConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRectConst.m; sourceTree = "<group>"; };
 		9CCC205D202BEBC700B6CD44 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		9CCC205E202BEBC700B6CD44 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		9CCC2061202BEBC700B6CD44 /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
@@ -1507,6 +1516,7 @@
 		18DCA1F91F1F4186008BF67E /* Vendors(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				9CC5845A20452D2B00F38F46 /* YBPopupMenu */,
 				9CCC205B202BEBC700B6CD44 /* ChooseLocation */,
 				9C7A1E36202AD6D40051DB5D /* ToastView */,
 				9C8135152022B7EE00F8F7E8 /* JPFPSStatus */,
@@ -2563,6 +2573,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9CC5845A20452D2B00F38F46 /* YBPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				9CC5845B20452D2B00F38F46 /* YBPopupMenu.h */,
+				9CC5845C20452D2B00F38F46 /* YBPopupMenu.m */,
+				9CC5845D20452D2B00F38F46 /* YBPopupMenuPath.h */,
+				9CC5845E20452D2B00F38F46 /* YBPopupMenuPath.m */,
+				9CC5845F20452D2B00F38F46 /* YBRectConst.h */,
+				9CC5846020452D2B00F38F46 /* YBRectConst.m */,
+			);
+			path = YBPopupMenu;
+			sourceTree = "<group>";
+		};
 		9CCC205B202BEBC700B6CD44 /* ChooseLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -2964,6 +2987,7 @@
 				18DCA36C1F1F4187008BF67E /* UIViewController+XWTransition.m in Sources */,
 				18DCA3511F1F4187008BF67E /* UIPlaceHolderTextView.m in Sources */,
 				18DCA3881F1F4187008BF67E /* XWFilterAnimator.m in Sources */,
+				9CC5846220452D2B00F38F46 /* YBPopupMenuPath.m in Sources */,
 				9C147D501FE10C5600CA3BB4 /* DCStateItemFooterView.m in Sources */,
 				18DCA38B1F1F4187008BF67E /* DCHandPickViewController.m in Sources */,
 				18DCA3941F1F4187008BF67E /* DCScrollAdFootView.m in Sources */,
@@ -3059,6 +3083,7 @@
 				18DCA3861F1F4187008BF67E /* XWFilterAnimator+XWRipple.m in Sources */,
 				18DCA3831F1F4187008BF67E /* XWFilterAnimator+XWMask.m in Sources */,
 				18DCA38F1F1F4187008BF67E /* DCGoodsGridCell.m in Sources */,
+				9CC5846320452D2B00F38F46 /* YBRectConst.m in Sources */,
 				18DCA38E1F1F4187008BF67E /* DCGoodsCountDownCell.m in Sources */,
 				9CE9CB681FE8B4700033322E /* DCAdressItem.m in Sources */,
 				9CCC207F202BEBC700B6CD44 /* AddressView.m in Sources */,
@@ -3067,6 +3092,7 @@
 				181AED981F4BC94D003DB950 /* DCContentItem.m in Sources */,
 				18DCA32D1F1F4187008BF67E /* DCDetailShufflingHeadView.m in Sources */,
 				9C67DC5D1FE7997900C04F25 /* DCManagementViewController.m in Sources */,
+				9CC5846120452D2B00F38F46 /* YBPopupMenu.m in Sources */,
 				18DCA3491F1F4187008BF67E /* DCLIRLButton.m in Sources */,
 				9CCC208C202C243600B6CD44 /* DCCheckRegular.m in Sources */,
 				9C8CC8662004A25E00515926 /* DCScanningViewController.m in Sources */,

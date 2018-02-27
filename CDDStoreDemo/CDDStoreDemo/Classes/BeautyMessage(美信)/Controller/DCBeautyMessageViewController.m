@@ -13,6 +13,7 @@
 // Models
 
 // Views
+#import "YBPopupMenu.h"
 #import "DCBeautyMsgCell.h"
 // Vendors
 #import "UIBarButtonItem+DCBarButtonItem.h"
@@ -20,10 +21,13 @@
 
 // Others
 
-@interface DCBeautyMessageViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface DCBeautyMessageViewController ()<UITableViewDelegate,UITableViewDataSource,YBPopupMenuDelegate>
 
 /* tableView */
 @property (strong , nonatomic)UITableView *tableView;
+
+/* 弹框 */
+@property (nonatomic, strong) YBPopupMenu *popupMenu;
 
 @end
 
@@ -78,7 +82,7 @@ static NSString *const DCBeautyMsgCellID = @"DCBeautyMsgCell";
     [button setImage:[UIImage imageNamed:@"emoticon_group_add"] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:@"emoticon_group_add"] forState:UIControlStateSelected];
     button.frame = CGRectMake(0, 0, 44, 44);
-    [button addTarget:self action:@selector(addItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(addItemClick:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     self.navigationItem.rightBarButtonItems = @[negativeSpacer, backButton];
@@ -97,7 +101,7 @@ static NSString *const DCBeautyMsgCellID = @"DCBeautyMsgCell";
 {
     DCBeautyMsgCell *cell = [tableView dequeueReusableCellWithIdentifier:DCBeautyMsgCellID forIndexPath:indexPath];
     
-    NSArray *contentArray = @[@[@"",@""],@[@"朋友圈",@"消息中心"]];
+    NSArray *contentArray = @[@[@"message_logo",@"message_logo"],@[@"朋友圈",@"消息中心"]];
     
     cell.msgImageView.image = [UIImage imageNamed:contentArray[0][indexPath.row]];
     cell.msgLabel.text = contentArray[1][indexPath.row];
@@ -130,10 +134,17 @@ static NSString *const DCBeautyMsgCellID = @"DCBeautyMsgCell";
     return 70;
 }
 
+#pragma mark - YBPopupMenuDelegate
+- (void)ybPopupMenu:(YBPopupMenu *)ybPopupMenu didSelectedAtIndex:(NSInteger)index
+{
+    NSLog(@"点击了%@",ybPopupMenu.titles[index]);
+}
+
 
 #pragma mark - 加好点击
-- (void)addItemClick
+- (void)addItemClick:(UIButton *)sender
 {
+    [YBPopupMenu showRelyOnView:sender titles:TITLES icons:ICONS menuWidth:180 delegate:self];
     
 }
 

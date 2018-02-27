@@ -1,8 +1,9 @@
 # CDDMall-高仿国美APP
 
-#### ✨✨✨本次更新描述：完成商品用户评论页面，支持选择评论类型店家回复图评论图片，以及图片轮播浏览和保存。
+![Build Status](https://travis-ci.org/hrscy/TodayNews.svg?branch=master) ![Objective-C](https://img.shields.io/badge/language-Objective-C.svg)
+#### ✨✨✨本次更新描述：处理未登录状态下的数据展示，细节完善。
 
-#### ✨✨上次更新描述：更新正则，完善收货地址本地存储。
+#### ✨✨上次更新描述：完成商品用户评论页面，支持选择评论类型店家回复图评论图片，以及图片轮播浏览和保存。
 
 ## 高仿国美商城：
 1.商城（商品分类，购物车，商品详情，用户评论，筛选，属性回调，布局切换）

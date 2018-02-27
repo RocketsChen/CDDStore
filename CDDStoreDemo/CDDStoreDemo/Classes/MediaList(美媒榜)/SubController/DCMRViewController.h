@@ -6,8 +6,8 @@
 //Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DCMVViewController.h"
 
-@interface DCMRViewController : UIViewController
+@interface DCMRViewController : DCMVViewController
 
 @end

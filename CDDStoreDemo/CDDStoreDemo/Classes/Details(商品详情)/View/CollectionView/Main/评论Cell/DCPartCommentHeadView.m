@@ -70,17 +70,20 @@
 {
     _commentTextView = [[UIView alloc] init];
     [self addSubview:_commentTextView];
+
     
     DCUserInfo *userInfo = UserInfoData;
     _iconImageView = [[UIImageView alloc] init];
-    UIImage *image = ([userInfo.userimage isEqualToString:@"icon"]) ? [[UIImage imageNamed:@"icon"] dc_circleImage] : [[DCSpeedy Base64StrToUIImage:userInfo.userimage] dc_circleImage];
+    UIImage *image = (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) ? [[UIImage imageNamed:@"GM_user_default_home"] dc_circleImage] : [[DCSpeedy Base64StrToUIImage:userInfo.userimage] dc_circleImage];
     _iconImageView.image = image;
 
     [_commentTextView addSubview:_iconImageView];
     
+    
     _nickNameLabel = [[UILabel alloc] init];
     _nickNameLabel.font = PFR11Font;
-    _nickNameLabel.text = [DCSpeedy dc_encryptionDisplayMessageWith:userInfo.nickname WithFirstIndex:2];
+    NSString *nickName = (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) ? @"RocketsChen" : userInfo.nickname;
+    _nickNameLabel.text = [DCSpeedy dc_encryptionDisplayMessageWith:nickName WithFirstIndex:2];
     [_commentTextView addSubview:_nickNameLabel];
     
     _contentLabel = [[UILabel alloc] init];

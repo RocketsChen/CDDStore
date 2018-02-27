@@ -9,7 +9,7 @@
 #import "DCAccountPsdView.h"
 
 // Controllers
-
+#import "DCBeautyMessageViewController.h"
 // Models
 
 // Views
@@ -77,7 +77,10 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [[UIApplication sharedApplication].keyWindow.rootViewController dismissViewControllerAnimated:YES completion:^{
                     [weakSelf endEditing:YES];
-                    [[NSNotificationCenter defaultCenter]postNotificationName:LOGINSELECTCENTERINDEX object:nil];
+                    if ([[DCSpeedy dc_getCurrentVC] isEqual:@[[DCBeautyMessageViewController class],[DCBeautyMessageViewController class],[DCBeautyMessageViewController class],[DCBeautyMessageViewController class],[DCBeautyMessageViewController class]]]) { //过滤
+                        
+                        [[NSNotificationCenter defaultCenter]postNotificationName:LOGINSELECTCENTERINDEX object:nil];
+                    }
                 }];
             });
         });
@@ -98,7 +101,7 @@
         _loginButton.backgroundColor = RGB(252, 159, 149);
         _loginButton.enabled = YES;
     }else{
-        _loginButton.backgroundColor = RGB(252, 159, 149);
+        _loginButton.backgroundColor = [UIColor lightGrayColor];
         _loginButton.enabled = NO;
     }
 }
@@ -126,7 +129,6 @@
         });
     }
 }
-
 
 
 

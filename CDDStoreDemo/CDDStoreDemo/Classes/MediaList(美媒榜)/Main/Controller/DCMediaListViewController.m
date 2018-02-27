@@ -15,6 +15,7 @@
 // Models
 
 // Views
+#import "YBPopupMenu.h"
 #import "DCMediaTopToolView.h"
 // Vendors
 
@@ -22,7 +23,7 @@
 
 // Others
 
-@interface DCMediaListViewController ()
+@interface DCMediaListViewController ()<YBPopupMenuDelegate>
 
 /* 顶部按钮 */
 @property (nonatomic, strong) DCMediaTopToolView *topToolView;
@@ -87,10 +88,12 @@
 #pragma mark - 导航栏处理
 - (void)setUpNavTopView
 {
+    WEAKSELF
     _topToolView = [[DCMediaTopToolView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 64)];
     _topToolView.leftItemClickBlock = ^{
     };
-    _topToolView.rightItemClickBlock = ^{
+    _topToolView.rightItemClickBlock = ^(UIButton *sender) {
+        [YBPopupMenu showRelyOnView:sender titles:TITLES icons:ICONS menuWidth:180 delegate:weakSelf];
     };
     _topToolView.searchButtonClickBlock = ^{
         NSLog(@"点击了美媒榜搜索");
@@ -102,14 +105,15 @@
 #pragma mark - 添加所有子控制器
 - (void)setUpAllChildViewController
 {
-    
-    
+
     DCMRViewController *vc01 = [DCMRViewController new];
     vc01.title = @"推荐";
+    vc01.url = @"https://www.jianshu.com/p/8bcdde249137";
     [self addChildViewController:vc01];
     
     DCMQViewController *vc02 = [DCMQViewController new];
     vc02.title = @"圈子";
+    vc02.url = @"https://www.jianshu.com/p/1b19028dc975";
     [self addChildViewController:vc02];
     
     DCMVViewController *vc03 = [DCMVViewController new];
@@ -120,6 +124,11 @@
 
 
 
+#pragma mark - YBPopupMenuDelegate
+- (void)ybPopupMenu:(YBPopupMenu *)ybPopupMenu didSelectedAtIndex:(NSInteger)index
+{
+    NSLog(@"点击了%@",ybPopupMenu.titles[index]);
+}
 
 
 @end
