@@ -76,7 +76,7 @@
     [self setTitle:badgeValue forState:UIControlStateNormal];
     // 判断是否有内容,设置隐藏属性
     self.hidden = (badgeValue.length == 0 || [badgeValue isEqualToString:@"0"]) ? YES : NO;
-    NSInteger badgeNumber = [badgeValue longLongValue];
+    NSInteger badgeNumber = [badgeValue integerValue];
     // 如果文字尺寸大于控件宽度
     
     if (badgeNumber > 99) {

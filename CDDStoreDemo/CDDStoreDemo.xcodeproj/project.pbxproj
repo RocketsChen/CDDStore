@@ -890,9 +890,9 @@
 		181AED741F4BC646003DB950 /* GoodsComments(商品评论) */ = {
 			isa = PBXGroup;
 			children = (
-				9C95E95B203FBE3C0084CB37 /* View */,
-				9C95E95A203FBE370084CB37 /* Model */,
 				9C95E959203FBE300084CB37 /* Controller */,
+				9C95E95A203FBE370084CB37 /* Model */,
+				9C95E95B203FBE3C0084CB37 /* View */,
 			);
 			path = "GoodsComments(商品评论)";
 			sourceTree = "<group>";
