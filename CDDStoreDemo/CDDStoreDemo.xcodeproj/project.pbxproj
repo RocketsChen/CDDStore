@@ -221,6 +221,7 @@
 		9C2D84142041307A00C27E0E /* DCItemImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D84132041307A00C27E0E /* DCItemImageCell.m */; };
 		9C2D841720413CAE00C27E0E /* DCComPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D841620413CAE00C27E0E /* DCComPicViewController.m */; };
 		9C2D841A2041495500C27E0E /* DCDetailPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D84192041495500C27E0E /* DCDetailPicCell.m */; };
+		9C3E4436204AB0F00054F099 /* NSURL+DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E4435204AB0F00054F099 /* NSURL+DCHook.m */; };
 		9C58D4211FEA08D900639225 /* UILabel+DCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C58D4201FEA08D900639225 /* UILabel+DCLabel.m */; };
 		9C58D4251FEA3C7D00639225 /* DCAppVersionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C58D4241FEA3C7D00639225 /* DCAppVersionTool.m */; };
 		9C58D42B1FEA511200639225 /* DCNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C58D42A1FEA511200639225 /* DCNewFeatureViewController.m */; };
@@ -711,6 +712,8 @@
 		9C2D841620413CAE00C27E0E /* DCComPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCComPicViewController.m; sourceTree = "<group>"; };
 		9C2D84182041495500C27E0E /* DCDetailPicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDetailPicCell.h; sourceTree = "<group>"; };
 		9C2D84192041495500C27E0E /* DCDetailPicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCDetailPicCell.m; sourceTree = "<group>"; };
+		9C3E4434204AB0F00054F099 /* NSURL+DCHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+DCHook.h"; sourceTree = "<group>"; };
+		9C3E4435204AB0F00054F099 /* NSURL+DCHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DCHook.m"; sourceTree = "<group>"; };
 		9C58D41F1FEA08D900639225 /* UILabel+DCLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+DCLabel.h"; sourceTree = "<group>"; };
 		9C58D4201FEA08D900639225 /* UILabel+DCLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DCLabel.m"; sourceTree = "<group>"; };
 		9C58D4231FEA3C7D00639225 /* DCAppVersionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCAppVersionTool.h; sourceTree = "<group>"; };
@@ -1447,6 +1450,8 @@
 				9C58D4201FEA08D900639225 /* UILabel+DCLabel.m */,
 				9CAB04121FECA1B300B1C879 /* NSObject+DCNull.h */,
 				9CAB04131FECA1B300B1C879 /* NSObject+DCNull.m */,
+				9C3E4434204AB0F00054F099 /* NSURL+DCHook.h */,
+				9C3E4435204AB0F00054F099 /* NSURL+DCHook.m */,
 			);
 			path = "Category(分类)";
 			sourceTree = "<group>";
@@ -3038,6 +3043,7 @@
 				18DCA34C1F1F4187008BF67E /* DCSelPhotos.m in Sources */,
 				9CCC207C202BEBC700B6CD44 /* AddressItem.m in Sources */,
 				18DCA3721F1F4187008BF67E /* SDBrowserImageView.m in Sources */,
+				9C3E4436204AB0F00054F099 /* NSURL+DCHook.m in Sources */,
 				18DCA3761F1F4187008BF67E /* XWCoolAnimator+XWExplode.m in Sources */,
 				9CE9CB701FE8E6700033322E /* DCNewAdressView.m in Sources */,
 				18DCA3901F1F4187008BF67E /* DCGoodsHandheldCell.m in Sources */,

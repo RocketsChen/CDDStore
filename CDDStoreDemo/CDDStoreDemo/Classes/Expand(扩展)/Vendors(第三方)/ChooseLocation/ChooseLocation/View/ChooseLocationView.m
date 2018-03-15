@@ -28,6 +28,7 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
 @property (nonatomic,strong) NSMutableArray * tableViews;
 @property (nonatomic,strong) NSMutableArray * topTabbarItems;
 @property (nonatomic,weak) UIButton * selectedBtn;
+@property (nonatomic,copy) NSString * areaCode;
 @end
 
 @implementation ChooseLocationView
@@ -151,9 +152,10 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
 #pragma mark - TableViewDelegate
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    NSMutableString *codeStr = [[NSMutableString alloc] init];
+    
     if([self.tableViews indexOfObject:tableView] == 0){
-        
-
+    
         //1.1 获取下一级别的数据源(市级别,如果是直辖市时,下级则为区级别)
         AddressItem * provinceItem = self.dataSouce[indexPath.row];
         self.cityDataSouce = [[CitiesDataTool sharedManager] queryAllRecordWithShengID:[provinceItem.code substringWithRange:(NSRange){0,2}]];
@@ -192,7 +194,9 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
         [self addTopBarItem];
         [self addTableView];
         AddressItem * item = self.dataSouce[indexPath.row];
-        [self scrollToNextItem:item.name ];
+        [self scrollToNextItem:item.name];
+        self.ProvinceId = item.code;
+        NSLog(@"%@ %@",item.name,item.code);
         
     }else if ([self.tableViews indexOfObject:tableView] == 1){
         
@@ -220,12 +224,19 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
         [self addTableView];
         AddressItem * item = self.cityDataSouce[indexPath.row];
         [self scrollToNextItem:item.name];
+        self.CityId = item.code;
+        NSLog(@"%@ %@",item.name,item.code);
         
     }else if ([self.tableViews indexOfObject:tableView] == 2){
         
         AddressItem * item = self.districtDataSouce[indexPath.row];
+        
+        self.DistrictId = item.code;
+        NSLog(@"%@ %@",item.name,item.code);
+        
         [self setUpAddress:item.name];
     }
+    
     return indexPath;
 }
 

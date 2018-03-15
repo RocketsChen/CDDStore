@@ -12,8 +12,14 @@
 
 @property (nonatomic, copy) NSString * address;
 
-@property (nonatomic, copy) void(^chooseFinish)();
+@property (nonatomic, copy) void(^chooseFinish)(void);
 
-@property (nonatomic,copy) NSString * areaCode;
+/* 省ID */
+@property (nonatomic, copy) NSString *ProvinceId;
+/* 市ID */
+@property (nonatomic, copy) NSString *CityId;
+/* 区ID */
+@property (nonatomic, copy) NSString *DistrictId;
+
 
 @end

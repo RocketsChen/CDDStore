@@ -21,4 +21,5 @@
 - (NSMutableArray *)queryAllRecordWithShengID:(NSString *) sheng cityID:(NSString *)di;
 //根据areaCode, 查询地址
 - (NSString *)queryAllRecordWithAreaCode:(NSString *) areaCode;
+
 @end

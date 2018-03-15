@@ -166,12 +166,11 @@
 #pragma mark - 退出当前界面
 - (IBAction)dismissViewController {
     
+    
     [self.view endEditing:YES];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 
-    if (self.tabBarController.selectedIndex == DCTabBarControllerPerson) { //判断选择控制器为登录控制器
-        self.tabBarController.selectedIndex = DCTabBarControllerHome; //跳转到首页去
-    }
 }
 
 

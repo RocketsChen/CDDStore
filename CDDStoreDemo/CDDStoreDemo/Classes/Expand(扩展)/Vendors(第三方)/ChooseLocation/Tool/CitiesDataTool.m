@@ -259,6 +259,7 @@ static CitiesDataTool *shareInstance = nil;
     return nil;
 }
 
+
 //根据areaCode, 查询地址
 - (NSString *)queryAllRecordWithAreaCode:(NSString *) areaCode
 

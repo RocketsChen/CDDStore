@@ -14,6 +14,8 @@
 
 /** 登录成功选择控制器通知 */
 NSString *const LOGINSELECTCENTERINDEX = @"LOGINSELECTCENTERINDEX";
+/** 退出登录成功选择控制器通知 */
+NSString *const LOGINOFFSELECTCENTERINDEX = @"LOGINOFFSELECTCENTERINDEX";
 
 /** 添加购物车或者立即购买通知 */
 NSString *const SELECTCARTORBUY = @"SELECTCARTORBUY";

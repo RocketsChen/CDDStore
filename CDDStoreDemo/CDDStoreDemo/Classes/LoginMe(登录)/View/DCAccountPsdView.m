@@ -128,7 +128,7 @@
         userInfo.username = @"qq-w923740293";
         userInfo.defaultAddress = @"中国 上海";
         dispatch_async(dispatch_get_global_queue(0, 0), ^{//异步保存
-            [userInfo save];
+            [userInfo saveOrUpdate];
         });
     }
 }

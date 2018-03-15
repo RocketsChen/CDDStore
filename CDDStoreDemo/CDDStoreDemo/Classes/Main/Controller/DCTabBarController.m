@@ -57,7 +57,12 @@
     // 添加badgeView
     [self addBadgeViewOnTabBarButtons];
     
-     self.selectedViewController = [self.viewControllers objectAtIndex:1]; //默认选择商城index为1
+    WEAKSELF
+    [[NSNotificationCenter defaultCenter] addObserverForName:LOGINOFFSELECTCENTERINDEX object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        
+        weakSelf.selectedViewController = [weakSelf.viewControllers objectAtIndex:DCTabBarControllerHome]; //默认选择商城index为1
+    }];
+
 }
 
 
@@ -68,6 +73,8 @@
     self.delegate = self;
     
     [self addDcChildViewContorller];
+    
+    self.selectedViewController = [self.viewControllers objectAtIndex:DCTabBarControllerHome]; //默认选择商城index为1
 }
 
 
